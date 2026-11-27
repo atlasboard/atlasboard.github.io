@@ -1,0 +1,377 @@
+<!doctype html>
+<html lang="en">
+<head>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22%3E%3Crect width=%2232%22 height=%2232%22 rx=%226%22 fill=%22%23151515%22/%3E%3Ccircle cx=%2216%22 cy=%2216%22 r=%227%22 fill=%22%23d4602a%22/%3E%3C/svg%3E">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ATLAS · Things to build on Robinhood Chain</title>
+<link rel="canonical" href="https://atlasboard.dev/">
+<meta property="og:title" content="ATLAS · Things to build on Robinhood Chain">
+<meta property="og:url" content="https://atlasboard.dev/">
+<meta name="description" content="Thirty things to build on Robinhood Chain, each with what it uses and how to start. Pick one. Ship it.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>:root{--bg:#f2ede3;--card:#fbf8f2;--ink:#151515;--mute:#5e5a52;--dim:#9a948a;--line:#d8d1c3;--hi:#d4602a;--peach:#f5c6ac}
+*{box-sizing:border-box}html,body{margin:0}
+body{background:var(--bg);color:var(--ink);font-family:Inter,system-ui,sans-serif}
+.wrap{max-width:1180px;margin:0 auto;padding:0 28px}
+.top{display:flex;justify-content:space-between;align-items:center;padding:22px 0 0;font:500 11px "JetBrains Mono";letter-spacing:.16em;color:var(--mute)}
+.top b{color:var(--ink)}.top .tag{display:flex;align-items:center;gap:8px;font-weight:700;color:var(--ink)}.top .tag i{width:22px;height:22px;border-radius:50%;background:var(--ink);display:inline-block;position:relative}.top .tag i:after{content:"";position:absolute;inset:6px;border-radius:50%;background:var(--hi)}
+.hero{padding:22px 0 10px;text-align:center}
+.stamp{display:inline-flex;align-items:center;gap:8px;font:600 12px "JetBrains Mono";color:#fff;background:var(--ink);padding:6px 14px;border-radius:30px}.stamp:before{content:"";width:7px;height:7px;border-radius:50%;background:var(--hi);animation:bl 1.4s infinite}
+@keyframes bl{50%{opacity:.2}}
+h1{font:800 clamp(40px,6.4vw,84px)/1 "JetBrains Mono";letter-spacing:-.02em;margin:18px 0 0;text-transform:uppercase}
+h1 .l2{display:block;color:var(--hi)}h1 b{font-weight:800}
+.sub{margin-top:14px;font:500 12px "JetBrains Mono";letter-spacing:.24em;color:var(--mute)}
+.cats{display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin:22px 0 22px}
+.cats button{font:600 12px "JetBrains Mono";color:var(--mute);background:transparent;border:1.5px solid var(--line);border-radius:30px;padding:7px 14px;cursor:pointer;transition:.2s}
+.cats button:hover{color:var(--ink);border-color:var(--ink)}.cats button.on{background:var(--ink);color:#fff;border-color:var(--ink)}
+.grid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:26px 24px;position:relative;z-index:1}
+.tile{position:relative;border:1.5px solid var(--line);border-radius:6px;background:var(--card);padding:10px 10px 9px;cursor:pointer;transition:transform .25s,border-color .25s,background .25s,opacity .3s;text-align:left;color:var(--ink);font:inherit}
+.tile:hover{border-color:var(--ink);transform:translateY(-2px)}
+.tile.hot{border-color:var(--hi);background:#fff}
+.tile.hot:after{content:"";position:absolute;inset:-5px;border:2px solid var(--hi);border-radius:9px;pointer-events:none;animation:pop .35s cubic-bezier(.2,.9,.3,1.4)}
+@keyframes pop{from{inset:6px;opacity:0}to{inset:-5px;opacity:1}}
+.tile.hot .tagc{color:var(--hi)}
+.tile.dim{opacity:.2;pointer-events:none}
+.tile svg{display:block;width:100%;height:70px;color:var(--ink)}
+.tile .n{position:absolute;top:7px;right:9px;font:500 9.5px "JetBrains Mono";color:var(--dim)}
+.tile b{display:block;margin-top:6px;font:700 11.5px "JetBrains Mono";letter-spacing:-.01em}
+.tile .lv{display:flex;gap:3px;margin-top:6px}.tile .lv i{width:12px;height:3px;border-radius:2px;background:var(--line)}.tile .lv i.f{background:var(--hi)}
+.tile.hot .ic-acc{animation:wig .6s ease-in-out}
+@keyframes wig{30%{transform:translateY(-3px)}60%{transform:translateY(1px)}}
+.foot{display:flex;justify-content:space-between;align-items:center;padding:26px 0 8px;font:800 14px "JetBrains Mono";letter-spacing:.04em;flex-wrap:wrap;gap:12px;border-top:1.5px solid var(--ink);margin-top:26px}
+.foot .r{color:var(--hi)}.small{font:500 11px "JetBrains Mono";color:var(--hi);padding-bottom:40px}
+.how{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:26px 0 0}
+.how div{border:1.5px solid var(--line);border-radius:8px;padding:16px;background:var(--card)}
+.how b{display:block;font:700 11px "JetBrains Mono";letter-spacing:.18em;color:var(--hi);margin-bottom:6px}.how p{margin:0;color:var(--mute);font-size:14.5px;line-height:1.55}
+.panel{position:fixed;top:0;right:0;bottom:0;width:min(460px,100vw);background:var(--card);border-left:1.5px solid var(--ink);z-index:30;transform:translateX(100%);transition:transform .4s cubic-bezier(.2,.8,.2,1);overflow:auto;padding:26px}
+.panel.on{transform:none}.shade{position:fixed;inset:0;background:rgba(21,21,21,.35);z-index:29;opacity:0;pointer-events:none;transition:.3s}.shade.on{opacity:1;pointer-events:auto}
+.panel .x{position:absolute;top:16px;right:20px;font-size:24px;cursor:pointer;color:var(--mute);background:none;border:0}
+.panel svg{width:100%;height:140px;color:var(--ink);border:1.5px solid var(--line);border-radius:8px;background:#fff;padding:14px}
+.panel .k{font:600 11px "JetBrains Mono";letter-spacing:.18em;color:var(--hi);margin:16px 0 6px}
+.panel h2{font:800 30px/1.05 "JetBrains Mono";margin:0 0 10px;text-transform:uppercase}
+.panel p{color:var(--mute);line-height:1.6;margin:0 0 14px}.panel ol{margin:0 0 14px;padding-left:20px;line-height:1.7}
+.uses{display:flex;flex-wrap:wrap;gap:6px}.uses span{font:500 11px "JetBrains Mono";border:1.5px solid var(--line);border-radius:20px;padding:4px 10px}
+.status{margin-top:16px;font:500 12px "JetBrains Mono";border:1.5px dashed var(--hi);color:var(--hi);border-radius:8px;padding:10px 12px}
+  
+/* ---- life ---- */
+.board{position:relative;height:430px;border:1.5px solid var(--ink);border-radius:10px;background:var(--card);overflow:hidden;margin:26px 0 14px;box-shadow:6px 6px 0 var(--ink)}
+.board canvas{position:absolute;inset:0;width:100%;height:100%}
+.board .core{position:absolute;left:50%;top:50%;width:132px;height:132px;margin:-66px 0 0 -66px;border-radius:50%;background:var(--hi);color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;font:800 54px/1 "JetBrains Mono";box-shadow:0 0 0 10px rgba(212,96,42,.15),0 0 0 22px rgba(212,96,42,.07);animation:beat 2.2s ease-in-out infinite}
+.board .core small{font:600 10px "JetBrains Mono";letter-spacing:.2em;margin-top:6px}
+@keyframes beat{50%{transform:scale(1.05);box-shadow:0 0 0 14px rgba(212,96,42,.18),0 0 0 30px rgba(212,96,42,.06)}}
+.note{position:absolute;background:#fff;border:1.5px solid var(--ink);border-radius:4px;padding:8px 10px;font:500 11px/1.5 "JetBrains Mono";color:var(--ink);box-shadow:3px 3px 0 var(--ink);white-space:pre;animation:float 6s ease-in-out infinite;min-width:120px}
+.note b{display:block;font-weight:700;color:var(--hi);font-size:10px;letter-spacing:.06em;margin-bottom:2px}
+.note.y{background:#fff6d8}.note.p{background:#fde3d5}
+@keyframes float{50%{transform:translateY(-8px) rotate(var(--r,0deg))}}
+.note .cur{display:inline-block;width:6px;height:11px;background:var(--hi);vertical-align:-1px;animation:bl 1s steps(1) infinite}
+.live{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:0 0 6px}
+.live div{border:1.5px solid var(--line);border-radius:8px;background:var(--card);padding:12px 14px;font:500 11px "JetBrains Mono";color:var(--mute);position:relative;overflow:hidden}
+.live div:after{content:"";position:absolute;left:0;bottom:0;height:2px;width:100%;background:var(--hi);transform-origin:left;animation:load 3s linear infinite}
+@keyframes load{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+.live b{display:block;font:800 22px "JetBrains Mono";color:var(--ink);margin-top:4px;transition:color .3s}.live b.flash{color:var(--hi)}
+.live .k{display:flex;justify-content:space-between;letter-spacing:.16em;font-size:10px}.live .k i{font-style:normal;color:#2f9e5b}
+.tile .mini{display:block;margin-top:5px;font:500 9.5px "JetBrains Mono";color:var(--hi);height:12px;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
+.tile{animation:rise .6s cubic-bezier(.2,.9,.3,1) backwards}@keyframes rise{from{opacity:0;transform:translateY(16px)}}
+.tile svg path,.tile svg rect,.tile svg circle{stroke-dasharray:var(--len,300);animation:draw 7s ease-in-out infinite;animation-delay:var(--d,0s)}
+@keyframes draw{0%{stroke-dashoffset:var(--len,300)}18%,82%{stroke-dashoffset:0}100%{stroke-dashoffset:calc(var(--len,300) * -1)}}
+.tile svg [fill="#f5c6ac"]{animation:draw 7s ease-in-out infinite,breathe 2.6s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+@keyframes breathe{50%{opacity:.45;transform:scale(.85)}}
+.pointer{position:absolute;z-index:6;width:26px;height:26px;pointer-events:none;transition:left .7s cubic-bezier(.5,0,.2,1),top .7s cubic-bezier(.5,0,.2,1);filter:drop-shadow(2px 2px 0 rgba(0,0,0,.18))}
+.gridwrap{position:relative}
+.doodle{position:fixed;z-index:0;pointer-events:none;color:var(--hi);opacity:.35;animation:drift 18s ease-in-out infinite}
+@keyframes drift{50%{transform:translate(20px,-30px) rotate(40deg)}}
+.wrap{position:relative;z-index:1}
+.top .blk{display:flex;align-items:center;gap:8px;color:var(--mute)}.top .blk i{width:7px;height:7px;border-radius:50%;background:#2f9e5b;animation:bl 1.4s infinite}
+h1 .t{display:inline-block;opacity:0;transform:translateY(.4em);animation:tin .5s forwards}@keyframes tin{to{opacity:1;transform:none}}
+@media (max-width:800px){.live{grid-template-columns:1fr 1fr}.board{height:300px}.board .note{display:none}.board .note.keep{display:block}}
+
+.desk{display:grid;grid-template-columns:1.6fr 1fr;gap:14px;margin:26px 0 18px}
+.sheet{position:relative;height:380px;border:1.5px solid var(--ink);border-radius:10px;background:#fffdf8;box-shadow:6px 6px 0 var(--ink);overflow:hidden;background-image:linear-gradient(rgba(212,96,42,.08) 1px,transparent 1px),linear-gradient(90deg,rgba(212,96,42,.08) 1px,transparent 1px);background-size:22px 22px}
+.sh-k{position:absolute;top:12px;left:14px;right:14px;display:flex;justify-content:space-between;font:700 11px "JetBrains Mono";letter-spacing:.18em;color:var(--mute)}
+.sh-k span:last-child{color:var(--hi)}
+#draft{position:absolute;left:12%;top:16%;width:76%;height:62%;color:var(--ink);overflow:visible}
+#draft path,#draft rect,#draft circle{stroke-width:1.6}
+.pencil{position:absolute;width:46px;height:46px;left:50%;top:50%;transition:left .1s linear,top .1s linear;pointer-events:none;filter:drop-shadow(3px 3px 0 rgba(0,0,0,.15));transform:translate(-6px,-40px)}
+.stampd{position:absolute;right:8%;top:20%;font:800 26px "JetBrains Mono";letter-spacing:.12em;color:var(--hi);border:3px solid var(--hi);padding:4px 12px;border-radius:6px;transform:rotate(-12deg) scale(2.2);opacity:0;transition:transform .25s cubic-bezier(.3,1.6,.5,1),opacity .2s}
+.stampd.on{transform:rotate(-12deg) scale(1);opacity:.9}
+.sh-f{position:absolute;left:14px;right:14px;bottom:12px;display:flex;gap:12px;align-items:baseline;font:500 12px "JetBrains Mono";color:var(--mute);overflow:hidden}
+.sh-f b{font:800 20px "JetBrains Mono";color:var(--ink);text-transform:uppercase;white-space:nowrap}
+.sh-f span{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.side{display:flex;flex-direction:column;gap:14px}
+.tape{flex:1;border:1.5px solid var(--ink);border-radius:10px;background:var(--ink);overflow:hidden;position:relative;box-shadow:6px 6px 0 var(--hi)}
+.tape div{position:absolute;left:0;right:0;top:0;display:flex;flex-direction:column;animation:tapeup 40s linear infinite}
+.tape span{font:700 14px "JetBrains Mono";color:#f2ede3;padding:9px 16px;border-bottom:1px dashed rgba(242,237,227,.18);display:flex;justify-content:space-between}
+.tape span i{font-style:normal;color:var(--hi)}
+@keyframes tapeup{to{transform:translateY(-50%)}}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.steps div{border:1.5px solid var(--ink);border-radius:8px;background:var(--card);padding:10px;font:700 12px "JetBrains Mono";text-align:center}
+.steps b{display:block;font-size:22px;color:var(--hi)}
+.tile{animation:flip .7s cubic-bezier(.2,.9,.3,1) backwards}
+@keyframes flip{from{opacity:0;transform:perspective(600px) rotateY(-80deg)}}
+@media (max-width:800px){.desk{grid-template-columns:1fr}.sheet{height:300px}.tape{height:180px;flex:none}}
+
+
+#wires{position:absolute;inset:0;width:100%;height:100%;z-index:0;pointer-events:none;overflow:visible}
+#wires .w{fill:none;stroke:#151515;stroke-opacity:.38;stroke-width:1.6;stroke-dasharray:5 5;animation:flow 1.4s linear infinite}
+#wires .w.hot{stroke:#d4602a;stroke-opacity:1;stroke-width:2.4;stroke-dasharray:none}
+#wires .port{fill:#fbf8f2;stroke:#151515;stroke-width:1.6}
+#wires .port.hot{fill:#d4602a;stroke:#d4602a}
+#wires .sig{fill:#d4602a}
+@keyframes flow{to{stroke-dashoffset:-20}}
+.gridwrap .tile{z-index:1}
+
+
+#page{display:none;max-width:1180px;margin:0 auto;padding:0 28px 50px}
+body.on-page #page{display:block}body.on-page .wrap{display:none}
+.pg-top{display:flex;justify-content:space-between;align-items:center;padding:24px 0 10px;font:600 12px "JetBrains Mono";letter-spacing:.12em;color:var(--mute)}
+.back{color:var(--ink);text-decoration:none;border:1.5px solid var(--ink);border-radius:30px;padding:8px 14px;box-shadow:3px 3px 0 var(--ink);transition:.15s}.back:hover{transform:translate(-1px,-1px);box-shadow:4px 4px 0 var(--hi)}
+.pg-hero{display:grid;grid-template-columns:340px 1fr;gap:30px;align-items:center;padding:22px 0 26px}
+.pg-ic{border:1.5px solid var(--ink);border-radius:12px;background:#fffdf8;box-shadow:6px 6px 0 var(--ink);padding:26px;background-image:linear-gradient(rgba(212,96,42,.08) 1px,transparent 1px),linear-gradient(90deg,rgba(212,96,42,.08) 1px,transparent 1px);background-size:20px 20px;animation:rise .5s backwards}
+.pgsvg{width:100%;height:190px;color:var(--ink)}
+.pgsvg path,.pgsvg rect,.pgsvg circle{stroke-dasharray:var(--len,300);animation:draw 7s ease-in-out infinite;animation-delay:var(--d,0s)}
+.pg-k{font:700 12px "JetBrains Mono";letter-spacing:.2em;color:var(--hi)}
+.pg-h{font:800 clamp(44px,6vw,76px)/1 "JetBrains Mono";margin:8px 0 12px;letter-spacing:-.02em}
+.pg-lead{font-size:19px;line-height:1.55;color:var(--mute);margin:0 0 14px;max-width:620px}
+.lv.big{display:flex;align-items:center;gap:4px}.lv.big i{width:22px;height:5px;border-radius:3px;background:var(--line)}.lv.big i.f{background:var(--hi)}.lv.big em{font:500 12px "JetBrains Mono";font-style:normal;color:var(--mute);margin-left:8px}
+.pg-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.pc{border:1.5px solid var(--line);border-radius:10px;background:var(--card);padding:20px;animation:rise .5s backwards}.pc:nth-child(2){animation-delay:.08s}.pc:nth-child(3){animation-delay:.16s}.pc:nth-child(4){animation-delay:.24s}.pc:nth-child(5){animation-delay:.32s}.pc:nth-child(6){animation-delay:.4s}
+.pc.wide{grid-column:1/-1}.pc b{display:block;font:700 11.5px "JetBrains Mono";letter-spacing:.18em;color:var(--hi);margin-bottom:10px}
+.pc p{margin:0;font-size:16.5px;line-height:1.65}.pc code{font:600 14px "JetBrains Mono";background:#fff;border:1px solid var(--line);padding:1px 6px;border-radius:4px}
+.pc ol{margin:0;padding-left:20px;line-height:1.85;font-size:15.5px}
+.pc.kit{border:1.5px dashed var(--hi);background:#fff7f1}
+.flow{display:flex;align-items:center;gap:0;flex-wrap:wrap}
+.fn{flex:1;min-width:150px;border:1.5px solid var(--ink);border-radius:8px;background:#fff;padding:16px;font:700 15px "JetBrains Mono";text-align:center;box-shadow:3px 3px 0 var(--ink)}.fn span{display:block;font-size:11px;color:var(--hi);margin-bottom:4px}
+.fw{width:56px;height:2px;position:relative;background:repeating-linear-gradient(90deg,var(--ink) 0 5px,transparent 5px 10px);animation:flowx 1s linear infinite}
+.fw i{position:absolute;top:-4px;left:0;width:10px;height:10px;border-radius:50%;background:var(--hi);animation:run 1.6s linear infinite}
+@keyframes flowx{to{background-position:20px 0}}@keyframes run{from{left:-4px}to{left:calc(100% - 6px)}}
+.pg-nav{display:grid;grid-template-columns:1fr auto 1fr;gap:12px;margin-top:22px}
+.pg-nav a{border:1.5px solid var(--ink);border-radius:10px;background:var(--card);padding:14px 18px;text-decoration:none;color:var(--ink);font:800 16px "JetBrains Mono";box-shadow:4px 4px 0 var(--ink);transition:.15s;display:flex;flex-direction:column;justify-content:center}
+.pg-nav a:hover{transform:translate(-2px,-2px);box-shadow:6px 6px 0 var(--hi)}.pg-nav a small{font:600 10.5px "JetBrains Mono";letter-spacing:.16em;color:var(--hi);margin-bottom:4px}.pg-nav a.r{text-align:right}.pg-nav a:nth-child(2){align-items:center;background:var(--ink);color:#fff}
+@media (max-width:800px){.pg-hero{grid-template-columns:1fr}.pg-grid{grid-template-columns:1fr}.fw{width:100%;height:24px;background:none}.fw:before{content:"↓";display:block;text-align:center;color:var(--hi);font:800 18px "JetBrains Mono"}.fw i{display:none}.pg-nav{grid-template-columns:1fr 1fr}.pg-nav a:nth-child(2){grid-column:1/-1;order:3}#page{padding:0 14px 40px}}
+
+@media (max-width:1000px){.grid{grid-template-columns:repeat(4,minmax(0,1fr))}}
+@media (max-width:640px){.wrap{padding:0 14px}.grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:6px}.tile svg{height:48px}.tile b{font-size:10px}.how{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="top"><span><b>ATLAS</b></span><span class="tag"><i></i>ROBINHOOD CHAIN</span></div>
+  <header class="hero"><span class="stamp">build it on Robinhood Chain</span><h1><b id="cnt">24</b> things to build.<span class="l2">Ship one this week.</span></h1><div class="sub">AGENT · PAYMENT · DATA · TOOLS — PICK ONE. MAKE IT YOURS.</div></header>
+  <section class="desk" id="desk"><div class="sheet"><div class="sh-k"><span>DRAFTING TABLE</span><span id="dno">Nº 01</span></div><svg id="draft" viewBox="0 0 120 70"></svg><svg class="pencil" id="pencil" viewBox="0 0 40 40"><path d="M6 34l4-12L28 4l8 8-18 18z" fill="#f6d27a" stroke="#151515" stroke-width="2" stroke-linejoin="round"/><path d="M6 34l4-12 8 8z" fill="#f5c6ac" stroke="#151515" stroke-width="2" stroke-linejoin="round"/><path d="M6 34l2-6 4 4z" fill="#151515"/><path d="M24 8l8 8" stroke="#151515" stroke-width="2"/></svg><div class="stampd" id="stampd">DRAFTED</div><div class="sh-f"><b id="dname">…</b><span id="dwhat">…</span></div></div>
+  <div class="side"><div class="tape"><div id="tape"></div></div><div class="steps"><div><b>01</b>Pick one</div><div><b>02</b>Sketch it</div><div><b>03</b>Ship it</div></div></div></section>
+  
+<div class="cats" id="cats"></div>
+  <div class="gridwrap" id="gw"><svg id="wires"></svg><main class="grid" id="grid"></main><svg class="pointer" id="ptr" viewBox="0 0 24 24"><path d="M3 2l17 10-7 2 4 7-3 1.5-4-7-5 4z" fill="#151515" stroke="#fff" stroke-width="1.4" stroke-linejoin="round"/></svg></div>
+  <section class="how"><div><b>01 · PICK</b><p>Choose one that solves a problem you actually have. Each one says what it reads or calls on chain.</p></div><div><b>02 · START</b><p>Each one lists the chain pieces it needs and the steps to a first working version.</p></div><div><b>03 · SHIP</b><p>Make it yours, put it online, and add it back to the atlas so the next builder starts further ahead.</p></div></section>
+  <div class="foot"><span>CHOOSE ONE. BUILD IT. SHARE IT.</span><span class="r">SAVE THE ATLAS ↓</span></div>
+  <div class="small">Robinhood Chain mainnet · chain 4663 · open source · free to start · starter kits are added as they are built and tested</div>
+</div>
+<main id="page"></main>
+<div class="shade" id="shade"></div>
+<aside class="panel" id="panel" aria-hidden="true"><button class="x" id="px" type="button">×</button><div id="pc"></div></aside>
+<script>
+// ---------- icons: drawn from a few primitives, white lines on blueprint ----------
+const S = (inner) => `<svg viewBox="0 0 120 70" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">${inner}</svg>`;
+const box = (x, y, w, h, r = 4, f = "none") => `<rect x="${x}" y="${y}" width="${w}" height="${h}" rx="${r}" fill="${f}"/>`;
+const c = (x, y, r, f = "none") => `<circle cx="${x}" cy="${y}" r="${r}" fill="${f}"/>`;
+const l = (d) => `<path d="${d}"/>`;
+const acc = "#f5c6ac", warm = "#d4602a";
+const bot = (x, y) => box(x, y, 26, 20, 5) + c(x + 8, y + 9, 2.2, "currentColor") + c(x + 18, y + 9, 2.2, "currentColor") + l(`M${x + 13} ${y}v-6`) + c(x + 13, y - 7, 2);
+const coin = (x, y, r = 10, t = "") => c(x, y, r) + c(x, y, r - 4) + (t ? `<text x="${x}" y="${y + 3}" font-size="7" font-family="JetBrains Mono" font-weight="700" fill="currentColor" stroke="none" text-anchor="middle">${t}</text>` : "");
+const bars = (x, y, hs) => hs.map((h, i) => box(x + i * 8, y - h, 5, h, 1, i === hs.length - 1 ? acc : "none")).join("");
+const I = {
+  mcp: S(box(10, 18, 34, 34, 6) + l("M18 18v-6M36 18v-6M18 52v6M36 52v6") + c(27, 35, 6, acc) + l("M44 35h18") + box(62, 24, 22, 22, 5) + l("M84 30h12M84 40h12") + c(104, 30, 3) + c(104, 40, 3)),
+  aimodel: S(box(38, 12, 44, 44, 8) + box(48, 22, 24, 24, 4, acc) + l("M30 22h8M30 34h8M30 46h8M82 22h8M82 34h8M82 46h8M48 6v6M60 6v6M72 6v6M48 56v6M60 56v6M72 56v6") + `<text x="60" y="38" font-size="9" font-family="JetBrains Mono" font-weight="700" fill="#d4602a" stroke="none" text-anchor="middle">AI</text>`),
+  console: S(box(10, 10, 100, 50, 6) + l("M10 20h100") + c(18, 15, 1.5, "currentColor") + c(24, 15, 1.5, "currentColor") + c(30, 15, 1.5, "currentColor") + l("M20 32l8 6-8 6") + l("M34 46h22") + box(60, 42, 7, 8, 1, acc)),
+  memory: S(l("M44 20c-10 0-16 8-14 16-6 4-6 14 2 18 2 6 10 8 16 4 4 4 12 4 16-2 8 2 14-4 12-12 6-6 2-16-6-18-2-8-12-10-18-6-2-2-6-2-8 0z") + l("M60 22v34M48 32c4 2 8 2 12 0M60 44c4-2 8-2 12 0") + box(86, 14, 22, 14, 3, acc) + box(86, 32, 22, 14, 3) + l("M90 21h14M90 39h10")),
+  scheduled: S(c(42, 36, 22) + l("M42 22v14l10 6") + box(74, 18, 34, 36, 5) + l("M74 28h34M82 14v8M100 14v8") + l("M82 40l5 5 10-10")),
+  skills: S(box(12, 14, 28, 20, 4) + box(46, 14, 28, 20, 4, acc) + box(80, 14, 28, 20, 4) + box(12, 40, 28, 20, 4) + box(46, 40, 28, 20, 4) + box(80, 40, 28, 20, 4) + l("M22 24h8M56 24h8M90 24h8M22 50h8M56 50h8M90 50h8")),
+  seal: S(c(46, 34, 20, acc) + c(46, 34, 13) + l("M40 34l4 4 9-9") + l("M32 50l-6 14 10-4 4 8 6-12M60 50l6 14-10-4-4 8-6-12") + box(76, 14, 32, 40, 4) + l("M84 26h16M84 34h12M84 42h16")),
+  privacy: S(box(14, 10, 40, 50, 4) + l("M22 22h24M22 30h18") + box(26, 38, 16, 14, 3, acc) + l("M30 38v-4a4 4 0 0 1 8 0v4") + l("M66 34c8-10 30-10 38 0-8 10-30 10-38 0z") + c(85, 34, 5) + l("M68 48l34-28")),
+  lens: S(c(48, 32, 18) + c(48, 32, 10, acc) + l("M61 45l16 16") + box(80, 12, 28, 30, 4) + l("M86 22h16M86 30h12")),
+  radar: S(c(50, 36, 24) + c(50, 36, 14) + c(50, 36, 4, "currentColor") + l("M50 36l18-14") + c(62, 26, 3, acc) + c(40, 46, 2.5, "currentColor") + l("M84 22h22M84 34h16M84 46h22")),
+  map: S(c(24, 20, 7) + c(24, 52, 7) + c(60, 36, 9, acc) + c(96, 18, 7) + c(96, 54, 7) + l("M30 23l22 9M30 49l22-9M68 32l21-11M68 40l21 11")),
+
+  watcher: S(box(8, 16, 40, 30, 5) + l("M14 27h18M14 35h26") + c(80, 31, 14) + c(80, 31, 5, acc) + l("M58 31h8")),
+  launch: S(l("M60 8c10 6 14 18 10 30l-10 8-10-8C46 26 50 14 60 8z") + c(60, 24, 4, acc) + l("M50 46l-6 10M70 46l6 10M60 50v12") + c(22, 20, 2, "currentColor") + c(96, 44, 2, "currentColor")),
+  whale: S(l("M14 40c10-16 40-20 64-6 6-6 14-8 22-6-4 4-6 8-6 12-14 10-46 14-70 4-4-2-8-2-10-4z") + c(34, 36, 2, "currentColor") + l("M78 26c2-6 6-10 10-12M84 30c4-4 10-6 14-6") + l("M10 54h100", "") ),
+  daily: S(box(16, 12, 40, 46, 5) + l("M16 24h40M24 34h24M24 42h16") + c(84, 30, 12) + l("M84 10v6M84 44v6M64 30h6M98 30h6M70 16l4 4M94 40l4 4M70 44l4-4M94 20l4-4")),
+  gas: S(box(20, 14, 32, 44, 4) + box(26, 20, 20, 12, 2, acc) + l("M52 26h8l6 6v20a4 4 0 0 0 8 0V30l-8-8") + bars(82, 58, [10, 18, 26])),
+  analyst: S(bot(14, 26) + l("M48 36h10") + box(62, 14, 46, 40, 5) + l("M70 26h28M70 34h20M70 42h24") + c(104, 18, 3, acc)),
+  tgbot: S(l("M14 34l80-24-14 46-22-12-10 12v-16z") + l("M48 38l32-22") + c(100, 52, 6, acc)),
+  devsell: S(box(10, 14, 50, 42, 5) + l("M18 44l10-10 8 6 14-16") + l("M44 24h6v6") + l("M78 20l14 24H64z") + l("M78 30v6M78 40v1")),
+  paybtn: S(box(16, 22, 62, 26, 13) + `<text x="47" y="39" font-size="10" font-family="JetBrains Mono" font-weight="700" fill="currentColor" stroke="none" text-anchor="middle">PAY</text>` + coin(94, 35, 12, "G")),
+  x402: S(box(10, 14, 56, 42, 5) + `<text x="38" y="40" font-size="15" font-family="JetBrains Mono" font-weight="700" fill="#d4602a" stroke="none" text-anchor="middle">402</text>` + l("M72 35h12") + coin(98, 35, 11, "$")),
+  tipjar: S(l("M40 16h40M44 16v6c-8 4-10 12-10 20v8a6 6 0 0 0 6 6h40a6 6 0 0 0 6-6v-8c0-8-2-16-10-20v-6") + coin(60, 40, 7) + coin(72, 48, 5)),
+  invoice: S(box(30, 8, 46, 56, 4) + l("M38 20h22M38 28h30M38 36h18") + l("M38 50h30") + c(88, 48, 10, acc) + l("M84 48l3 3 6-6")),
+  subscribe: S(c(46, 35, 20) + l("M46 23v12l8 6") + l("M76 22a26 26 0 0 1 0 26") + l("M84 16a34 34 0 0 1 0 38") + coin(100, 35, 7)),
+  mint: S(box(16, 10, 44, 50, 6) + l("M24 44l10-12 8 8 6-6 6 10") + c(30, 22, 4) + l("M72 35h12M92 25v20M82 35h20")),
+  tokenpage: S(coin(32, 35, 18, "") + l("M26 30h12M32 30v14") + box(62, 12, 46, 46, 5) + l("M70 24h30M70 32h22") + box(70, 40, 28, 10, 5, acc)),
+  airdrop: S(l("M36 22a24 16 0 0 1 48 0z") + l("M36 22l24 22 24-22M60 22v22") + box(52, 44, 16, 14, 2) + c(20, 50, 2, "currentColor") + c(100, 54, 2, "currentColor")),
+  holders: S(c(30, 26, 7) + l("M18 48c2-8 8-12 12-12s10 4 12 12") + c(60, 22, 9) + l("M44 50c2-10 10-16 16-16s14 6 16 16") + c(90, 26, 7) + l("M78 48c2-8 8-12 12-12s10 4 12 12") + l("M14 58h92")),
+  stocks: S(box(10, 12, 100, 46, 6) + l("M18 46l14-10 10 6 14-16 12 8 14-14 10 6") + `<text x="20" y="24" font-size="8" font-family="JetBrains Mono" font-weight="700" fill="#d4602a" stroke="none">NVDA</text>`),
+  weekend: S(box(12, 14, 56, 44, 5) + l("M12 26h56M24 10v8M56 10v8") + `<text x="40" y="47" font-size="11" font-family="JetBrains Mono" font-weight="700" fill="currentColor" stroke="none" text-anchor="middle">SAT</text>` + l("M80 46l8-10 8 4 10-14") + c(106, 26, 3, acc)),
+  pool: S(c(46, 36, 18) + c(74, 36, 18) + l("M60 24v24") + `<text x="40" y="39" font-size="8" font-family="JetBrains Mono" font-weight="700" fill="currentColor" stroke="none" text-anchor="middle">ETH</text><text x="80" y="39" font-size="8" font-family="JetBrains Mono" font-weight="700" fill="#d4602a" stroke="none" text-anchor="middle">TKN</text>`),
+  lending: S(l("M20 26l40-14 40 14z") + l("M28 30v20M44 30v20M60 30v20M76 30v20M92 30v20") + l("M18 54h84") + c(100, 14, 5, acc)),
+  bridge: S(l("M10 44c20-24 80-24 100 0") + l("M10 44h100M30 44V32M50 44V27M70 44V27M90 44V32") + c(18, 56, 3) + c(102, 56, 3, acc)),
+  explorer: S(box(8, 14, 64, 42, 5) + l("M16 26h20M16 34h40M16 42h30") + c(88, 32, 12) + l("M97 41l12 12")),
+  verify: S(box(18, 10, 44, 52, 4) + l("M26 22h24M26 30h28M26 38h18") + l("M80 18l18 6v12c0 12-8 18-18 22-10-4-18-10-18-22V24z") + l("M72 36l6 6 10-12")),
+  multisig: S(c(30, 22, 8) + c(30, 50, 8) + c(54, 36, 8) + l("M38 22l40 14M38 50l40-14M62 36h16") + box(80, 26, 28, 20, 4, acc)),
+  guestbook: S(l("M20 14h32a8 8 0 0 1 8 8v36a6 6 0 0 0-6-6H20z") + l("M100 14H68a8 8 0 0 0-8 8v36a6 6 0 0 1 6-6h34z") + l("M28 26h20M28 34h16M72 26h20M72 34h12")),
+  proof: S(box(14, 12, 40, 46, 4) + l("M22 24h24M22 32h20M22 40h22") + l("M60 35h10") + `<text x="94" y="39" font-size="10" font-family="JetBrains Mono" font-weight="700" fill="#d4602a" stroke="none" text-anchor="middle">#a3f…</text>` + box(74, 24, 40, 22, 4)),
+  poll: S(box(14, 12, 92, 46, 6) + box(24, 22, 50, 7, 3, acc) + box(24, 34, 32, 7, 3) + box(24, 46, 62, 7, 3) + l("M92 22l4 4 6-8")),
+  gate: S(box(16, 12, 52, 46, 6) + l("M42 24v10") + c(42, 40, 4) + box(30, 28, 24, 18, 3) + l("M36 28v-6a6 6 0 0 1 12 0v6") + coin(92, 35, 12, "T")),
+  agentpay: S(bot(12, 28) + l("M44 38h10") + box(58, 22, 22, 22, 4) + `<text x="69" y="37" font-size="9" font-family="JetBrains Mono" font-weight="700" fill="currentColor" stroke="none" text-anchor="middle">402</text>` + l("M84 33h8") + coin(104, 33, 9, "$")),
+};
+// ---------- the technologies ----------
+const B = [
+  ["mcp", "MCP", "agent", 2, "One URL that gives any AI app read-only tools for the chain: Claude, Cursor, ChatGPT and more.", ["MCP server", "Streamable HTTP", "Chain RPC"], ["Write a few read-only tools", "Serve them over Streamable HTTP", "Add the URL to an AI app and ask"]],
+  ["aimodel", "AI Model", "agent", 2, "Pick any AI model and let it answer from live chain data, with its sources.", ["Any AI model", "Tool calling", "Chain RPC"], ["Choose a model", "Give it the chain tools", "Show the answer with the blocks it read"]],
+  ["console", "Console", "agent", 1, "One prompt for everything: type a command, get the answer from the chain.", ["Browser", "Chain RPC", "Commands"], ["Open the console", "Type a command like block, token or wallet", "Read the answer, with links"]],
+  ["memory", "Recall", "agent", 2, "An AI that remembers: it writes what it learns as notes and reads them back next time.", ["Markdown notes", "MCP", "Search"], ["Let the AI save a note after each task", "Search the notes before answering", "Keep the notes in your own folder"]],
+  ["scheduled", "Night Shift", "agent", 2, "A task that runs on its own every day and writes a report.", ["Scheduler", "Chain reads", "Notes"], ["Pick a task, like a daily token report", "Run it on a schedule", "Compare with the last run"]],
+  ["skills", "Skill Pack", "agent", 1, "Small skills an agent can pick up: prices, token facts, alerts, summaries.", ["Skill files", "Tools", "Any agent"], ["Write one skill per job", "List them for the agent", "Let it choose the right one"]],
+  ["x402", "x402", "payment", 3, "Pay per call: an API answers 402 with a price in USDG and serves the data once paid.", ["x402", "EIP-3009 USDG", "Your API"], ["Return 402 with a USDG offer", "Verify the signed authorization", "Settle it and return the data"]],
+  ["seal", "Hash Stamp", "payment", 2, "Prove a note existed at a block without showing what it says.", ["SHA-256", "Your own wallet", "One transaction"], ["Hash the note on your device", "Record the hash from your wallet", "Anyone can check it later"]],
+  ["privacy", "Lockbox", "payment", 2, "Lock your notes with a password and see what the public can read about your wallet.", ["AES-256-GCM", "Wallet history"], ["Encrypt your notes locally", "Read your wallet's public footprint", "See what to keep private"]],
+  ["paybtn", "Checkout Button", "payment", 1, "A button any site can embed to take a payment in USDG.", ["USDG", "Wallet connect"], ["Ask the wallet to send USDG", "Wait for the transaction", "Show a receipt with the link"]],
+  ["invoice", "Smart Invoice", "payment", 2, "An invoice that marks itself paid when the USDG arrives.", ["USDG transfers"], ["Create an invoice with an amount", "Watch for the matching transfer", "Mark it paid with the transaction"]],
+  ["tipjar", "Tip Jar", "payment", 1, "A page where people tip a creator in USDG or ETH.", ["USDG", "ETH"], ["Show an address and a QR code", "Read incoming tips from the chain", "Show a live thank-you wall"]],
+  ["lens", "Token X-Ray", "data", 2, "Every fact about a token: creator, liquidity, holders, and whether it's verified.", ["Token calls", "Transfer logs", "Pool reads"], ["Read the token's contract", "Rebuild holders from transfers", "Show the pool and the creator's moves"]],
+  ["radar", "Fresh Mints", "data", 2, "Every new token as it launches, with its first facts.", ["Launchpad events"], ["Read launch events as blocks arrive", "Read each token's name and creator", "List them, newest first"]],
+  ["watcher", "Wallet Pulse", "data", 1, "Know the moment a wallet you follow moves.", ["Transfer logs", "Alerts"], ["Pick wallets to follow", "Filter transfers for them", "Send an alert with the link"]],
+  ["pool", "Liquidity Depth", "data", 3, "Any pool read straight from its contract: price, liquidity, latest swaps.", ["Uniswap V4", "Swap events"], ["Read the pool's state", "Decode price and liquidity", "List its latest swaps"]],
+  ["stocks", "Stock Drift", "data", 2, "Stock tokens on chain next to their oracle prices, even on weekends.", ["Stock tokens", "Oracle feeds", "DEX route"], ["Read each stock token's price", "Read its oracle price", "Show the gap"]],
+  ["map", "Holder Web", "data", 3, "Who holds a token and which holders are linked by the chain itself.", ["Transfer logs"], ["Rebuild holders", "Find direct transfers between them", "Draw the links"]],
+  ["proof", "Notary", "tools", 1, "Check if a text or file was recorded on chain, and when.", ["SHA-256", "Contract events"], ["Hash the text", "Search the recorded hashes", "Show the block and the recorder"]],
+  ["verify", "Source Check", "tools", 1, "Paste a contract and see if its source is verified, function by function.", ["Sourcify"], ["Ask Sourcify about the address", "Show the match type", "List what each function can do"]],
+  ["explorer", "Explorer Lite", "tools", 2, "A tiny explorer for one wallet or contract, in plain words.", ["RPC", "Logs", "ABI"], ["Read recent transactions", "Decode them", "Show them in plain words"]],
+  ["gate", "Token Gate", "tools", 2, "A page that opens only for holders of a token.", ["balanceOf", "Wallet sign-in"], ["Sign in with a wallet", "Check its balance", "Open the content if it holds enough"]],
+  ["poll", "Onchain Poll", "tools", 2, "A poll where each wallet votes once, counted on chain.", ["A small contract"], ["Deploy a one-vote-per-wallet contract", "Build the voting page", "Read the results from events"]],
+  ["guestbook", "Guestbook", "tools", 1, "Visitors leave a short message, stored on chain forever.", ["A small contract", "Events"], ["Deploy a message contract", "Let visitors sign one", "Show every message"]],
+];
+const CATS = [["all", "All " + B.length], ["agent", "Agent"], ["payment", "Payment"], ["data", "Data"], ["tools", "Tools"]];
+const $ = (id) => document.getElementById(id);
+$("cnt").textContent = B.length;
+$("cats").innerHTML = CATS.map(([k, n], i) => `<button type="button" data-k="${k}" class="${i ? "" : "on"}">${n}</button>`).join("");
+$("grid").innerHTML = B.map(([ic, name, cat, lv], i) => `<button type="button" class="tile" data-i="${i}" data-c="${cat}" style="animation-delay:${0.3 + i * 0.04}s"><span class="n">${String(i + 1).padStart(2, "0")}</span>${I[ic]}<b>${name}</b><span class="lv">${[1, 2, 3].map((k) => `<i class="${k <= lv ? "f" : ""}"></i>`).join("")}</span></button>`).join("");
+const tiles = [...document.querySelectorAll(".tile")];
+document.querySelectorAll("#cats button").forEach((b) => (b.onclick = () => { document.querySelectorAll("#cats button").forEach((x) => x.classList.toggle("on", x === b)); const k = b.dataset.k; tiles.forEach((t) => t.classList.toggle("dim", k !== "all" && t.dataset.c !== k)); }));
+function open(i) { const [ic, name, cat, lv, what, uses, steps] = B[i]; $("pc").innerHTML = `${I[ic]}<div class="k">Nº ${String(i + 1).padStart(2, "0")} · ${cat.toUpperCase()} · ${["", "A WEEKEND", "A FEW WEEKENDS", "A PROJECT"][lv]}</div><h2>${name}</h2><p>${what}</p><div class="k">IT USES</div><div class="uses">${uses.map((u) => `<span>${u}</span>`).join("")}</div><div class="k">FIRST VERSION</div><ol>${steps.map((s) => `<li>${s}</li>`).join("")}</ol><div class="status">Starter kit: in progress. Open-source code is added once it is built and tested on mainnet.</div>`;
+  $("panel").classList.add("on"); $("shade").classList.add("on"); $("panel").setAttribute("aria-hidden", "false"); }
+const close = () => { $("panel").classList.remove("on"); $("shade").classList.remove("on"); $("panel").setAttribute("aria-hidden", "true"); };
+tiles.forEach((t) => (t.onclick = () => (location.hash = "#/" + SL[+t.dataset.i]))); $("px").onclick = close; $("shade").onclick = close; addEventListener("keydown", (e) => { if (e.key === "Escape") close(); });
+// the highlight hops from blueprint to blueprint, like a finger on the map
+let hot = -1; const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+function point(t) { const g = $("gw").getBoundingClientRect(), r = t.getBoundingClientRect(); $("ptr").style.left = (r.left - g.left + r.width * 0.62) + "px"; $("ptr").style.top = (r.top - g.top + r.height * 0.55) + "px"; }
+function hop() { const live = tiles.filter((t) => !t.classList.contains("dim")); if (!live.length) return; tiles.forEach((t) => t.classList.remove("hot")); let n; do { n = Math.floor(Math.random() * live.length); } while (live.length > 1 && live[n] === tiles[hot]); live[n].classList.add("hot"); hot = tiles.indexOf(live[n]); point(live[n]); if (window.wiresReady) lightWires(); }
+if (!reduce) { hop(); setInterval(hop, 900); }
+
+
+// ---- one page per technology: plain words first, then how it works and how to build it ----
+const D = {
+  mcp: { plain: "MCP (Model Context Protocol) is a plug that lets AI apps like Claude, Cursor or ChatGPT use outside tools. Build an MCP server once, and any of those apps can call your tools by adding one URL.", example: "You ask your AI: \"what is the newest token on Robinhood Chain?\" The AI calls your MCP tool, the tool reads the chain, and the AI answers with the block number.", who: "Builders who want their data or service usable from any AI app.", flow: ["AI app", "MCP server", "Robinhood Chain"] },
+  aimodel: { plain: "Lets people pick from many AI models (fast, cheap, or smart) and have the model answer from live chain data instead of from memory.", example: "Choose a free model, ask \"how many holders does this token have?\", and get an answer with the source it read.", who: "Anyone who wants AI answers about the chain without being tied to one model.", flow: ["You", "AI model", "Chain tools"] },
+  console: { plain: "A text box where you type short commands, like a terminal in the browser. Each command reads something from the chain and shows the answer straight away.", example: "Type `block` to see the latest block, or `token 0x…` to see a token's facts.", who: "People who like typing over clicking, and builders testing ideas quickly.", flow: ["Command", "Console", "Answer + link"] },
+  memory: { plain: "Most AI chats forget everything when you close them. Recall gives an AI a notebook: it writes down what it learns as notes and reads them back next time.", example: "Today the AI notes \"wallet A bought token X\". Tomorrow you ask about wallet A, and it remembers.", who: "Anyone running an AI agent that should get smarter over time.", flow: ["AI", "Notes folder", "Next answer"] },
+  scheduled: { plain: "A task that runs by itself on a timer, even while you sleep. It does the job, writes a report, and shows what changed since last time.", example: "Every morning at 00:00 UTC it writes a report on your token: holders, price, and what moved overnight.", who: "Project teams and holders who want a daily report without doing it by hand.", flow: ["Timer", "Task", "Daily report"] },
+  skills: { plain: "Small ready-made abilities an AI agent can learn, each doing one job well. The agent picks the right skill for each request.", example: "One skill reads prices, one checks a token, one sends an alert. Ask for anything and the agent uses the right one.", who: "Builders who want to give an agent new abilities without rewriting it.", flow: ["Request", "Skill pack", "The right skill"] },
+  x402: { plain: "x402 lets an API charge per use. Instead of a monthly plan or an account, each request is paid on the spot in USDG, often a fraction of a cent.", example: "An AI asks your weather API for data. The API replies \"402: 0.01 USDG please\", the AI pays, and gets the data.", who: "API sellers who want to get paid per call, and AIs that need to buy data.", flow: ["Request", "402 + price", "Paid → data"] },
+  seal: { plain: "Proves a document existed at a certain time without showing what it says. Only a fingerprint (hash) of it goes on the chain.", example: "Stamp your idea today. Months later, show the file: anyone can check it matches the fingerprint from that day.", who: "Creators, researchers and teams who need proof of when something was written.", flow: ["Your file", "Fingerprint", "On chain, dated"] },
+  privacy: { plain: "Two things: lock your notes with a password so only you can read them, and see what strangers can learn about your wallet from public data.", example: "Lock your trading notes, then check whether your wallet shows when you usually trade.", who: "Anyone who keeps notes about money or wants to understand what their wallet reveals.", flow: ["Your notes", "Lockbox", "Only you"] },
+  paybtn: { plain: "A button any website can add to accept payments in USDG, a dollar-pegged token, with no card processor in between.", example: "A shop adds a \"Pay 5 USDG\" button. The buyer clicks, approves in their wallet, and gets a receipt with the transaction.", who: "Small shops, creators and services that want simple crypto payments.", flow: ["Buyer clicks", "Wallet pays", "Receipt"] },
+  invoice: { plain: "An invoice that knows when it's been paid. It watches the chain and marks itself paid the moment the right amount arrives.", example: "Send a client an invoice for 200 USDG. When they pay, it turns green and shows the transaction.", who: "Freelancers and small businesses billing in USDG.", flow: ["Invoice", "Payment arrives", "Marked paid"] },
+  tipjar: { plain: "A page where fans can send a creator a small tip in USDG or ETH, with a live wall showing every thank-you.", example: "A streamer shares their tip page. Each tip pops up on the wall with the amount.", who: "Creators, writers and open-source builders.", flow: ["Fan", "Tip jar", "Thank-you wall"] },
+  lens: { plain: "Looks inside a token like an X-ray: who made it, who holds it, where its liquidity sits, and whether its code is verified.", example: "Paste a token address before buying and see that one wallet holds 40% of it.", who: "Traders who want facts before they buy.", flow: ["Token address", "X-Ray", "Facts + links"] },
+  radar: { plain: "Lists new tokens the moment they're created, with their first facts: who launched them and how they started.", example: "A new token appears. You see it 10 seconds later, with the creator's first buy.", who: "Traders and researchers watching new launches.", flow: ["New launch", "Fresh Mints", "Live list"] },
+  watcher: { plain: "Follows the wallets you choose and tells you as soon as one of them moves money.", example: "Follow a big holder's wallet. When it sells, you get an alert with the link.", who: "Holders, traders and teams keeping an eye on key wallets.", flow: ["Wallets you follow", "Wallet Pulse", "Alert"] },
+  pool: { plain: "Shows how deep a trading pool is: how much money is in it and how much a trade would move the price.", example: "Before a big buy, see that 2,000 USDG would move the price by 3%.", who: "Traders sizing orders, and projects checking their liquidity.", flow: ["Pool", "Liquidity Depth", "Price impact"] },
+  stocks: { plain: "Stock tokens like NVDA trade on chain all week. Stock Drift shows how far their on-chain price is from the real stock price, even on weekends.", example: "On Saturday the stock market is closed, but NVDA on chain is 0.4% above Friday's close.", who: "People trading stock tokens, and anyone curious about weekend prices.", flow: ["Stock token", "Oracle price", "The gap"] },
+  map: { plain: "Draws a web of a token's holders and the links between them, so groups of related wallets become visible.", example: "Five \"different\" top holders all got their tokens from the same wallet. The web shows it.", who: "Traders and researchers checking how spread out a token really is.", flow: ["Holders", "Transfers", "The web"] },
+  proof: { plain: "Checks whether a text or file was recorded on chain before, and when. Like a notary, it confirms the record without changing it.", example: "Someone claims they posted a statement last month. Paste it and see the block where it was recorded.", who: "Anyone verifying claims, documents or announcements.", flow: ["Text or file", "Notary", "Recorded when?"] },
+  verify: { plain: "Tells you if a smart contract's source code is public and matches what's running, and what each function can do.", example: "Paste a token contract and see whether its owner can mint more tokens.", who: "Anyone about to use or buy into a contract.", flow: ["Contract", "Source Check", "What it can do"] },
+  explorer: { plain: "A tiny explorer for one wallet or contract that explains each transaction in plain words instead of raw codes.", example: "Instead of \"0xa9059cbb…\", you read \"sent 50 USDG to 0x12…\".", who: "Newcomers who find block explorers confusing.", flow: ["Address", "Explorer Lite", "Plain words"] },
+  gate: { plain: "A page, chat or file that opens only for people holding a certain token. It's like a members-only door.", example: "Hold 1,000 of your community token to unlock the private updates page.", who: "Communities and projects with holder-only content.", flow: ["Wallet", "Token check", "Door opens"] },
+  poll: { plain: "A vote where each wallet gets one vote and every vote is counted on chain, so nobody can fake the result.", example: "Your community votes on the next feature. Anyone can recount the votes.", who: "Communities and small DAOs.", flow: ["Question", "One vote per wallet", "Open results"] },
+  guestbook: { plain: "A page where visitors leave a short message that's stored on chain forever.", example: "Visitors to your launch page sign it with \"gm\", and the messages stay there.", who: "Builders learning to write their first contract, and fun community pages.", flow: ["Visitor", "Message", "On chain forever"] },
+};
+const slug = (n) => n.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+const SL = B.map((b) => slug(b[1]));
+const LVL = ["", "A weekend", "A few weekends", "A project"];
+function pageHtml(i) {
+  const [ic, name, cat, lv, what, uses, steps] = B[i], d = D[ic] || {}, prev = (i + B.length - 1) % B.length, next = (i + 1) % B.length;
+  const md = (t) => String(t).replace(/`([^`]+)`/g, "<code>$1</code>");
+  const flow = (d.flow || []).map((f, k) => `<div class="fn"><span>${String(k + 1).padStart(2, "0")}</span>${f}</div>${k < d.flow.length - 1 ? '<div class="fw"><i></i></div>' : ""}`).join("");
+  return `<div class="pg-top"><a href="#/" class="back">← Back to the atlas</a><span>Nº ${String(i + 1).padStart(2, "0")} / ${B.length} · ${cat.toUpperCase()}</span></div>
+  <section class="pg-hero"><div class="pg-ic">${I[ic].replace("<svg ", '<svg class="pgsvg" ')}</div><div><div class="pg-k">${cat.toUpperCase()} · ${LVL[lv].toUpperCase()}</div><h2 class="pg-h">${name}</h2><p class="pg-lead">${what}</p><div class="lv big">${[1, 2, 3].map((q) => `<i class="${q <= lv ? "f" : ""}"></i>`).join("")}<em>${LVL[lv]} to a first version</em></div></div></section>
+  <section class="pg-grid">
+    <div class="pc wide"><b>WHAT IS IT, IN PLAIN WORDS?</b><p>${md(d.plain || what)}</p></div>
+    <div class="pc"><b>AN EXAMPLE</b><p>${md(d.example || "")}</p></div>
+    <div class="pc"><b>WHO IS IT FOR?</b><p>${md(d.who || "")}</p></div>
+    <div class="pc wide"><b>HOW IT WORKS</b><div class="flow">${flow}</div></div>
+    <div class="pc"><b>WHAT IT USES</b><div class="uses">${uses.map((u) => `<span>${u}</span>`).join("")}</div></div>
+    <div class="pc"><b>BUILD THE FIRST VERSION</b><ol>${steps.map((s) => `<li>${s}</li>`).join("")}</ol></div>
+    <div class="pc wide kit"><b>STARTER KIT</b><p>In progress. Open-source code and a one-line start are added here once this is built and tested on Robinhood Chain mainnet.</p></div>
+  </section>
+  <nav class="pg-nav"><a href="#/${SL[prev]}"><small>← PREVIOUS</small>${B[prev][1]}</a><a href="#/">ALL ${B.length}</a><a href="#/${SL[next]}" class="r"><small>NEXT →</small>${B[next][1]}</a></nav>`;
+}
+function route() {
+  const s = decodeURIComponent((location.hash.match(/^#\/(.+)$/) || [])[1] || ""), i = SL.indexOf(s);
+  if (i >= 0) { $("page").innerHTML = pageHtml(i); document.body.classList.add("on-page"); document.title = B[i][1] + " · ATLAS"; scrollTo(0, 0);
+    const svg = $("page").querySelector(".pgsvg"); svg.querySelectorAll("path,rect,circle").forEach((el, k) => { let L = 200; try { L = Math.ceil(el.getTotalLength()) + 2; } catch {} el.style.setProperty("--len", L); el.style.setProperty("--d", `${-k * 0.2}s`); }); }
+  else { document.body.classList.remove("on-page"); document.title = "ATLAS · Things to build on Robinhood Chain"; if (window.wiresReady) setTimeout(wire, 50); }
+}
+addEventListener("hashchange", route);
+
+// ---- wires: every tile is joined to its right and lower neighbour, and signals travel along them ----
+const WS = "http://www.w3.org/2000/svg", wires = $("wires"); let edges = [], sigs = [];
+function wire() {
+  const g = $("gw").getBoundingClientRect(), live = tiles.filter((t) => !t.classList.contains("dim")), box = new Map(live.map((t) => { const r = t.getBoundingClientRect(); return [t, { l: r.left - g.left, t: r.top - g.top, r: r.right - g.left, b: r.bottom - g.top }]; }));
+  const rows = []; live.forEach((t) => { const b = box.get(t), row = rows.find((x) => Math.abs(x.y - b.t) < 8); row ? row.items.push(t) : rows.push({ y: b.t, items: [t] }); }); rows.sort((a, b) => a.y - b.y); rows.forEach((r) => r.items.sort((a, b) => box.get(a).l - box.get(b).l));
+  edges = []; const add = (a, b, pts) => edges.push({ a, b, pts });
+  rows.forEach((row, ri) => { row.items.forEach((t, ci) => { const A = box.get(t), cy = (A.t + A.b) / 2, cx = (A.l + A.r) / 2;
+      const nb = row.items[ci + 1]; if (nb) { const B = box.get(nb); add(t, nb, [[A.r, cy], [B.l, cy]]); }
+      const below = rows[ri + 1] && rows[ri + 1].items.reduce((best, u) => { const U = box.get(u), d = Math.abs((U.l + U.r) / 2 - cx); return !best || d < best.d ? { u, d } : best; }, null);
+      if (below) { const B = box.get(below.u), bx = (B.l + B.r) / 2, my = (A.b + B.t) / 2; add(t, below.u, bx === cx ? [[cx, A.b], [cx, B.t]] : [[cx, A.b], [cx, my], [bx, my], [bx, B.t]]); } }); });
+  wires.innerHTML = ""; edges.forEach((e) => { const d = "M" + e.pts.map((p) => p.join(" ")).join(" L"); const path = document.createElementNS(WS, "path"); path.setAttribute("d", d); path.setAttribute("class", "w"); wires.appendChild(path); e.el = path; e.len = path.getTotalLength();
+    [e.pts[0], e.pts[e.pts.length - 1]].forEach((p, k) => { const c = document.createElementNS(WS, "circle"); c.setAttribute("cx", p[0]); c.setAttribute("cy", p[1]); c.setAttribute("r", 3.4); c.setAttribute("class", "port"); wires.appendChild(c); (e.ports = e.ports || []).push(c); }); });
+  sigs.forEach((sg) => sg.el.remove()); sigs = []; for (let k = 0; k < Math.min(10, edges.length); k++) { const c = document.createElementNS(WS, "circle"); c.setAttribute("r", 3.6); c.setAttribute("class", "sig"); wires.appendChild(c); sigs.push({ el: c, e: edges[Math.floor(Math.random() * edges.length)], t: Math.random(), dir: Math.random() < 0.5 ? 1 : -1, sp: 0.006 + Math.random() * 0.008 }); }
+  window.wiresReady = true; lightWires(); }
+function lightWires() { const h = tiles[hot]; edges.forEach((e) => { const on = h && (e.a === h || e.b === h); e.el.classList.toggle("hot", !!on); (e.ports || []).forEach((p) => p.classList.toggle("hot", !!on)); }); }
+function signals() { for (const sg of sigs) { if (!sg.e || !sg.e.el.isConnected) continue; sg.t += sg.sp * sg.dir; if (sg.t > 1 || sg.t < 0) { const at = sg.dir > 0 ? sg.e.b : sg.e.a, next = edges.filter((x) => x !== sg.e && (x.a === at || x.b === at)); sg.e = next.length ? next[Math.floor(Math.random() * next.length)] : edges[Math.floor(Math.random() * edges.length)]; sg.dir = sg.e.a === at ? 1 : -1; sg.t = sg.dir > 0 ? 0 : 1; }
+    const p = sg.e.el.getPointAtLength(sg.e.len * Math.max(0, Math.min(1, sg.t))); sg.el.setAttribute("cx", p.x); sg.el.setAttribute("cy", p.y); }
+  requestAnimationFrame(signals); }
+setTimeout(() => { wire(); signals(); }, 1600); addEventListener("resize", () => wire());
+document.querySelectorAll("#cats button").forEach((b) => b.addEventListener("click", () => setTimeout(wire, 50)));
+
+// ---- the drafting table: a pencil sketches each technology, then stamps it ----
+$("tape").innerHTML = (B.map((b, i) => `<span>${b[1]}<i>Nº ${String(i + 1).padStart(2, "0")}</i></span>`).join("")).repeat(2);
+const dsvg = $("draft"), pen = $("pencil"); let di = 0;
+function penAt(el, len, t) { try { const pt = el.getPointAtLength(len * t), r = dsvg.getBoundingClientRect(), sheet = dsvg.parentElement.getBoundingClientRect(), sx = r.width / 120, sy = r.height / 70; pen.style.left = (r.left - sheet.left + pt.x * sx) + "px"; pen.style.top = (r.top - sheet.top + pt.y * sy) + "px"; } catch {} }
+async function drafting() {
+  for (;;) { const [ic, name, cat, lv, what] = B[di % B.length]; $("dno").textContent = "Nº " + String((di % B.length) + 1).padStart(2, "0"); $("dname").textContent = name; $("dwhat").textContent = what; $("stampd").classList.remove("on");
+    dsvg.innerHTML = I[ic].replace(/^<svg[^>]*>/, "").replace(/<\/svg>$/, ""); dsvg.setAttribute("fill", "none"); dsvg.setAttribute("stroke", "currentColor"); dsvg.setAttribute("stroke-linecap", "round"); dsvg.setAttribute("stroke-linejoin", "round");
+    const parts = [...dsvg.querySelectorAll("path,rect,circle,text")];
+    parts.forEach((el) => { if (el.tagName === "text") { el.style.opacity = 0; return; } let L = 100; try { L = el.getTotalLength(); } catch {} el.dataset.l = L; el.style.strokeDasharray = L; el.style.strokeDashoffset = L; const f = el.getAttribute("fill"); if (f && f !== "none") { el.dataset.f = f; el.setAttribute("fill", "none"); } });
+    for (const el of parts) { if (el.tagName === "text") { el.style.transition = "opacity .3s"; el.style.opacity = 1; await new Promise((r) => setTimeout(r, 150)); continue; } const L = +el.dataset.l, steps = Math.max(6, Math.min(26, Math.round(L / 6)));
+      for (let k = 1; k <= steps; k++) { const t = k / steps; el.style.strokeDashoffset = L * (1 - t); penAt(el, L, t); await new Promise((r) => setTimeout(r, 20)); }
+      if (el.dataset.f) { el.style.transition = "fill .3s"; el.setAttribute("fill", el.dataset.f); } }
+    $("stampd").classList.add("on"); await new Promise((r) => setTimeout(r, 1400)); di++; }
+}
+route();
+if (!reduce) drafting(); else { dsvg.innerHTML = I[B[0][0]].replace(/^<svg[^>]*>/, "").replace(/<\/svg>$/, ""); $("dname").textContent = B[0][1]; $("dwhat").textContent = B[0][4]; }
+
+// ---- life ----
+tiles.forEach((t, i) => t.querySelectorAll("svg path,svg rect,svg circle").forEach((el, j) => { let L = 200; try { L = Math.ceil(el.getTotalLength()) + 2; } catch {} el.style.setProperty("--len", L); el.style.setProperty("--d", `${-((i * 0.41 + j * 0.17) % 7)}s`); }));
+tiles.forEach((t) => { t.addEventListener("pointermove", (e) => { const r = t.getBoundingClientRect(), x = (e.clientX - r.left) / r.width - 0.5, y = (e.clientY - r.top) / r.height - 0.5; t.style.transform = `perspective(500px) rotateX(${-y * 10}deg) rotateY(${x * 12}deg) translateY(-3px)`; }); t.addEventListener("pointerleave", () => (t.style.transform = "")); });
+// title types in
+document.querySelectorAll("h1").forEach((h) => { let k = 0; const walk = (n) => { [...n.childNodes].forEach((c) => { if (c.nodeType === 3) { const f = document.createDocumentFragment(); [...c.textContent].forEach((ch) => { const sp = document.createElement("span"); sp.className = "t"; if (ch === " ") sp.innerHTML = "&nbsp;"; else sp.textContent = ch; sp.style.animationDelay = (k++ * 0.03) + "s"; f.appendChild(sp); }); c.replaceWith(f); } else walk(c); }); }; walk(h); });
+// doodles drifting on the paper
+["+", "○", "✶", "◇", "+", "○"].forEach((d, i) => { const el = document.createElement("div"); el.className = "doodle"; el.textContent = d; el.style.cssText += `left:${[4, 92, 8, 88, 50, 70][i]}%;top:${[30, 22, 70, 64, 92, 45][i]}%;font-size:${18 + (i % 3) * 8}px;animation-delay:${-i * 3}s`; document.body.appendChild(el); });
+
+
+</script>
+</body>
+</html>
