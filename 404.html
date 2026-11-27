@@ -26,7 +26,7 @@ h1 .l2{display:block;color:var(--hi)}h1 b{font-weight:800}
 .cats{display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin:22px 0 22px}
 .cats button{font:600 12px "JetBrains Mono";color:var(--mute);background:transparent;border:1.5px solid var(--line);border-radius:30px;padding:7px 14px;cursor:pointer;transition:.2s}
 .cats button:hover{color:var(--ink);border-color:var(--ink)}.cats button.on{background:var(--ink);color:#fff;border-color:var(--ink)}
-.grid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:26px 24px;position:relative;z-index:1}
+.grid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:40px 24px;position:relative;z-index:1}
 .tile{position:relative;border:1.5px solid var(--line);border-radius:6px;background:var(--card);padding:10px 10px 9px;cursor:pointer;transition:transform .25s,border-color .25s,background .25s,opacity .3s;text-align:left;color:var(--ink);font:inherit}
 .tile:hover{border-color:var(--ink);transform:translateY(-2px)}
 .tile.hot{border-color:var(--hi);background:#fff}
@@ -336,7 +336,7 @@ function wire() {
       const below = rows[ri + 1] && rows[ri + 1].items.reduce((best, u) => { const U = box.get(u), d = Math.abs((U.l + U.r) / 2 - cx); return !best || d < best.d ? { u, d } : best; }, null);
       if (below) { const B = box.get(below.u), bx = (B.l + B.r) / 2, my = (A.b + B.t) / 2; add(t, below.u, bx === cx ? [[cx, A.b], [cx, B.t]] : [[cx, A.b], [cx, my], [bx, my], [bx, B.t]]); } }); });
   wires.innerHTML = ""; edges.forEach((e) => { const d = "M" + e.pts.map((p) => p.join(" ")).join(" L"); const path = document.createElementNS(WS, "path"); path.setAttribute("d", d); path.setAttribute("class", "w"); wires.appendChild(path); e.el = path; e.len = path.getTotalLength();
-    [e.pts[0], e.pts[e.pts.length - 1]].forEach((p, k) => { const c = document.createElementNS(WS, "circle"); c.setAttribute("cx", p[0]); c.setAttribute("cy", p[1]); c.setAttribute("r", 3.4); c.setAttribute("class", "port"); wires.appendChild(c); (e.ports = e.ports || []).push(c); }); });
+    [e.pts[0], e.pts[e.pts.length - 1]].forEach((p, k) => { const c = document.createElementNS(WS, "circle"); c.setAttribute("cx", p[0]); c.setAttribute("cy", p[1]); c.setAttribute("r", 2.6); c.setAttribute("class", "port"); wires.appendChild(c); (e.ports = e.ports || []).push(c); }); });
   sigs.forEach((sg) => sg.el.remove()); sigs = []; for (let k = 0; k < Math.min(10, edges.length); k++) { const c = document.createElementNS(WS, "circle"); c.setAttribute("r", 3.6); c.setAttribute("class", "sig"); wires.appendChild(c); sigs.push({ el: c, e: edges[Math.floor(Math.random() * edges.length)], t: Math.random(), dir: Math.random() < 0.5 ? 1 : -1, sp: 0.006 + Math.random() * 0.008 }); }
   window.wiresReady = true; lightWires(); }
 function lightWires() { const h = tiles[hot]; edges.forEach((e) => { const on = h && (e.a === h || e.b === h); e.el.classList.toggle("hot", !!on); (e.ports || []).forEach((p) => p.classList.toggle("hot", !!on)); }); }
