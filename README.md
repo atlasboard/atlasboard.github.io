@@ -50,7 +50,9 @@ Then open http://localhost:8000. The `-s` flag sends every path to the page, so 
 
 ## Contact
 
-hello@atlasboard.dev
+- X: [@atlasboard_](https://x.com/atlasboard_)
+- Email: hello@atlasboard.dev
+- Token: CA coming soon, launching on [Pons](https://ponsfamily.com/launchpad/)
 
 ## License
 
