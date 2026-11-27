@@ -63,7 +63,7 @@ h1 .l2{display:block;color:var(--hi)}h1 b{font-weight:800}
 @keyframes beat{50%{transform:scale(1.05);box-shadow:0 0 0 14px rgba(119,187,144,.18),0 0 0 30px rgba(119,187,144,.06)}}
 .note{position:absolute;background:var(--card2);border:1.5px solid var(--bd);border-radius:4px;padding:8px 10px;font:500 11px/1.5 "JetBrains Mono";color:var(--ink);box-shadow:3px 3px 0 var(--sh);white-space:pre;animation:float 6s ease-in-out infinite;min-width:120px}
 .note b{display:block;font-weight:700;color:var(--hi);font-size:10px;letter-spacing:.06em;margin-bottom:2px}
-.note.y{background:var(--card2)6d8}.note.p{background:#1d3326}
+.note.y{background:#2a2717}.note.p{background:#1d3326}
 @keyframes float{50%{transform:translateY(-8px) rotate(var(--r,0deg))}}
 .note .cur{display:inline-block;width:6px;height:11px;background:var(--hi);vertical-align:-1px;animation:bl 1s steps(1) infinite}
 .live{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:0 0 6px}
@@ -88,7 +88,7 @@ h1 .t{display:inline-block;opacity:0;transform:translateY(.4em);animation:tin .5
 @media (max-width:800px){.live{grid-template-columns:1fr 1fr}.board{height:300px}.board .note{display:none}.board .note.keep{display:block}}
 
 .desk{display:grid;grid-template-columns:1.6fr 1fr;gap:14px;margin:26px 0 18px}
-.sheet{position:relative;height:380px;border:1.5px solid var(--bd);border-radius:10px;background:var(--card2)df8;box-shadow:6px 6px 0 var(--sh);overflow:hidden;background-image:linear-gradient(rgba(119,187,144,.08) 1px,transparent 1px),linear-gradient(90deg,rgba(119,187,144,.08) 1px,transparent 1px);background-size:22px 22px}
+.sheet{position:relative;height:380px;border:1.5px solid var(--bd);border-radius:10px;background:#121416;box-shadow:6px 6px 0 var(--sh);overflow:hidden;background-image:linear-gradient(rgba(119,187,144,.08) 1px,transparent 1px),linear-gradient(90deg,rgba(119,187,144,.08) 1px,transparent 1px);background-size:22px 22px}
 .sh-k{position:absolute;top:12px;left:14px;right:14px;display:flex;justify-content:space-between;font:700 11px "JetBrains Mono";letter-spacing:.18em;color:var(--mute)}
 .sh-k span:last-child{color:var(--hi)}
 #draft{position:absolute;left:12%;top:16%;width:76%;height:62%;color:var(--ink);overflow:visible}
@@ -128,7 +128,7 @@ body.on-page #page{display:block}body.on-page .wrap{display:none}
 .pg-top{display:flex;justify-content:space-between;align-items:center;padding:24px 0 10px;font:600 12px "JetBrains Mono";letter-spacing:.12em;color:var(--mute)}
 .back{color:var(--ink);text-decoration:none;border:1.5px solid var(--bd);border-radius:30px;padding:8px 14px;box-shadow:3px 3px 0 var(--sh);transition:.15s}.back:hover{transform:translate(-1px,-1px);box-shadow:4px 4px 0 var(--hi)}
 .pg-hero{display:grid;grid-template-columns:340px 1fr;gap:30px;align-items:center;padding:22px 0 26px}
-.pg-ic{border:1.5px solid var(--bd);border-radius:12px;background:var(--card2)df8;box-shadow:6px 6px 0 var(--sh);padding:26px;background-image:linear-gradient(rgba(119,187,144,.08) 1px,transparent 1px),linear-gradient(90deg,rgba(119,187,144,.08) 1px,transparent 1px);background-size:20px 20px;animation:rise .5s backwards}
+.pg-ic{border:1.5px solid var(--bd);border-radius:12px;background:#121416;box-shadow:6px 6px 0 var(--sh);padding:26px;background-image:linear-gradient(rgba(119,187,144,.08) 1px,transparent 1px),linear-gradient(90deg,rgba(119,187,144,.08) 1px,transparent 1px);background-size:20px 20px;animation:rise .5s backwards}
 .pgsvg{width:100%;height:190px;color:var(--ink)}
 .pgsvg path,.pgsvg rect,.pgsvg circle{stroke-dasharray:var(--len,300);animation:draw 7s ease-in-out infinite;animation-delay:var(--d,0s)}
 .pg-k{font:700 12px "JetBrains Mono";letter-spacing:.2em;color:var(--hi)}
@@ -140,7 +140,7 @@ body.on-page #page{display:block}body.on-page .wrap{display:none}
 .pc.wide{grid-column:1/-1}.pc b{display:block;font:700 11.5px "JetBrains Mono";letter-spacing:.18em;color:var(--hi);margin-bottom:10px}
 .pc p{margin:0;font-size:16.5px;line-height:1.65}.pc code{font:600 14px "JetBrains Mono";background:var(--card2);border:1px solid var(--line);padding:1px 6px;border-radius:4px}
 .pc ol{margin:0;padding-left:20px;line-height:1.85;font-size:15.5px}
-.pc.kit{border:1.5px dashed var(--hi);background:var(--card2)7f1}
+.pc.kit{border:1.5px dashed var(--hi);background:#15201a}
 .flow{display:flex;align-items:center;gap:0;flex-wrap:wrap}
 .fn{flex:1;min-width:150px;border:1.5px solid var(--bd);border-radius:8px;background:var(--card2);padding:16px;font:700 15px "JetBrains Mono";text-align:center;box-shadow:3px 3px 0 var(--sh)}.fn span{display:block;font-size:11px;color:var(--hi);margin-bottom:4px}
 .fw{width:56px;height:2px;position:relative;background:repeating-linear-gradient(90deg,var(--ink) 0 5px,transparent 5px 10px);animation:flowx 1s linear infinite}
@@ -159,14 +159,14 @@ body.on-page #page{display:block}body.on-page .wrap{display:none}
 .dm-b{font:700 13px "JetBrains Mono";border:1.5px solid var(--bd);border-radius:8px;padding:11px 16px;background:var(--hi);color:var(--on);border-color:var(--hi);cursor:pointer;box-shadow:3px 3px 0 var(--sh);transition:.15s}.dm-b:hover{transform:translate(-1px,-1px)}.dm-b.ghost{background:var(--card2);color:var(--ink);border-color:var(--bd);box-shadow:3px 3px 0 var(--sh)}
 .dm-o{margin-top:10px}.dm-n{font:500 12.5px/1.6 "JetBrains Mono";color:var(--mute);margin:6px 0}.dm-e{font:600 13px "JetBrains Mono";color:#ef7b6e}.dm-okt{font:800 14px "JetBrains Mono";color:#77bb90}
 .dm-card{border:1.5px solid var(--line);border-radius:8px;padding:12px 14px;margin:8px 0;background:var(--card)}.dm-card b{font:800 12px "JetBrains Mono";letter-spacing:.12em}.dm-card p{margin:6px 0 0;font-size:14.5px;line-height:1.55}
-.dm-card.ok{border-color:#77bb90}.dm-card.ok b{color:#77bb90}.dm-card.bad{border-color:#ef7b6e;background:var(--card2)4f2}.dm-card.bad b{color:#ef7b6e}
+.dm-card.ok{border-color:#77bb90}.dm-card.ok b{color:#77bb90}.dm-card.bad{border-color:#ef7b6e;background:#2a1716}.dm-card.bad b{color:#ef7b6e}
 .dm-h{font:700 11px "JetBrains Mono";letter-spacing:.16em;color:var(--mute);margin:14px 0 6px}
-.dm-chips{display:flex;flex-wrap:wrap;gap:5px}.dm-chip{font:500 11.5px "JetBrains Mono";border:1px solid var(--line);border-radius:6px;padding:3px 7px;background:var(--card)}.dm-chip.warn{border-color:#ef7b6e;color:#ef7b6e;background:var(--card2)4f2}
+.dm-chips{display:flex;flex-wrap:wrap;gap:5px}.dm-chip{font:500 11.5px "JetBrains Mono";border:1px solid var(--line);border-radius:6px;padding:3px 7px;background:var(--card)}.dm-chip.warn{border-color:#ef7b6e;color:#ef7b6e;background:#2a1716}
 .dm-t{width:100%;border-collapse:collapse;font:500 13.5px "JetBrains Mono";margin:6px 0}.dm-t th{text-align:left;font-size:11px;letter-spacing:.12em;color:var(--mute);padding:8px 6px;border-bottom:1.5px solid var(--bd)}.dm-t td{padding:9px 6px;border-bottom:1px solid var(--line)}.dm-t a{color:var(--ink)}
 .dm-bar{display:inline-block;width:90px;height:6px;border-radius:3px;background:var(--line);overflow:hidden;vertical-align:middle}.dm-bar i{display:block;height:100%;background:var(--hi)}
 .dm-f{display:grid;grid-template-columns:2fr 1fr 1fr;gap:10px}.dm-f label{display:flex;flex-direction:column;gap:5px;font:700 11px "JetBrains Mono";letter-spacing:.1em;color:var(--mute)}.dm-f input{min-width:0}
 .dm-inv{border:1.5px dashed var(--ink);border-radius:10px;padding:18px;background:var(--card)}.dm-inv-h{display:flex;justify-content:space-between;align-items:center}.dm-inv-h b{font:800 14px "JetBrains Mono";letter-spacing:.2em}
-.dm-st{font:800 11px "JetBrains Mono";letter-spacing:.14em;padding:6px 10px;border-radius:20px}.dm-st.wait{background:var(--card2)6d8;color:#e3c565;animation:bl 1.6s infinite}.dm-st.ok{background:#77bb90;color:var(--on)}
+.dm-st{font:800 11px "JetBrains Mono";letter-spacing:.14em;padding:6px 10px;border-radius:20px}.dm-st.wait{background:#2a2717;color:#e3c565;animation:bl 1.6s infinite}.dm-st.ok{background:#77bb90;color:var(--on)}
 .dm-inv-a{font:800 48px "JetBrains Mono";margin:10px 0 4px}.dm-inv-a small{font-size:18px;color:var(--mute)}
 .dm-prev{display:flex;align-items:center;gap:14px;padding:18px;border:1.5px dashed var(--line);border-radius:10px;background:var(--card)}.dm-pay{font:600 15px system-ui;padding:12px 20px;border-radius:30px;border:0;background:#151515;color:#fff;cursor:pointer}
 .dm-code{width:100%;font:500 11.5px "JetBrains Mono"!important;resize:vertical}
@@ -204,9 +204,9 @@ body.on-page #page{display:block}body.on-page .wrap{display:none}
 .hero2 h1{text-align:left;margin:16px 0 0;font-size:clamp(36px,4.6vw,62px)}.h2p{font-size:18px;line-height:1.6;color:var(--mute);margin:18px 0 0;max-width:600px}
 .h2b{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}.btn-a,.btn-b{font:700 14px "JetBrains Mono";text-decoration:none;padding:13px 18px;border-radius:30px;border:1.5px solid var(--bd);transition:.15s}.btn-a{background:var(--hi);color:var(--on);box-shadow:4px 4px 0 var(--sh)}.btn-b{background:var(--card2);color:var(--ink);box-shadow:4px 4px 0 var(--sh)}.btn-a:hover,.btn-b:hover{transform:translate(-2px,-2px)}
 .h2s{display:flex;gap:18px;flex-wrap:wrap;margin-top:24px;font:500 12px "JetBrains Mono";color:var(--mute)}.h2s b{font:800 20px "JetBrains Mono";color:var(--ink);margin-right:5px}
-.try{border:1.5px solid var(--bd);border-radius:14px;background:var(--card2)df8;box-shadow:8px 8px 0 var(--sh);padding:18px;background-image:linear-gradient(rgba(119,187,144,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(119,187,144,.07) 1px,transparent 1px);background-size:20px 20px;animation:rise .7s .3s backwards}
+.try{border:1.5px solid var(--bd);border-radius:14px;background:rgba(18,20,22,.72);-webkit-backdrop-filter:blur(3px);backdrop-filter:blur(3px);box-shadow:8px 8px 0 var(--sh);padding:18px;background-image:linear-gradient(rgba(119,187,144,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(119,187,144,.07) 1px,transparent 1px);background-size:20px 20px;animation:rise .7s .3s backwards}
 .try-k{display:flex;justify-content:space-between;font:700 11px "JetBrains Mono";letter-spacing:.18em;color:var(--hi);margin-bottom:12px}.try-k i{font-style:normal;color:#77bb90}
-.try-drop{position:relative;display:block;border:2px dashed var(--ink);border-radius:10px;padding:30px 14px;text-align:center;background:var(--card2);cursor:pointer;transition:.2s}.try-drop:hover,.try-drop.over{background:var(--card2)3ea;border-color:var(--hi);transform:scale(1.01)}
+.try-drop{position:relative;display:block;border:2px dashed var(--ink);border-radius:10px;padding:30px 14px;text-align:center;background:var(--card2);cursor:pointer;transition:.2s}.try-drop:hover,.try-drop.over{background:#15201a;border-color:var(--hi);transform:scale(1.01)}
 .try-drop input{position:absolute;inset:0;opacity:0;cursor:pointer}.try-drop b{display:block;font:800 18px "JetBrains Mono"}.try-drop span{font:500 12px "JetBrains Mono";color:var(--mute)}
 .try-o{margin-top:12px;border:1.5px solid var(--line);border-radius:8px;background:var(--card2)}.try-ln{display:flex;gap:10px;padding:8px 10px;border-bottom:1px solid var(--line);font:500 12px "JetBrains Mono"}.try-ln:last-child{border:0}.try-ln span{width:70px;color:var(--mute);flex:none}.try-ln code{word-break:break-all;color:var(--ink)}
 .try-ln code.got{color:var(--hi);font-weight:700}
@@ -225,7 +225,7 @@ body.on-page #page{display:block}body.on-page .wrap{display:none}
 .cs-in{display:flex;align-items:center;gap:8px;border-top:1px solid #2a2e33;padding:8px 14px}.cs-in span{font:700 13px "JetBrains Mono";color:var(--hi)}.cs-in input{flex:1;background:none;border:0!important;color:var(--on)!important;font:500 14px "JetBrains Mono";outline:none;padding:6px 0!important;min-width:0!important}
 .pv-h{display:grid;grid-template-columns:repeat(24,1fr);gap:3px;height:90px;align-items:end;margin:8px 0}.pv-h div{display:flex;flex-direction:column;justify-content:flex-end;height:100%}.pv-h i{display:block;background:var(--hi);border-radius:2px;min-height:2px}.pv-h small{font:500 9px "JetBrains Mono";color:var(--mute);height:12px}
 .dm-b.on{background:var(--ink);color:var(--on)}
-.nt-cert{position:relative;border:2px solid var(--bd);border-radius:10px;padding:20px;background:var(--card2)df8;margin:8px 0;overflow:hidden}.nt-cert b{font:800 18px "JetBrains Mono"}.nt-cert p{margin:6px 0 0}
+.nt-cert{position:relative;border:2px solid var(--bd);border-radius:10px;padding:20px;background:#121416;margin:8px 0;overflow:hidden}.nt-cert b{font:800 18px "JetBrains Mono"}.nt-cert p{margin:6px 0 0}
 .nt-seal{position:absolute;right:14px;top:14px;font:800 16px "JetBrains Mono";color:#77bb90;border:3px solid #77bb90;border-radius:6px;padding:3px 10px;transform:rotate(-10deg)}
 
 
@@ -239,6 +239,15 @@ body.on-page #page{display:block}body.on-page .wrap{display:none}
 .sw-r{display:flex;gap:8px;align-items:center;margin-top:6px}.sw-r input{flex:1;font:800 26px "JetBrains Mono"!important;border:0!important;background:none!important;padding:4px 0!important;min-width:0!important;outline:none}.sw-r select{font:700 14px "JetBrains Mono";border:1.5px solid var(--bd);border-radius:30px;padding:8px 10px;background:var(--card2)}
 .sw-c{margin-top:8px;width:100%;min-width:0!important}.sw-flip{display:block;margin:-6px auto;position:relative;z-index:1;width:38px;height:38px;border-radius:50%;border:1.5px solid var(--bd);background:var(--card2);font-size:18px;cursor:pointer;box-shadow:2px 2px 0 var(--sh)}
 .sw-info{margin:12px 0}.sw-l{display:flex;justify-content:space-between;font:500 13px "JetBrains Mono";padding:6px 0;border-bottom:1px dashed var(--line)}.sw-l span{color:var(--mute)}.sw-go{width:100%;padding:15px!important;font-size:15px!important}
+#bgring{position:fixed;inset:0;z-index:-1;pointer-events:none}#ringspot{min-height:470px}.tryband{margin:0 0 30px}.tryband .try{display:grid;grid-template-columns:1fr 1fr;gap:0 18px;align-items:start}.tryband .try-k,.tryband .try-go{grid-column:1/-1}.tryband .try-o{margin-top:0}@media (max-width:900px){#ringspot{min-height:300px}.tryband .try{grid-template-columns:1fr}.tryband .try-o{margin-top:12px}}
+.mw{border:1px solid var(--line);border-radius:12px;background:var(--card);padding:14px 0 10px;margin-bottom:16px;overflow:hidden}.mw-h{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;padding:0 16px 10px}.mw-h b{font:700 12px "JetBrains Mono";letter-spacing:.16em;color:var(--ink)}.mw-h span{font:500 11.5px "JetBrains Mono";color:var(--dim)}.mw-h span em{font-style:normal;color:var(--hi)}
+.mw-f{display:flex;gap:6px;flex-wrap:wrap;padding:0 16px 10px}.mw-f button,.mw-p{font:600 11.5px "JetBrains Mono";color:var(--mute);background:transparent;border:1px solid var(--bd);border-radius:30px;padding:5px 11px;cursor:pointer}.mw-f button.on{color:var(--on);background:var(--hi);border-color:var(--hi)}.mw-p:hover,.mw-f button:hover{color:var(--ink)}
+.mw-row{overflow:hidden;padding:5px 0;-webkit-mask-image:linear-gradient(90deg,transparent,#000 5%,#000 95%,transparent);mask-image:linear-gradient(90deg,transparent,#000 5%,#000 95%,transparent)}.mw-track{display:flex;gap:10px;width:max-content;animation:mwL var(--dur,80s) linear infinite}.mw-row.rev .mw-track{animation-direction:reverse}.mw.paused .mw-track,.mw-row:hover .mw-track{animation-play-state:paused}@keyframes mwL{to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion:reduce){.mw-track{animation:none}.mw-row{overflow-x:auto}}
+.mw-c{width:206px;flex:none;border:1px solid var(--bd);border-radius:10px;background:var(--card2);padding:10px 12px 9px;cursor:pointer;text-align:left;color:var(--ink);transition:border-color .15s,transform .15s;display:flex;flex-direction:column;gap:3px}.mw-c:hover{border-color:var(--hi);transform:translateY(-2px)}.mw-c.sel{border-color:var(--hi);box-shadow:0 0 0 1px var(--hi) inset}
+.mw-c i{font:600 9.5px "JetBrains Mono";letter-spacing:.15em;color:var(--dim);font-style:normal;display:flex;align-items:center;gap:6px;text-transform:uppercase}.mw-c i:before{content:"";width:6px;height:6px;border-radius:50%;background:var(--bd)}.mw-c.free i:before{background:var(--hi)}
+.mw-c b{font:700 12.5px "JetBrains Mono";white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.mw-c em{font:800 17px "JetBrains Mono";font-style:normal;color:var(--ink)}.mw-c.free em{color:var(--hi)}.mw-c small{font:500 10px "JetBrains Mono";color:var(--dim)}
+.mw-m{display:flex;gap:3px;margin:2px 0}.mw-m u{height:3px;flex:1;border-radius:2px;background:var(--line);text-decoration:none}.mw-m u.f{background:var(--hi)}.mw-note{font:500 10.5px "JetBrains Mono";color:var(--dim);padding:6px 16px 0}
 .pt-tabs{display:flex;gap:6px;flex-wrap:wrap;margin:0 0 16px;padding-bottom:12px;border-bottom:1.5px dashed var(--line)}.pt-tabs button{font:700 13px "JetBrains Mono";border:1.5px solid var(--bd);border-radius:30px;padding:8px 16px;background:var(--card2);cursor:pointer}.pt-tabs button.on{background:var(--ink);color:var(--on);box-shadow:2px 2px 0 var(--hi)}
 .lp-2{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:10px 0}@media(max-width:560px){.lp-2{grid-template-columns:1fr}}.lp-2 .sw-r select{width:100%}.lp-2>*{min-width:0}.lp-2 .sw-r input{width:100%}.lp-rng{margin:10px 0;padding:10px 12px;border:1.5px dashed var(--line);border-radius:10px}.lp-in{color:#77bb90;font-style:normal;font-weight:700}.lp-out{color:#ef7b6e;font-style:normal;font-weight:700}.sw-box span i{font-style:normal}
 .pl-c{border:1.5px solid var(--line);border-radius:10px;background:var(--card);padding:14px;margin:10px 0}.pl-h{display:flex;justify-content:space-between;flex-wrap:wrap;gap:6px;align-items:baseline}.pl-h b{font:800 18px "JetBrains Mono"}.pl-h span{font:500 12px "JetBrains Mono";color:var(--mute)}
@@ -250,18 +259,19 @@ body.on-page #page{display:block}body.on-page .wrap{display:none}
 </style>
 </head>
 <body>
-<nav class="nv" id="nv"><div class="nv-in"><a href="#/" class="nv-logo"><span class="nv-dot"></span>ATLAS</a>
+<nav class="nv" id="nv"><div class="nv-in"><a href="/" class="nv-logo"><span class="nv-dot"></span>ATLAS</a>
 <div class="nv-m"><button type="button" data-m="protocol">Protocol ▾</button><button type="button" data-m="tools">Tools ▾</button><button type="button" data-m="trust">Trust ▾</button><button type="button" data-m="dev">Developers ▾</button><button type="button" data-m="vision">Vision ▾</button></div>
-<a class="nv-cta" href="#/seal">Try a live tool →</a><button class="nv-burger" id="nvb" type="button" aria-label="menu">☰</button></div>
+<a class="nv-cta" href="/seal">Try a live tool →</a><button class="nv-burger" id="nvb" type="button" aria-label="menu">☰</button></div>
 <div class="mega" id="mega"></div></nav>
 <div class="wrap">
   
   <header class="hero2"><div class="h2l"><span class="stamp">tools you can check · Robinhood Chain</span>
 <h1><b id="cnt">15</b> tools to build with.<span class="l2">All of them work.</span></h1>
 <p class="h2p">ATLAS is a set of tools for AI agents, payments and privacy on Robinhood Chain mainnet. Every tool has its own page and runs right there, in your browser: no server, no account, and nothing is signed except in your own wallet.</p>
-<div class="h2b"><a class="btn-a" href="#/memory">Open Memory →</a><a class="btn-b" href="#/trust">How we keep it safe</a></div>
+<div class="h2b"><a class="btn-a" href="/memory">Open Memory →</a><a class="btn-b" href="/trust">How we keep it safe</a></div>
 <div class="h2s"><span><b id="hlive">15</b> live tools</span><span><b>0</b> servers</span><span><b>0</b> keys held</span><span><b>MIT</b> open source</span></div></div>
-<div class="h2r"><div class="try"><div class="try-k"><span>TRY IT NOW · SEAL</span><i>LIVE</i></div><label class="try-drop" id="tdrop"><input type="file" id="tfile"><b>Drop any file here</b><span>its fingerprint is made on your device · nothing is uploaded</span></label><div class="try-o" id="tout"><div class="try-ln"><span>SHA-256</span><code id="thash">waiting for a file…</code></div><div class="try-ln"><span>size</span><code id="tsize">–</code></div><div class="try-ln"><span>uploaded</span><code>never</code></div></div><a href="#/seal" class="try-go" id="tgo">Stamp it on Robinhood Chain →</a></div></div></header>
+<div class="h2r" id="ringspot" aria-hidden="true"></div></header>
+  <div class="tryband"><div class="try"><div class="try-k"><span>TRY IT NOW · SEAL</span><i>LIVE</i></div><label class="try-drop" id="tdrop"><input type="file" id="tfile"><b>Drop any file here</b><span>its fingerprint is made on your device · nothing is uploaded</span></label><div class="try-o" id="tout"><div class="try-ln"><span>SHA-256</span><code id="thash">waiting for a file…</code></div><div class="try-ln"><span>size</span><code id="tsize">–</code></div><div class="try-ln"><span>uploaded</span><code>never</code></div></div><a href="/seal" class="try-go" id="tgo">Stamp it on Robinhood Chain →</a></div></div>
   <section class="desk" id="desk"><div class="sheet"><div class="sh-k"><span>DRAFTING TABLE</span><span id="dno">Nº 01</span></div><svg id="draft" viewBox="0 0 120 70"></svg><svg class="pencil" id="pencil" viewBox="0 0 40 40"><path d="M6 34l4-12L28 4l8 8-18 18z" fill="#f6d27a" stroke="#f2f3f4" stroke-width="2" stroke-linejoin="round"/><path d="M6 34l4-12 8 8z" fill="#26402f" stroke="#f2f3f4" stroke-width="2" stroke-linejoin="round"/><path d="M6 34l2-6 4 4z" fill="#f2f3f4"/><path d="M24 8l8 8" stroke="#f2f3f4" stroke-width="2"/></svg><div class="stampd" id="stampd">DRAFTED</div><div class="sh-f"><b id="dname">…</b><span id="dwhat">…</span></div></div>
   <div class="side"><div class="tape"><div id="tape"></div></div><div class="steps"><div><b>01</b>Pick one</div><div><b>02</b>Sketch it</div><div><b>03</b>Ship it</div></div></div></section>
   
@@ -275,6 +285,13 @@ body.on-page #page{display:block}body.on-page .wrap{display:none}
 <div class="shade" id="shade"></div>
 <aside class="panel" id="panel" aria-hidden="true"><button class="x" id="px" type="button">×</button><div id="pc"></div></aside>
 <script>
+// ---------- clean URLs: /swap instead of #/swap (404.html serves the same page on GitHub Pages) ----------
+const H = () => "#/" + location.pathname.replace(/^\/+/, "") + location.search;
+if (/^#\/./.test(location.hash)) history.replaceState(null, "", "/" + location.hash.slice(2)); else if (location.hash === "#/") history.replaceState(null, "", "/");
+function go(u) { history.pushState(null, "", u); route(); }
+addEventListener("popstate", () => route());
+addEventListener("hashchange", () => { if (/^#\/./.test(location.hash)) { history.replaceState(null, "", "/" + location.hash.slice(2)); route(); } else if (location.hash === "#/") { history.replaceState(null, "", "/"); route(); } });
+document.addEventListener("click", (e) => { const a = e.target.closest && e.target.closest("a[href]"); if (!a || e.defaultPrevented || a.target || e.button || e.ctrlKey || e.metaKey || e.shiftKey || e.altKey) return; const h = a.getAttribute("href"); if (!h.startsWith("/") || h.startsWith("//")) return; e.preventDefault(); if (h !== location.pathname + location.search) go(h); else route(); });
 // ---------- icons: drawn from a few primitives, white lines on blueprint ----------
 const S = (inner) => `<svg viewBox="0 0 120 70" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">${inner}</svg>`;
 const box = (x, y, w, h, r = 4, f = "none") => `<rect x="${x}" y="${y}" width="${w}" height="${h}" rx="${r}" fill="${f}"/>`;
@@ -338,7 +355,7 @@ const I = {
 const B = [
   ["protocol", "Protocol", "protocol", 3, "Swap any token, find every pool, create a pool, add liquidity and manage your positions on Robinhood Chain, in one place.", ["KyberSwap router", "Uniswap v4 PositionManager", "Permit2, exact amounts"], ["Swap any token at the best route", "Find a pool, or create one and add liquidity", "Track your positions, collect fees or remove them"]],
   ["mcp", "MCP", "agent", 2, "One URL that gives any AI app read-only tools for the chain: Claude, Cursor, ChatGPT and more.", ["MCP server", "Streamable HTTP", "Chain RPC"], ["Write a few read-only tools", "Serve them over Streamable HTTP", "Add the URL to an AI app and ask"]],
-  ["aimodel", "AI Model", "agent", 2, "Pick any AI model and let it answer from live chain data, with its sources.", ["Any AI model", "Tool calling", "Chain RPC"], ["Choose a model", "Give it the chain tools", "Show the answer with the blocks it read"]],
+  ["aimodel", "Model", "agent", 2, "Hundreds of AI models with live prices. Pick one and it answers from live chain data, with its sources.", ["Any AI model", "Tool calling", "Chain RPC"], ["Choose a model", "Give it the chain tools", "Show the answer with the blocks it read"]],
   ["console", "Console", "agent", 1, "One prompt for everything: type a command, get the answer from the chain.", ["Browser", "Chain RPC", "Commands"], ["Open the console", "Type a command like block, token or wallet", "Read the answer, with links"]],
   ["memory", "Memory", "agent", 2, "An encrypted memory vault on your own device: what your AI should know about you, in folders, given only where you allow it.", ["AES-256-GCM", "PBKDF2", "Your browser"], ["Create a vault with a password: it is encrypted on this device", "Save memories into folders, or import your ChatGPT and Claude history into the inbox", "Give an AI only the folders you choose, and see every read in the log"]],
   ["x402", "x402", "payment", 3, "Pay per call: an API answers 402 with a price in USDG and serves the data once paid.", ["x402", "EIP-3009 USDG", "Your API"], ["Return 402 with a USDG offer", "Verify the signed authorization", "Settle it and return the data"]],
@@ -417,24 +434,24 @@ const DEMO = {
         if (!$("dso")) return; $("dso").innerHTML = `<table class="dm-t"><tr><th>stock token</th><th>on chain (DEX)</th><th>oracle</th><th>drift</th></tr>${rows.map((r) => `<tr><td><a href="${CHAIN.explorer}/token/${r.a}" target="_blank" rel="noopener">${r.sym}</a></td><td>${r.dex ? "$" + fmt2(r.dex) : "–"}</td><td>${r.oracle ? "$" + fmt2(r.oracle) : "no on-chain oracle"}</td><td style="color:${r.gap == null ? "inherit" : r.gap >= 0 ? "#77bb90" : "#ef7b6e"}">${r.gap == null ? "–" : (r.gap >= 0 ? "+" : "") + r.gap.toFixed(2) + "%"}</td></tr>`).join("")}</table><p class="dm-n">DEX price is a live 100 USDG route quote. Oracle prices come from the price feeds the chain's lending market uses; when the US market is closed they hold the last close.</p>`; } };
     $("dsb").onclick = go; go(); },
   // ---------- Smart Invoice ----------
-  invoice: (el) => { const q = new URLSearchParams((location.hash.split("?")[1]) || "");
+  invoice: (el) => { const q = new URLSearchParams((H().split("?")[1]) || "");
     if (q.get("to")) { const to = q.get("to").toLowerCase(), amt = q.get("amt"), ref = q.get("ref") || "", from = parseInt(q.get("from") || "0", 10);
       el.innerHTML = `<div class="dm-inv"><div class="dm-inv-h"><b>INVOICE</b><span id="dist" class="dm-st wait">WAITING FOR PAYMENT</span></div><div class="dm-inv-a">${esc2(amt)} <small>USDG</small></div><p>Pay to ${exA(to)} on Robinhood Chain${ref ? ` · ref <b>${esc2(ref)}</b>` : ""}</p><p class="dm-n">Created at block ${from.toLocaleString("en-US")}. This page checks the chain every few seconds and turns PAID as soon as one USDG transfer of at least ${esc2(amt)} reaches this address.</p><div id="dio"></div><div class="dm-row"><button id="dipay" class="dm-b">Pay this invoice from my wallet</button><button id="dicp" class="dm-b ghost">Copy invoice link</button></div><p id="dipm" class="dm-n"></p></div>`;
       let units; try { units = usdgUnits(amt); } catch { $("dio").innerHTML = `<p class="dm-e">This invoice link has a bad amount.</p>`; return; }
       const check = async () => { try { const h = await cblock(), L = await crpc("eth_getLogs", [{ address: USDG_ADDR, topics: [T_TRANSFER, null, "0x" + pad32(to)], fromBlock: "0x" + from.toString(16), toBlock: "0x" + h.toString(16) }]); const hit = (L || []).find((l) => BigInt(l.data) >= units);
-          if (hit) { $("dist").className = "dm-st ok"; $("dist").textContent = "PAID"; $("dio").innerHTML = `<div class="dm-card ok"><b>PAID</b><p>${fmt2(Number(BigInt(hit.data)) / 1e6, 6)} USDG from ${exA("0x" + hit.topics[1].slice(26))} · ${exT(hit.transactionHash)} · block ${parseInt(hit.blockNumber, 16).toLocaleString("en-US")}</p></div>`; return; } } catch {} if (location.hash.includes("smart-invoice")) setTimeout(check, 5000); };
+          if (hit) { $("dist").className = "dm-st ok"; $("dist").textContent = "PAID"; $("dio").innerHTML = `<div class="dm-card ok"><b>PAID</b><p>${fmt2(Number(BigInt(hit.data)) / 1e6, 6)} USDG from ${exA("0x" + hit.topics[1].slice(26))} · ${exT(hit.transactionHash)} · block ${parseInt(hit.blockNumber, 16).toLocaleString("en-US")}</p></div>`; return; } } catch {} if (H().includes("smart-invoice")) setTimeout(check, 5000); };
       check(); $("dicp").onclick = () => { navigator.clipboard && navigator.clipboard.writeText(location.href); $("dipm").textContent = "Link copied."; };
       $("dipay").onclick = async () => { try { const me = await wallet(); const r = await sendTx({ from: me, to: USDG_ADDR, data: transferData(to, units) }, (m) => ($("dipm").textContent = m)); $("dipm").innerHTML = r.ok ? `Paid · ${exT(r.hash)}` : `Sent · ${exT(r.hash)}`; } catch (e) { $("dipm").innerHTML = `<span class="dm-e">${esc2(e.message || e)}</span>`; } }; return; }
     el.innerHTML = `<div class="dm-f"><label>Pay to (your address)<input id="dit" placeholder="0x…" spellcheck="false"></label><label>Amount (USDG)<input id="dia" placeholder="25"></label><label>Reference (optional)<input id="dir" placeholder="INV-001" maxlength="40"></label></div><div class="dm-row"><button id="dic" class="dm-b">Create invoice ▸</button><button id="dime" class="dm-b ghost">Use my wallet address</button></div><div id="dio2" class="dm-o"><p class="dm-n">Creates a link you can send to anyone. The invoice watches Robinhood Chain and marks itself PAID when the USDG arrives. Nothing is stored on a server: everything is in the link.</p></div>`;
     $("dime").onclick = async () => { try { $("dit").value = await wallet(); } catch (e) { $("dio2").innerHTML = `<p class="dm-e">${esc2(e.message)}</p>`; } };
     $("dic").onclick = async () => { const to = $("dit").value.trim(), amt = $("dia").value.trim(), ref = $("dir").value.trim(); if (!isAddr(to)) { $("dio2").innerHTML = `<p class="dm-e">Give the address that receives the payment.</p>`; return; } try { if (usdgUnits(amt) <= 0n) throw 0; } catch { $("dio2").innerHTML = `<p class="dm-e">Give an amount, like 25 or 9.99.</p>`; return; }
-      const from = await cblock(); location.hash = `#/smart-invoice?to=${to}&amt=${encodeURIComponent(amt)}&ref=${encodeURIComponent(ref)}&from=${from}`; }; },
+      const from = await cblock(); go(`/smart-invoice?to=${to}&amt=${encodeURIComponent(amt)}&ref=${encodeURIComponent(ref)}&from=${from}`); }; },
   // ---------- Checkout Button ----------
   paybtn: (el) => { el.innerHTML = `<div class="dm-f"><label>Receive at<input id="dct" placeholder="0x… your address" spellcheck="false"></label><label>Price (USDG)<input id="dca" placeholder="5"></label><label>Button text<input id="dcl" placeholder="Pay 5 USDG" maxlength="30"></label></div><div class="dm-row"><button id="dcg" class="dm-b">Make my button ▸</button><button id="dcme" class="dm-b ghost">Use my wallet address</button></div><div id="dco" class="dm-o"><p class="dm-n">Makes a real pay button for any website. Buyers pay in USDG on Robinhood Chain from their own wallet, after a simulation. You get the code to paste.</p></div>`;
     $("dcme").onclick = async () => { try { $("dct").value = await wallet(); } catch (e) { $("dco").innerHTML = `<p class="dm-e">${esc2(e.message)}</p>`; } };
     $("dcg").onclick = () => { const to = $("dct").value.trim(), amt = $("dca").value.trim(), label = $("dcl").value.trim() || `Pay ${amt} USDG`; if (!isAddr(to)) { $("dco").innerHTML = `<p class="dm-e">Give the address that receives payments.</p>`; return; } let units; try { units = usdgUnits(amt); if (units <= 0n) throw 0; } catch { $("dco").innerHTML = `<p class="dm-e">Give a price, like 5 or 0.99.</p>`; return; }
       const snippet = `<button onclick="(async b=>{const e=window.ethereum;if(!e)return alert('Install a wallet first');const[a]=await e.request({method:'eth_requestAccounts'});try{await e.request({method:'wallet_switchEthereumChain',params:[{chainId:'0x1237'}]})}catch(x){if(x.code===4902)await e.request({method:'wallet_addEthereumChain',params:[{chainId:'0x1237',chainName:'Robinhood Chain',nativeCurrency:{name:'Ether',symbol:'ETH',decimals:18},rpcUrls:['https://rpc.mainnet.chain.robinhood.com'],blockExplorerUrls:['https://robinhoodchain.blockscout.com']}]});else throw x}const h=await e.request({method:'eth_sendTransaction',params:[{from:a,to:'${USDG_ADDR}',data:'${transferData(to, units)}'}]});b.textContent='Paid ✓';b.title=h})(this)" style="font:600 15px system-ui;padding:12px 20px;border-radius:30px;border:0;background:#151515;color:#fff;cursor:pointer">${esc2(label)}</button>`;
-      $("dco").innerHTML = `<div class="dm-h">PREVIEW (THIS BUTTON IS REAL: IT CHARGES ${esc2(amt)} USDG ON MAINNET)</div><div class="dm-prev"><button id="dctry" class="dm-pay">${esc2(label)}</button><span id="dcm" class="dm-n"></span></div><div class="dm-h">PASTE THIS INTO YOUR WEBSITE</div><textarea class="dm-code" readonly rows="5">${esc2(snippet)}</textarea><div class="dm-row"><button id="dccp" class="dm-b ghost">Copy code</button><a class="dm-b ghost" href="#/smart-invoice?to=${to}&amt=${encodeURIComponent(amt)}&ref=checkout&from=0" style="text-decoration:none">See payments to this address</a></div>`;
+      $("dco").innerHTML = `<div class="dm-h">PREVIEW (THIS BUTTON IS REAL: IT CHARGES ${esc2(amt)} USDG ON MAINNET)</div><div class="dm-prev"><button id="dctry" class="dm-pay">${esc2(label)}</button><span id="dcm" class="dm-n"></span></div><div class="dm-h">PASTE THIS INTO YOUR WEBSITE</div><textarea class="dm-code" readonly rows="5">${esc2(snippet)}</textarea><div class="dm-row"><button id="dccp" class="dm-b ghost">Copy code</button><a class="dm-b ghost" href="/smart-invoice?to=${to}&amt=${encodeURIComponent(amt)}&ref=checkout&from=0" style="text-decoration:none">See payments to this address</a></div>`;
       $("dccp").onclick = () => { navigator.clipboard && navigator.clipboard.writeText(snippet); $("dccp").textContent = "Copied ✓"; };
       $("dctry").onclick = async () => { try { const me = await wallet(); const r = await sendTx({ from: me, to: USDG_ADDR, data: transferData(to, units) }, (m) => ($("dcm").textContent = m)); $("dcm").innerHTML = r.ok ? `Paid ✓ ${exT(r.hash)}` : `Sent · ${exT(r.hash)}`; } catch (e) { $("dcm").innerHTML = `<span class="dm-e">${esc2(e.message || e)}</span>`; } }; }; },
   // ---------- Hash Stamp ----------
@@ -622,10 +639,10 @@ DEMO.proof = (el) => {
 
 // ---------- Token Gate: prove you hold a token, check anyone's proof ----------
 DEMO.gate = (el) => {
-  const q = new URLSearchParams(location.hash.split("?")[1] || ""), token = (q.get("token") || "").toLowerCase(), min = q.get("min") || "";
+  const q = new URLSearchParams(H().split("?")[1] || ""), token = (q.get("token") || "").toLowerCase(), min = q.get("min") || "";
   if (!isAddr(token)) {
     el.innerHTML = `<div class="dm-f"><label>Token<input id="gtk" placeholder="token address 0x…" spellcheck="false"></label><label>Minimum to hold<input id="gtm" placeholder="1000"></label><label>Name (optional)<input id="gtn" placeholder="Holders room" maxlength="30"></label></div><div class="dm-row"><button id="gtb" class="dm-b">Make a gate link ▸</button></div><div id="gto" class="dm-o"><p class="dm-n">Makes a link for your community. Visitors connect a wallet, sign a free message (no transaction) and get a proof that they hold enough of your token. You, or a mod, paste the proof back here to check it.</p></div>`;
-    $("gtb").onclick = () => { const t = $("gtk").value.trim(), m = $("gtm").value.trim(); if (!isAddr(t) || !(Number(m) > 0)) { $("gto").innerHTML = `<p class="dm-e">Give a token address and a minimum above 0.</p>`; return; } location.hash = `#/token-gate?token=${t.toLowerCase()}&min=${encodeURIComponent(m)}&name=${encodeURIComponent($("gtn").value.trim())}`; };
+    $("gtb").onclick = () => { const t = $("gtk").value.trim(), m = $("gtm").value.trim(); if (!isAddr(t) || !(Number(m) > 0)) { $("gto").innerHTML = `<p class="dm-e">Give a token address and a minimum above 0.</p>`; return; } go(`/token-gate?token=${t.toLowerCase()}&min=${encodeURIComponent(m)}&name=${encodeURIComponent($("gtn").value.trim())}`); };
     return; }
   const name = q.get("name") || "Token gate";
   el.innerHTML = `<div class="dm-inv"><div class="dm-inv-h"><b>${esc2(name.toUpperCase())}</b><span class="dm-st wait" id="gst">NOT CHECKED</span></div><p id="gti">Hold at least <b>${esc2(min)}</b> of ${exA(token)} to pass.</p><div class="dm-row"><button id="gtgo" class="dm-b">Connect and prove ▸</button><button id="gtcp" class="dm-b ghost">Copy gate link</button></div><div id="gto"></div></div><div class="dm-h">CHECK SOMEONE'S PROOF</div><textarea id="gpv" rows="3" placeholder="paste a proof here" style="width:100%"></textarea><div class="dm-row"><button id="gpvb" class="dm-b ghost">Check proof ▸</button></div><div id="gpvo"></div>`;
@@ -675,7 +692,7 @@ DEMO.scheduled = (el) => {
   $("nsr").onclick = async () => { try { const [t, a] = args(); $("nso").innerHTML = `<p class="dm-n">reading the chain…</p>`; const md = await nightReport(t, a); $("nso").innerHTML = `<div class="ns-rep">${mdLite(md)}</div>`; } catch (e) { $("nso").innerHTML = `<p class="dm-e">${esc2(e.message)}</p>`; } };
   $("nsg").onclick = () => { try { const [t, a] = args(), cron = $("nsc").value;
       const yml = `name: ATLAS Night Shift\non:\n  schedule:\n    - cron: "${cron}"\n  workflow_dispatch:\npermissions:\n  contents: write\njobs:\n  report:\n    runs-on: ubuntu-latest\n    steps:\n      - uses: actions/checkout@v4\n      - uses: actions/setup-node@v4\n        with:\n          node-version: 20\n      - name: Write the report\n        run: node .github/night-shift.mjs\n      - name: Save it\n        run: |\n          git config user.name "night-shift"\n          git config user.email "night-shift@users.noreply.github.com"\n          git add reports\n          git commit -m "night shift report" || echo "nothing new"\n          git push\n`;
-      const mjs = `// ATLAS Night Shift · ${t}${a ? " · " + a : ""} · https://atlasboard.dev/#/night-shift\nimport fs from "node:fs";\n${nightReport.toString()}\nconst md = await nightReport(${JSON.stringify(t)}, ${JSON.stringify(a)});\nfs.mkdirSync("reports", { recursive: true });\nfs.writeFileSync("reports/" + new Date().toISOString().slice(0, 13).replace("T", "-") + "h.md", md);\nfs.writeFileSync("reports/latest.md", md);\nconsole.log(md);\n`;
+      const mjs = `// ATLAS Night Shift · ${t}${a ? " · " + a : ""} · https://atlasboard.dev/night-shift\nimport fs from "node:fs";\n${nightReport.toString()}\nconst md = await nightReport(${JSON.stringify(t)}, ${JSON.stringify(a)});\nfs.mkdirSync("reports", { recursive: true });\nfs.writeFileSync("reports/" + new Date().toISOString().slice(0, 13).replace("T", "-") + "h.md", md);\nfs.writeFileSync("reports/latest.md", md);\nconsole.log(md);\n`;
       $("nso").innerHTML = `<div class="dm-card ok"><b>YOUR NIGHT SHIFT</b><p>1. Create a new repository on GitHub (public repositories get Actions for free). 2. Add the two files below at exactly these paths. 3. Open the Actions tab and press "Run workflow" once to test. Reports appear in <code>reports/</code>, and <code>reports/latest.md</code> is always the newest.</p></div>
         <div class="dm-h">.github/workflows/night-shift.yml</div><textarea class="dm-code" rows="8" readonly id="nsy">${esc2(yml)}</textarea><div class="dm-row"><button class="dm-b ghost" data-cp="nsy">Copy</button><button class="dm-b ghost" data-dl="night-shift.yml">Download</button></div>
         <div class="dm-h">.github/night-shift.mjs</div><textarea class="dm-code" rows="8" readonly id="nsm">${esc2(mjs)}</textarea><div class="dm-row"><button class="dm-b ghost" data-cp="nsm">Copy</button><button class="dm-b ghost" data-dl="night-shift.mjs">Download</button></div>`;
@@ -696,18 +713,34 @@ const AI_TOOLS = [
 ];
 DEMO.aimodel = (el) => {
   let key = "";
-  el.innerHTML = `<div class="dm-row"><input id="aik" type="password" placeholder="your OpenRouter key sk-or-… (stays in this tab)" autocomplete="off"><select id="aim"><option value="openrouter/auto">loading models…</option></select></div>
+  el.innerHTML = `<div class="mw" id="mw"><div class="mw-h"><b>THE MODELS · LIVE PRICES</b><span id="mwc">reading OpenRouter…</span><button type="button" class="mw-p" id="mwp">❚❚ Pause</button></div>
+    <div class="mw-f" id="mwf">${[["all", "All"], ["free", "Free"], ["cheap", "Under $1"], ["long", "1M+ context"]].map(([k, n], i) => `<button type="button" data-k="${k}" class="${i ? "" : "on"}">${n}</button>`).join("")}</div><div id="mwr"></div>
+    <p class="mw-note">Prices per 1M tokens, in / out, read live from OpenRouter and billed by OpenRouter to your own key. ATLAS adds nothing. The meter shows cost: one bar is cheapest, four is most expensive. Click a model to use it.</p></div>
+    <div class="dm-row"><input id="aik" type="password" placeholder="your OpenRouter key sk-or-… (stays in this tab)" autocomplete="off"><select id="aim"><option value="openrouter/auto">loading models…</option></select></div>
     <div class="ai-chat" id="aic"><p class="dm-n">Ask anything about Robinhood Chain. The model you pick can call six ATLAS tools that read the chain live, and every call is shown. Your key is kept only in this tab's memory and is sent only to openrouter.ai. Free models need no credit: get a key at openrouter.ai/keys.</p></div>
     <div class="dm-row"><input id="aiq" placeholder="e.g. what is NVDA trading at on chain versus its oracle?"><button id="aigo" class="dm-b">Ask ▸</button></div><div class="dm-row" id="aisg"></div>`;
   (async () => { try { const j = await (await fetch("https://openrouter.ai/api/v1/models")).json(), ms = (j.data || []).filter((m) => (m.supported_parameters || []).includes("tools")), free = ms.filter((m) => /:free$/.test(m.id) || (m.pricing && +m.pricing.prompt === 0 && +m.pricing.completion === 0));
-      const opt = (m) => `<option value="${esc2(m.id)}">${esc2(m.name || m.id)}${free.includes(m) ? " · free" : ""}</option>`; $("aim").innerHTML = `<optgroup label="Free (${free.length})">${free.map(opt).join("")}</optgroup><optgroup label="All with tools (${ms.length})">${ms.filter((m) => !free.includes(m)).map(opt).join("")}</optgroup>`; } catch { $("aim").innerHTML = `<option value="openrouter/auto">openrouter/auto</option>`; } })();
+      const opt = (m) => `<option value="${esc2(m.id)}">${esc2(m.name || m.id)}${free.includes(m) ? " · free" : ""}</option>`; $("aim").innerHTML = `<optgroup label="Free (${free.length})">${free.map(opt).join("")}</optgroup><optgroup label="All with tools (${ms.length})">${ms.filter((m) => !free.includes(m)).map(opt).join("")}</optgroup>`; modelWall(ms, free); } catch { $("aim").innerHTML = `<option value="openrouter/auto">openrouter/auto</option>`; if ($("mwc")) $("mwc").textContent = "OpenRouter did not answer; try again in a moment."; } })();
+  function modelWall(ms, free) { if (!$("mw")) return; const isFree = (m) => free.includes(m), pin = (m) => +m.pricing.prompt * 1e6, pout = (m) => +m.pricing.completion * 1e6;
+    const money = (n) => (n >= 10 ? "$" + n.toFixed(0) : n >= 0.995 ? "$" + n.toFixed(2).replace(/\.00$/, "") : n >= 0.01 ? "$" + n.toFixed(2) : "$" + n.toPrecision(2)), ctx = (n) => (n >= 1e6 ? (n / 1e6).toFixed(1) + "M" : Math.round(n / 1000) + "K");
+    const tier = (m) => { const c = pin(m) + pout(m); return isFree(m) ? 0 : c < 1 ? 1 : c < 5 ? 2 : c < 20 ? 3 : 4; };
+    $("mwc").innerHTML = `<em>${ms.length}</em> models that can call ATLAS tools · <em>${free.length}</em> free · live from OpenRouter`;
+    const card = (m) => { const [prov] = m.id.split("/"), nm = (m.name || m.id).replace(/^[^:]{1,40}:\s*/, ""), f = isFree(m), t = tier(m);
+      return `<button type="button" class="mw-c${f ? " free" : ""}" data-id="${esc2(m.id)}" title="${esc2(m.id)}"><i>${esc2(prov.replace(/-/g, " "))}</i><b>${esc2(nm)}</b><em>${f ? "FREE" : money(pin(m)) + " / " + money(pout(m))}</em><span class="mw-m">${[1, 2, 3, 4].map((k) => `<u class="${k <= Math.max(1, t) && !f ? "f" : ""}"></u>`).join("")}</span><small>${f ? "no credit needed" : "per 1M · in / out"} · ${ctx(m.context_length || 0)} context</small></button>`; };
+    const draw = (k) => { let list = ms; if (k === "free") list = ms.filter(isFree); else if (k === "cheap") list = ms.filter((m) => !isFree(m) && pin(m) + pout(m) < 1); else if (k === "long") list = ms.filter((m) => (m.context_length || 0) >= 1e6);
+      const paid = list.filter((m) => !isFree(m)), fr = list.filter(isFree), rows = k === "all" ? [paid.slice(0, 36), fr.slice(0, 36), paid.slice(36, 72)] : [0, 1, 2].map((r) => list.filter((_, i) => i % 3 === r).slice(0, 36));
+      $("mwr").innerHTML = rows.filter((r) => r.length).map((r, i) => { const h = r.map(card).join(""); return `<div class="mw-row${i % 2 ? " rev" : ""}"><div class="mw-track" style="--dur:${Math.max(30, r.length * 5)}s">${h}${r.length > 4 ? h : ""}</div></div>`; }).join("") || `<p class="mw-note">No model matches this filter right now.</p>`;
+      $("mwr").querySelectorAll(".mw-c").forEach((c) => (c.onclick = () => { const id = c.dataset.id; if (![...$("aim").options].some((o) => o.value === id)) $("aim").insertAdjacentHTML("afterbegin", `<option value="${esc2(id)}">${esc2(id)}</option>`); $("aim").value = id;
+        $("mwr").querySelectorAll(".mw-c").forEach((x) => x.classList.toggle("sel", x.dataset.id === id)); add(`Model set: <b>${esc2(c.querySelector("b").textContent)}</b> · ${esc2(c.querySelector("em").textContent)}${c.classList.contains("free") ? "" : " per 1M tokens in / out"}. Ask away.`, "tool"); $("aiq").focus({ preventScroll: true }); $("aic").scrollIntoView({ behavior: "smooth", block: "center" }); })); };
+    $("mwf").querySelectorAll("button").forEach((b) => (b.onclick = () => { $("mwf").querySelectorAll("button").forEach((x) => x.classList.toggle("on", x === b)); draw(b.dataset.k); }));
+    $("mwp").onclick = () => { const p = $("mw").classList.toggle("paused"); $("mwp").textContent = p ? "▶ Play" : "❚❚ Pause"; }; draw("all"); }
   $("aisg").innerHTML = ["What block is Robinhood Chain on?", "Is 0xc2623e62d5fae1eeebc2990a9d51f9e69a8a9092 verified?", "Compare NVDA and SPY drift"].map((q) => `<button class="dm-b ghost" data-q="${esc2(q)}">${esc2(q)}</button>`).join("");
   $("aisg").querySelectorAll("button").forEach((b) => (b.onclick = () => { $("aiq").value = b.dataset.q; $("aigo").click(); }));
   const chat = $("aic"), add = (h, cls) => { chat.insertAdjacentHTML("beforeend", `<div class="ai-m ${cls}">${h}</div>`); chat.scrollTop = chat.scrollHeight; };
   $("aigo").onclick = async () => { key = $("aik").value.trim() || key; $("aik").value = ""; $("aik").placeholder = key ? "key set for this tab ✓" : $("aik").placeholder; const q = $("aiq").value.trim(); if (!q) return; if (!/^sk-or-/.test(key)) { add("Paste your OpenRouter key first (it starts with sk-or-).", "err"); return; }
     $("aiq").value = ""; add(esc2(q), "you"); const model = $("aim").value, tools = AI_TOOLS.map((t) => ({ type: "function", function: { name: t.name, description: t.description, parameters: t.parameters } }));
     const msgs = [{ role: "system", content: "You answer questions about Robinhood Chain mainnet (chain 4663) using only the tools. Name the block or source behind each number. Say plainly when you cannot answer. No price predictions or advice. Times in UTC. Keep it short." }, { role: "user", content: q }];
-    try { for (let step = 0; step < 6; step++) { const r = await fetch("https://openrouter.ai/api/v1/chat/completions", { method: "POST", headers: { "content-type": "application/json", authorization: "Bearer " + key, "x-title": "ATLAS AI Model" }, body: JSON.stringify({ model, messages: msgs, tools, tool_choice: "auto" }) }); const j = await r.json();
+    try { for (let step = 0; step < 6; step++) { const r = await fetch("https://openrouter.ai/api/v1/chat/completions", { method: "POST", headers: { "content-type": "application/json", authorization: "Bearer " + key, "x-title": "ATLAS Model" }, body: JSON.stringify({ model, messages: msgs, tools, tool_choice: "auto" }) }); const j = await r.json();
         if (!r.ok || j.error) throw new Error((j.error && (j.error.message || j.error)) || "OpenRouter answered " + r.status); const m = j.choices[0].message, calls = m.tool_calls || [];
         if (!calls.length) { add(esc2(m.content || "(empty answer)").replace(/\n/g, "<br>") + `<small>${esc2(j.model || model)}</small>`, "ai"); return; }
         msgs.push({ role: "assistant", content: m.content || "", tool_calls: calls });
@@ -740,7 +773,7 @@ DEMO.x402 = (el) => {
 // ---------- MCP: ATLAS tools for Claude, Cursor and any MCP client ----------
 DEMO.mcp = (el) => {
   const cfg = `{\n  "mcpServers": {\n    "atlas": {\n      "command": "npx",\n      "args": ["-y", "github:atlasboard/atlas-mcp"]\n    }\n  }\n}`;
-  el.innerHTML = `<div class="dm-card ok"><b>ATLAS MCP · 6 READ-ONLY TOOLS</b><p>latest_block · wallet_balance · token_info · token_price · contract_verified · stock_drift. The same tools AI Model uses, running on your own computer. No key, no account, nothing to sign.</p></div>
+  el.innerHTML = `<div class="dm-card ok"><b>ATLAS MCP · 6 READ-ONLY TOOLS</b><p>latest_block · wallet_balance · token_info · token_price · contract_verified · stock_drift. The same tools Model uses, running on your own computer. No key, no account, nothing to sign.</p></div>
     <div class="dm-h">CLAUDE DESKTOP, CURSOR OR ANY MCP CLIENT · ADD THIS TO ITS MCP CONFIG</div><textarea class="dm-code" rows="8" readonly id="mcfg">${esc2(cfg)}</textarea><div class="dm-row"><button id="mcc" class="dm-b ghost">Copy</button></div>
     <div class="dm-h">CLAUDE CODE · ONE LINE</div><textarea class="dm-code" rows="1" readonly id="mcl">claude mcp add atlas -- npx -y github:atlasboard/atlas-mcp</textarea><div class="dm-row"><button id="mcc2" class="dm-b ghost">Copy</button></div>
     <div class="dm-h">TRY THE TOOLS HERE</div><div class="dm-row"><select id="mct">${AI_TOOLS.map((t) => `<option>${t.name}</option>`).join("")}</select><input id="mca" placeholder='arguments, e.g. {"address":"0x…"} or {"symbol":"NVDA"}' spellcheck="false"><button id="mcr" class="dm-b">Call ▸</button></div><div id="mco" class="dm-o"></div>`;
@@ -809,7 +842,7 @@ DEMO.pool4 = (el) => {
       pools.forEach((x) => (x.major = majors.has(x.c0) || majors.has(x.c1))); pools.sort((a, b) => (b.major - a.major) || (b.liq > 0n) - (a.liq > 0n) || b.swaps - a.swaps);
       o.innerHTML = `<div class="dm-card ok"><b>${found.length} POOL${found.length > 1 ? "S" : ""} FOUND</b><p>Showing pairs with USDG and ETH first, then the newest others. Read from the PoolManager ${exA(POOLM)}.</p></div>${pools.map((x, xi) => `<div class="pl-c"><div class="pl-h"><b>${esc2(x.m0.symbol)} / ${esc2(x.m1.symbol)}</b><span>${x.fee & 0x800000 ? "dynamic fee" : (x.fee / 10000).toFixed(2) + "% fee"} · tick spacing ${x.ts}${/^0x0{40}$/.test(x.hook) ? "" : " · hook " + exA(x.hook)}</span></div>
         <div class="pl-g"><div><small>PRICE</small><b>1 ${esc2(x.m0.symbol)} = ${x.price ? x.price.toPrecision(6) : "–"} ${esc2(x.m1.symbol)}</b></div><div><small>ACTIVE LIQUIDITY</small><b>${x.liq > 0n ? Number(x.liq).toExponential(3) : "none"}</b></div><div><small>SWAPS · 24H</small><b>${x.swaps.toLocaleString("en-US")}</b></div><div><small>VOLUME · 24H</small><b>${fmt2(x.vol0, 4)} ${esc2(x.m0.symbol)}</b></div></div>
-        <p class="dm-n">pool id <code>${x.id.slice(0, 18)}…</code> · created at block ${x.block.toLocaleString("en-US")} · <a href="#/swap">swap</a> · <a href="#/create-pool" data-lp="${xi}">add liquidity</a></p></div>`).join("")}`; o.querySelectorAll("[data-lp]").forEach((a) => (a.onclick = () => { const x = pools[+a.dataset.lp]; lpPrefill = { c0: x.c0, c1: x.c1, fee: x.fee, ts: x.ts, hook: x.hook }; })); }
+        <p class="dm-n">pool id <code>${x.id.slice(0, 18)}…</code> · created at block ${x.block.toLocaleString("en-US")} · <a href="/swap">swap</a> · <a href="/create-pool" data-lp="${xi}">add liquidity</a></p></div>`).join("")}`; o.querySelectorAll("[data-lp]").forEach((a) => (a.onclick = () => { const x = pools[+a.dataset.lp]; lpPrefill = { c0: x.c0, c1: x.c1, fee: x.fee, ts: x.ts, hook: x.hook }; })); }
     catch (e) { o.innerHTML = `<p class="dm-e">${esc2(e.message)}</p>`; } }; };
 LIVE.add("swap"); LIVE.add("pool4");
 // ---------- Uniswap v4 liquidity: ABI encoding and tick math, no libraries ----------
@@ -915,7 +948,7 @@ DEMO.create = (el) => {
       const native = st.k.c0 === ZERO, deadline = Math.floor(Date.now() / 1000) + 1200, acts = [ACT.MINT, ACT.SETTLE_PAIR], params = [mintParams(st.k, pl.tl, pl.tu, pl.L, pl.m0, pl.m1, me), pairParams(st.k.c0, st.k.c1)]; if (native) { acts.push(ACT.SWEEP); params.push(sweepParams(ZERO, me)); }
       const mod = modifyLiqData(acts, params, deadline), data = s0 ? mod : multicallData([initPoolData(st.k, pl.sP), mod]);
       const r = await sendTx({ from: me, to: POSM, data, value: "0x" + (native ? pl.m0 : 0n).toString(16) }, (m) => say((s0 ? "add liquidity: " : "create pool and add liquidity: ") + m));
-      say(r.ok ? `✓ ${s0 ? "liquidity added" : "pool created and funded"} · ${exT(r.hash)} · <a href="#/positions">see it in Positions</a>` : r.ok === false ? `✗ it reverted · ${exT(r.hash)}` : `sent · ${exT(r.hash)}`); await check(); }
+      say(r.ok ? `✓ ${s0 ? "liquidity added" : "pool created and funded"} · ${exT(r.hash)} · <a href="/positions">see it in Positions</a>` : r.ok === false ? `✗ it reverted · ${exT(r.hash)}` : `sent · ${exT(r.hash)}`); await check(); }
     catch (e) { say(`<span class="dm-e">${esc2(e.message || e)}</span>`); } };
   showC(); check();
 };
@@ -928,7 +961,7 @@ DEMO.positions = (el) => {
   async function find() { const who = $("psa").value.trim().toLowerCase(), o = $("pso"); if (!isAddr(who)) { o.innerHTML = `<p class="dm-e">Give a wallet address.</p>`; return; } o.innerHTML = `<p class="dm-n">reading the PositionManager's history…</p>`;
     try { const now = await cblock(), Wd = 9000000, jobs = []; for (let f = 0; f <= now; f += Wd) jobs.push({ address: POSM, topics: [T_XFER, null, "0x" + pad32(who)], fromBlock: "0x" + f.toString(16), toBlock: "0x" + Math.min(now, f + Wd - 1).toString(16) });
       const got = []; let qi = 0, done = 0; await Promise.all([0, 1].map(async () => { while (qi < jobs.length) { const jb = jobs[qi++]; got.push(...(await crpc("eth_getLogs", [jb]))); done++; o.innerHTML = `<p class="dm-n">reading the PositionManager's history · ${done} / ${jobs.length}…</p>`; } }));
-      const ids = [...new Set(got.map((l) => BigInt(l.topics[3])))].sort((a, b) => (b > a ? 1 : -1)).slice(0, 30); if (!ids.length) { o.innerHTML = `<p class="dm-n">This wallet has never held a Uniswap v4 position on Robinhood Chain. <a href="#/create-pool">Create one</a>.</p>`; return; }
+      const ids = [...new Set(got.map((l) => BigInt(l.topics[3])))].sort((a, b) => (b > a ? 1 : -1)).slice(0, 30); if (!ids.length) { o.innerHTML = `<p class="dm-n">This wallet has never held a Uniswap v4 position on Robinhood Chain. <a href="/create-pool">Create one</a>.</p>`; return; }
       o.innerHTML = `<p class="dm-n">reading ${ids.length} position${ids.length > 1 ? "s" : ""}…</p>`; const ps = [];
       for (const id of ids) { const owner = "0x" + ((await crpc("eth_call", [{ to: POSM, data: "0x6352211e" + W(id) }, "latest"]).catch(() => "0x")) || "0x").slice(26); if (owner !== who) continue;
         const [inf, lq] = await Promise.all([crpc("eth_call", [{ to: POSM, data: "0x7ba03aad" + W(id) }, "latest"]), crpc("eth_call", [{ to: POSM, data: "0x1efeed33" + W(id) }, "latest"])]), d = inf.slice(2), w = (i) => d.slice(i * 64, i * 64 + 64);
@@ -938,7 +971,7 @@ DEMO.positions = (el) => {
             const c = sim[0].calls[0]; if (c.status === "0x1") { f0 = 0n; f1 = 0n; for (const g of c.logs) if (g.topics[0] === T_XFER && addrT(g.topics[2]) === who) { const t = g.address.toLowerCase(), v = BigInt(g.data); if (t === k.c1) f1 += v; else if (t === k.c0 || (k.c0 === ZERO && t === NATIVE)) f0 += v; } } } catch {} }
         ps.push({ id, k, tl, tu, L, m0, m1, sP, sa, sb, a0, a1, f0, f1, full: tl === fullRange(k.ts)[0] && tu === fullRange(k.ts)[1], inr: sP > sa && sP < sb }); }
       const open = ps.filter((p) => p.L > 0n), closed = ps.length - open.length, mine = me && me.toLowerCase() === who;
-      if (!open.length) { o.innerHTML = `<p class="dm-n">No open positions${closed ? ` (${closed} closed)` : ""}. <a href="#/create-pool">Create one</a>.</p>`; return; }
+      if (!open.length) { o.innerHTML = `<p class="dm-n">No open positions${closed ? ` (${closed} closed)` : ""}. <a href="/create-pool">Create one</a>.</p>`; return; }
       const pr = (s, p) => { const v = sqrtToPrice(s, p.m0.decimals, p.m1.decimals); return v > 1e15 || v < 1e-12 ? "∞" : v.toPrecision(5); };
       o.innerHTML = `<div class="dm-card ok"><b>${open.length} OPEN POSITION${open.length > 1 ? "S" : ""}</b><p>${closed ? closed + " closed · " : ""}fees shown are what you would receive by collecting right now, simulated on mainnet.</p></div>` + open.map((p, i) => `<div class="pl-c"><div class="pl-h"><b>#${p.id} · ${esc2(p.m0.symbol)} / ${esc2(p.m1.symbol)}</b><span>${p.k.fee & 0x800000 ? "dynamic fee" : (p.k.fee / 10000).toFixed(2) + "% fee"} · <em class="${p.inr ? "lp-in" : "lp-out"}">${p.inr ? "in range" : "out of range"}</em>${/^0x0{40}$/.test(p.k.hook) ? "" : " · hook " + exA(p.k.hook)}</span></div>
         <div class="pl-g"><div><small>RANGE</small><b>${p.full ? "Full range" : `${pr(p.sa, p)} – ${pr(p.sb, p)} ${esc2(p.m1.symbol)}`}</b></div><div><small>HOLDS NOW</small><b>${uFmt(p.a0, p.m0.decimals)} ${esc2(p.m0.symbol)}<br>${uFmt(p.a1, p.m1.decimals)} ${esc2(p.m1.symbol)}</b></div><div><small>FEES TO COLLECT</small><b>${p.f0 == null ? "–" : `${uFmt(p.f0, p.m0.decimals, 8)} ${esc2(p.m0.symbol)}<br>${uFmt(p.f1, p.m1.decimals, 8)} ${esc2(p.m1.symbol)}`}</b></div><div><small>PRICE NOW</small><b>1 ${esc2(p.m0.symbol)} = ${pr(p.sP, p)} ${esc2(p.m1.symbol)}</b></div></div>
@@ -953,7 +986,7 @@ LIVE.add("create"); LIVE.add("positions");
 const PTABS = [["swap", "swap", "Swap"], ["pools", "pool4", "Pools"], ["create-pool", "create", "Create Pool"], ["positions", "positions", "Positions"]];
 DEMO.protocol = (el, tab) => { tab = PTABS.some((t) => t[0] === tab) ? tab : "swap";
   el.innerHTML = `<div class="pt-tabs">${PTABS.map(([h, , n]) => `<button type="button" data-t="${h}">${n}</button>`).join("")}</div><div id="ptb"></div>`;
-  const show = (h) => { el.querySelectorAll(".pt-tabs button").forEach((b) => b.classList.toggle("on", b.dataset.t === h)); const d = PTABS.find((t) => t[0] === h)[1]; try { DEMO[d]($("ptb")); } catch (e) { $("ptb").innerHTML = `<p class="dm-e">${esc2(e.message)}</p>`; } if (location.hash !== "#/" + h) history.replaceState(null, "", "#/" + h); };
+  const show = (h) => { el.querySelectorAll(".pt-tabs button").forEach((b) => b.classList.toggle("on", b.dataset.t === h)); const d = PTABS.find((t) => t[0] === h)[1]; try { DEMO[d]($("ptb")); } catch (e) { $("ptb").innerHTML = `<p class="dm-e">${esc2(e.message)}</p>`; } if (location.pathname !== "/" + h) history.replaceState(null, "", "/" + h); };
   el.querySelectorAll(".pt-tabs button").forEach((b) => (b.onclick = () => show(b.dataset.t))); show(tab); };
 LIVE.add("protocol");
 
@@ -967,7 +1000,7 @@ document.querySelectorAll("#cats button").forEach((b) => (b.onclick = () => { do
 function open(i) { const [ic, name, cat, lv, what, uses, steps] = B[i]; $("pc").innerHTML = `${I[ic]}<div class="k">Nº ${String(i + 1).padStart(2, "0")} · ${cat.toUpperCase()} · ${["", "A WEEKEND", "A FEW WEEKENDS", "A PROJECT"][lv]}</div><h2>${name}</h2><p>${what}</p><div class="k">IT USES</div><div class="uses">${uses.map((u) => `<span>${u}</span>`).join("")}</div><div class="k">FIRST VERSION</div><ol>${steps.map((s) => `<li>${s}</li>`).join("")}</ol><div class="status">Starter kit: in progress. Open-source code is added once it is built and tested on mainnet.</div>`;
   $("panel").classList.add("on"); $("shade").classList.add("on"); $("panel").setAttribute("aria-hidden", "false"); }
 const close = () => { $("panel").classList.remove("on"); $("shade").classList.remove("on"); $("panel").setAttribute("aria-hidden", "true"); };
-tiles.forEach((t) => (t.onclick = () => (location.hash = "#/" + SL[+t.dataset.i]))); $("px").onclick = close; $("shade").onclick = close; addEventListener("keydown", (e) => { if (e.key === "Escape") close(); });
+tiles.forEach((t) => (t.onclick = () => (go("/" + SL[+t.dataset.i])))); $("px").onclick = close; $("shade").onclick = close; addEventListener("keydown", (e) => { if (e.key === "Escape") close(); });
 // the highlight hops from blueprint to blueprint, like a finger on the map
 let hot = -1; const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
 function point(t) { const g = $("gw").getBoundingClientRect(), r = t.getBoundingClientRect(); $("ptr").style.left = (r.left - g.left + r.width * 0.62) + "px"; $("ptr").style.top = (r.top - g.top + r.height * 0.55) + "px"; }
@@ -980,11 +1013,11 @@ if (!reduce) { hop(); setInterval(hop, 900); }
 
 // ---- navigation menus, hero try-it, and the trust / status / developers / roadmap / changelog pages ----
 const MENU = {
-  protocol: ["PROTOCOL", "Trade and provide liquidity on Robinhood Chain. Simulated first, signed in your own wallet.", () => [["#/swap", "Swap", "Any token, best route, exact approvals", 1], ["#/pools", "Pools", "Every v4 pool for a token, live", 1], ["#/create-pool", "Create Pool", "New pool or add liquidity, full range", 1], ["#/positions", "Positions", "Your liquidity, fees, collect and remove", 1]]],
-  tools: ["TOOLS", "16 tools for liquidity, agents, payments and data. Each has its own page.", () => B.map((b, i) => [`#/${SL[i]}`, b[1], ((t) => (t.length > 64 ? t.slice(0, 64).replace(/\s+\S*$/, "") + "…" : t))(b[4].split(":")[0]), LIVE.has(b[0])])],
-  trust: ["TRUST", "What ATLAS can see, what it cannot, and how you can check.", () => [["#/trust", "How it works", "From a click to a signed transaction, in plain words"], ["#/trust", "What ATLAS can't see", "Your files, memories, keys and passwords"], ["#/trust", "Wallet safety", "Simulated first, signed only in your wallet"], ["#/trust", "Threat model", "What we protect against, and what we do not"], ["#/status", "Status", "Live health of everything ATLAS reads"]]],
-  dev: ["DEVELOPERS", "Open source, one static page, nothing to install.", () => [["#/developers", "Run it yourself", "Clone, serve, done"], ["#/developers", "Embed a Checkout Button", "Paste one button into any site"], ["#/developers", "Verify a Seal", "Check a stamp without ATLAS"], ["#/mcp", "MCP connector", "npx -y github:atlasboard/atlas-mcp"], ["https://github.com/atlasboard/atlasboard.github.io", "Source code", "github.com/atlasboard, MIT"]]],
-  vision: ["VISION", "Where ATLAS goes next, and what it has shipped.", () => [["#/roadmap", "Roadmap", "What is live and what comes next"], ["#/changelog", "Changelog", "Everything shipped, by date"]]],
+  protocol: ["PROTOCOL", "Trade and provide liquidity on Robinhood Chain. Simulated first, signed in your own wallet.", () => [["/swap", "Swap", "Any token, best route, exact approvals", 1], ["/pools", "Pools", "Every v4 pool for a token, live", 1], ["/create-pool", "Create Pool", "New pool or add liquidity, full range", 1], ["/positions", "Positions", "Your liquidity, fees, collect and remove", 1]]],
+  tools: ["TOOLS", "16 tools for liquidity, agents, payments and data. Each has its own page.", () => B.map((b, i) => [`/${SL[i]}`, b[1], ((t) => (t.length > 64 ? t.slice(0, 64).replace(/\s+\S*$/, "") + "…" : t))(b[4].split(":")[0]), LIVE.has(b[0])])],
+  trust: ["TRUST", "What ATLAS can see, what it cannot, and how you can check.", () => [["/trust", "How it works", "From a click to a signed transaction, in plain words"], ["/trust", "What ATLAS can't see", "Your files, memories, keys and passwords"], ["/trust", "Wallet safety", "Simulated first, signed only in your wallet"], ["/trust", "Threat model", "What we protect against, and what we do not"], ["/status", "Status", "Live health of everything ATLAS reads"]]],
+  dev: ["DEVELOPERS", "Open source, one static page, nothing to install.", () => [["/developers", "Run it yourself", "Clone, serve, done"], ["/developers", "Embed a Checkout Button", "Paste one button into any site"], ["/developers", "Verify a Seal", "Check a stamp without ATLAS"], ["/mcp", "MCP connector", "npx -y github:atlasboard/atlas-mcp"], ["https://github.com/atlasboard/atlasboard.github.io", "Source code", "github.com/atlasboard, MIT"]]],
+  vision: ["VISION", "Where ATLAS goes next, and what it has shipped.", () => [["/roadmap", "Roadmap", "What is live and what comes next"], ["/changelog", "Changelog", "Everything shipped, by date"]]],
 };
 MENU.more = ["MORE", "Trust, live status, building on ATLAS, and where it goes next.", () => [...MENU.trust[2](), ...MENU.dev[2](), ...MENU.vision[2]()]];
 let openM = null;
@@ -1008,18 +1041,18 @@ const INFO = {
     <div class="sec"><b class="h">WHAT ATLAS CAN'T SEE</b><ul><li>Your files: Seal hashes them locally and only the fingerprint can leave your device, if you stamp it.</li><li>Your memories: Memory encrypts them with AES-256-GCM using a key made from your password (PBKDF2, 310,000 rounds). The password never leaves the page.</li><li>Your keys and seed phrase: ATLAS never asks for them. Ever.</li></ul></div>
     <div class="sec"><b class="h">WALLET SAFETY</b><ul><li>Anything that sends money or writes to the chain is simulated first with <code>eth_call</code> and <code>eth_estimateGas</code>.</li><li>Only then does your wallet show the transaction. You read it and you sign it, or not.</li><li>ATLAS never holds funds and never asks for unlimited approvals.</li></ul></div>
     <div class="sec"><b class="h">THREAT MODEL</b><p><b>We protect against:</b> a server leak (there is no server), someone reading your memories in browser storage without your password, a tool sending money you did not see.</p><p><b>We do not protect against:</b> malware on your own device, a weak or lost password (a lost password means the vault cannot be opened, by anyone), a wallet that hides what you sign, and sites you paste a Checkout Button into.</p></div>
-    <div class="sec"><b class="h">CHECK IT YOURSELF</b><p>The whole site is one file, open source under MIT: <a href="https://github.com/atlasboard/atlasboard.github.io" target="_blank" rel="noopener">github.com/atlasboard</a>. Live health is on the <a href="#/status">status page</a>.</p></div></div>`,
+    <div class="sec"><b class="h">CHECK IT YOURSELF</b><p>The whole site is one file, open source under MIT: <a href="https://github.com/atlasboard/atlasboard.github.io" target="_blank" rel="noopener">github.com/atlasboard</a>. Live health is on the <a href="/status">status page</a>.</p></div></div>`,
   status: () => `<div class="info"><div class="pg-k">STATUS</div><h2>Live health.</h2><p class="lead">Checked from your browser right now, every 10 seconds. If something here is down, the tools that use it will say so.</p><div class="sec" id="stl"><p class="dm-n">checking…</p></div><p class="dm-n" id="stt"></p></div>`,
   developers: () => `<div class="info"><div class="pg-k">DEVELOPERS</div><h2>One file.<br>Nothing to install.</h2><p class="lead">ATLAS is a single static page, MIT licensed. Fork it, run it, or take one tool out of it.</p>
     <div class="sec"><b class="h">RUN IT YOURSELF</b><div class="codeb">git clone https://github.com/atlasboard/atlasboard.github.io
 cd atlasboard.github.io
 python3 -m http.server 8000</div><p>Then open http://localhost:8000.</p></div>
-    <div class="sec"><b class="h">EMBED A CHECKOUT BUTTON</b><p>Make a button on the <a href="#/checkout-button">Checkout Button</a> page and paste the code into any site. It asks the buyer's wallet to send USDG to your address on Robinhood Chain (chain 4663). No backend needed; check payments with a <a href="#/smart-invoice">Smart Invoice</a> link.</p></div>
+    <div class="sec"><b class="h">EMBED A CHECKOUT BUTTON</b><p>Make a button on the <a href="/checkout-button">Checkout Button</a> page and paste the code into any site. It asks the buyer's wallet to send USDG to your address on Robinhood Chain (chain 4663). No backend needed; check payments with a <a href="/smart-invoice">Smart Invoice</a> link.</p></div>
     <div class="sec"><b class="h">VERIFY A SEAL WITHOUT ATLAS</b><p>A stamp is a 0-ETH transaction from a wallet to itself whose data is the file's SHA-256. To verify: hash the file, fetch the transaction from any Robinhood Chain RPC, and compare its <code>input</code> with the hash.</p><div class="codeb">sha256sum myfile.pdf
 curl -s https://rpc.mainnet.chain.robinhood.com -H 'content-type: application/json' \\
   -d '{"jsonrpc":"2.0","id":1,"method":"eth_getTransactionByHash","params":["0xYOUR_TX"]}'</div></div></div>`,
   roadmap: () => `<div class="info"><div class="pg-k">ROADMAP</div><h2>${B.filter((b) => LIVE.has(b[0])).length} live.<br>${B.length - B.filter((b) => LIVE.has(b[0])).length} on the way.</h2><p class="lead">A tool is marked LIVE only when it works on Robinhood Chain mainnet. Plans have no dates: they ship when they work.</p>
-    <div class="sec"><b class="h">ALL TOOLS</b><div class="rm">${B.map((b, i) => `<a href="#/${SL[i]}">${b[1]}<em class="${LIVE.has(b[0]) ? "l" : ""}">${LIVE.has(b[0]) ? "LIVE" : "NEXT"}</em></a>`).join("")}</div></div>
+    <div class="sec"><b class="h">ALL TOOLS</b><div class="rm">${B.map((b, i) => `<a href="/${SL[i]}">${b[1]}<em class="${LIVE.has(b[0]) ? "l" : ""}">${LIVE.has(b[0]) ? "LIVE" : "NEXT"}</em></a>`).join("")}</div></div>
     <div class="sec"><b class="h">COMING NEXT</b><ul><li>Memory folders readable by the MCP connector, with the same per-folder permission and read log.</li><li>A public, hourly proof that every live tool still works.</li><li>New tools are added here only once they work on mainnet.</li></ul></div></div>`,
   changelog: () => `<div class="info"><div class="pg-k">CHANGELOG</div><h2>What has shipped.</h2><div class="sec cl">
     <div><b>27 Nov 2026 · Protocol: Create Pool and Positions</b><p>Protocol is one tool with four tabs: Swap, Pools, Create Pool and Positions. Create a Uniswap v4 pool or add liquidity at full range through the PositionManager and Permit2, with exact amounts and every step simulated first. Positions shows what each position holds and the fees waiting, and collects or removes them from your wallet.</p></div>
@@ -1030,7 +1063,7 @@ curl -s https://rpc.mainnet.chain.robinhood.com -H 'content-type: application/js
     <div><b>27 Nov 2026 · Trust, Status, Developers and Roadmap pages</b><p>What ATLAS can and cannot see, live health checks, and how to run or verify everything yourself.</p></div>
     <div><b>27 Nov 2026 · atlasboard.dev</b><p>The atlas goes online, one page per tool.</p></div></div></div>`,
 };
-async function statusLoop() { if (!location.hash.startsWith("#/status")) return; const checks = [["Robinhood Chain RPC", async () => { const b = parseInt(await crpc("eth_blockNumber", []), 16); return "block " + b.toLocaleString("en-US"); }], ["KyberSwap router", async () => { const j = await (await fetch(`${KYBER}/routes?tokenIn=${USDG_ADDR}&tokenOut=0xd0601ce157db5bdc3162bbac2a2c8af5320d9eec&amountIn=1000000`)).json(); if (!j.data) throw 0; return "quotes answering"; }], ["Sourcify", async () => { const r = await fetch(`https://sourcify.dev/server/v2/contract/${CHAIN.id}/0xc2623e62d5fae1eeebc2990a9d51f9e69a8a9092`); if (!r.ok) throw 0; return "lookups answering"; }], ["Browser crypto (SHA-256, AES-GCM)", async () => { await crypto.subtle.digest("SHA-256", new Uint8Array(1)); return "available"; }]];
+async function statusLoop() { if (!H().startsWith("/status")) return; const checks = [["Robinhood Chain RPC", async () => { const b = parseInt(await crpc("eth_blockNumber", []), 16); return "block " + b.toLocaleString("en-US"); }], ["KyberSwap router", async () => { const j = await (await fetch(`${KYBER}/routes?tokenIn=${USDG_ADDR}&tokenOut=0xd0601ce157db5bdc3162bbac2a2c8af5320d9eec&amountIn=1000000`)).json(); if (!j.data) throw 0; return "quotes answering"; }], ["Sourcify", async () => { const r = await fetch(`https://sourcify.dev/server/v2/contract/${CHAIN.id}/0xc2623e62d5fae1eeebc2990a9d51f9e69a8a9092`); if (!r.ok) throw 0; return "lookups answering"; }], ["Browser crypto (SHA-256, AES-GCM)", async () => { await crypto.subtle.digest("SHA-256", new Uint8Array(1)); return "available"; }]];
   const out = []; for (const [n, f] of checks) { const t0 = performance.now(); try { const m = await f(); out.push(`<div class="st-row"><i class="st-d up"></i><b>${n}</b><span>${m} · ${Math.round(performance.now() - t0)} ms</span></div>`); } catch { out.push(`<div class="st-row"><i class="st-d down"></i><b>${n}</b><span>not answering</span></div>`); } }
   if (!$("stl")) return; $("stl").innerHTML = out.join(""); $("stt").textContent = "last checked " + new Date().toISOString().slice(11, 19) + " UTC"; setTimeout(statusLoop, 10000); }
 
@@ -1073,7 +1106,7 @@ function pageHtml(i) {
   const [ic, name, cat, lv, what, uses, steps] = B[i], d = D[ic] || {}, prev = (i + B.length - 1) % B.length, next = (i + 1) % B.length;
   const md = (t) => String(t).replace(/`([^`]+)`/g, "<code>$1</code>");
   const flow = (d.flow || []).map((f, k) => `<div class="fn"><span>${String(k + 1).padStart(2, "0")}</span>${f}</div>${k < d.flow.length - 1 ? '<div class="fw"><i></i></div>' : ""}`).join("");
-  return `<div class="pg-top"><a href="#/" class="back">← Back to the atlas</a><span>Nº ${String(i + 1).padStart(2, "0")} / ${B.length} · ${cat.toUpperCase()}</span></div>
+  return `<div class="pg-top"><a href="/" class="back">← Back to the atlas</a><span>Nº ${String(i + 1).padStart(2, "0")} / ${B.length} · ${cat.toUpperCase()}</span></div>
   <section class="pg-hero"><div class="pg-ic">${I[ic].replace("<svg ", '<svg class="pgsvg" ')}</div><div><div class="pg-k">${cat.toUpperCase()} · ${LVL[lv].toUpperCase()}</div><h2 class="pg-h">${name}</h2><p class="pg-lead">${what}</p><div class="lv big">${[1, 2, 3].map((q) => `<i class="${q <= lv ? "f" : ""}"></i>`).join("")}<em>${LVL[lv]} to a first version</em></div></div></section>
   ${LIVE.has(ic) ? `<section class="dm"><div class="dm-k"><span>TRY IT · ROBINHOOD CHAIN MAINNET</span><i>LIVE</i></div><div id="demo"></div></section>` : ""}<section class="pg-grid">
     <div class="pc wide"><b>WHAT IS IT, IN PLAIN WORDS?</b><p>${md(d.plain || what)}</p></div>
@@ -1084,16 +1117,16 @@ function pageHtml(i) {
     <div class="pc"><b>BUILD THE FIRST VERSION</b><ol>${steps.map((s) => `<li>${s}</li>`).join("")}</ol></div>
     ${LIVE.has(ic) ? `<div class="pc wide kit live"><b>STATUS · LIVE</b><p>Working on Robinhood Chain mainnet, in your browser. Anything that sends money or writes to the chain is simulated first and signed in your own wallet: ATLAS never holds funds or keys. Open source at github.com/atlasboard.</p></div>` : `<div class="pc wide kit"><b>STATUS · IN PROGRESS</b><p>Not live yet. This page explains the idea and how to build it; the working tool is added here once it is built and tested on Robinhood Chain mainnet.</p></div>`}
   </section>
-  <nav class="pg-nav"><a href="#/${SL[prev]}"><small>← PREVIOUS</small>${B[prev][1]}</a><a href="#/">ALL ${B.length}</a><a href="#/${SL[next]}" class="r"><small>NEXT →</small>${B[next][1]}</a></nav>`;
+  <nav class="pg-nav"><a href="/${SL[prev]}"><small>← PREVIOUS</small>${B[prev][1]}</a><a href="/">ALL ${B.length}</a><a href="/${SL[next]}" class="r"><small>NEXT →</small>${B[next][1]}</a></nav>`;
 }
 function route() {
-  const s0 = decodeURIComponent((location.hash.match(/^#\/([^?]+)/) || [])[1] || ""), ptab = PTABS.some((t) => t[0] === s0) ? s0 : null, s = ptab ? "protocol" : s0, i = SL.indexOf(s);
-  if (INFO[s]) { $("page").innerHTML = `<div class="pg-top"><a href="#/" class="back">← Back to the atlas</a><span>ATLAS · ${s.toUpperCase()}</span></div>` + INFO[s](); document.body.classList.add("on-page"); document.title = s[0].toUpperCase() + s.slice(1) + " · ATLAS"; scrollTo(0, 0); if (s === "status") statusLoop(); return; }
+  const s0 = decodeURIComponent((H().match(/^#\/([^?]+)/) || [])[1] || ""), ptab = PTABS.some((t) => t[0] === s0) ? s0 : null, s = ptab ? "protocol" : s0, i = SL.indexOf(s);
+  if (INFO[s]) { $("page").innerHTML = `<div class="pg-top"><a href="/" class="back">← Back to the atlas</a><span>ATLAS · ${s.toUpperCase()}</span></div>` + INFO[s](); document.body.classList.add("on-page"); document.title = s[0].toUpperCase() + s.slice(1) + " · ATLAS"; scrollTo(0, 0); if (s === "status") statusLoop(); return; }
   if (i >= 0) { $("page").innerHTML = pageHtml(i); document.body.classList.add("on-page"); document.title = B[i][1] + " · ATLAS"; scrollTo(0, 0); if (DEMO[B[i][0]]) { try { DEMO[B[i][0]]($("demo"), ptab); } catch (e) { $("demo").innerHTML = `<p class="dm-e">${e.message}</p>`; } }
     const svg = $("page").querySelector(".pgsvg"); svg.querySelectorAll("path,rect,circle").forEach((el, k) => { let L = 200; try { L = Math.ceil(el.getTotalLength()) + 2; } catch {} el.style.setProperty("--len", L); el.style.setProperty("--d", `${-k * 0.2}s`); }); }
   else { document.body.classList.remove("on-page"); document.title = "ATLAS · Things to build on Robinhood Chain"; if (window.wiresReady) setTimeout(wire, 50); }
 }
-addEventListener("hashchange", route);
+
 
 // ---- wires: every tile is joined to its right and lower neighbour, and signals travel along them ----
 const WS = "http://www.w3.org/2000/svg", wires = $("wires"); let edges = [], sigs = [];
@@ -1131,6 +1164,75 @@ async function drafting() {
     $("stampd").classList.add("on"); await new Promise((r) => setTimeout(r, 1400)); di++; }
 }
 route();
+// ---------- background object: a segmented ring, one segment per tool, over wireframe orbs ----------
+(() => {
+  const cv = document.createElement("canvas"); cv.id = "bgring"; cv.setAttribute("aria-hidden", "true"); document.body.prepend(cv);
+  const g = cv.getContext("2d"), still = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  let W = 0, Hh = 0, dpr = 1, small = false;
+  const size = () => { dpr = Math.min(1.5, devicePixelRatio || 1); W = innerWidth; Hh = innerHeight; small = W < 760; cv.width = W * dpr; cv.height = Hh * dpr; cv.style.width = W + "px"; cv.style.height = Hh + "px"; g.setTransform(dpr, 0, 0, dpr, 0, 0); };
+  size(); addEventListener("resize", size);
+  const N = B.length, SUB = small ? 3 : 4, U = N * SUB, V = small ? 9 : 13, Rr = 1, rr = 0.3;
+  // orbs: each a set of random great circles
+  const rnd = (a, b) => a + Math.random() * (b - a);
+  const orbs = Array.from({ length: small ? 4 : 8 }, () => ({ x: rnd(0, 1), y: rnd(0, 1), r: rnd(40, 120), vx: rnd(-6, 6), vy: rnd(-4, 4), sp: rnd(0.05, 0.18), ph: rnd(0, 6),
+    cs: Array.from({ length: 9 }, () => { const a = rnd(0, Math.PI), b = rnd(0, Math.PI); return [Math.cos(a) * Math.sin(b), Math.sin(a) * Math.sin(b), Math.cos(b)]; }) }));
+  let active = 0, lastSwitch = 0, t0 = performance.now();
+  function draw(now) {
+    const t = (now - t0) / 1000; g.clearRect(0, 0, W, Hh);
+    const page = document.body.classList.contains("on-page"), sy = scrollY;
+    // orbs
+    g.lineWidth = 1;
+    for (const o of orbs) { const ox = ((o.x * W + o.vx * t) % (W + 260) + W + 260) % (W + 260) - 130, oy = ((o.y * Hh + o.vy * t) % (Hh + 260) + Hh + 260) % (Hh + 260) - 130, a = t * o.sp + o.ph;
+      g.strokeStyle = "rgba(242,243,244,.07)";
+      for (const [nx, ny, nz] of o.cs) { // circle perpendicular to n, rotated about y by a
+        const ux = [ny, -nx, 0], ul = Math.hypot(...ux) || 1; const u = ux.map((v) => v / ul), w = [ny * u[2] - nz * u[1], nz * u[0] - nx * u[2], nx * u[1] - ny * u[0]];
+        g.beginPath(); for (let k = 0; k <= 40; k++) { const th = (k / 40) * Math.PI * 2, px = u[0] * Math.cos(th) + w[0] * Math.sin(th), py = u[1] * Math.cos(th) + w[1] * Math.sin(th), pz = u[2] * Math.cos(th) + w[2] * Math.sin(th);
+          const X = px * Math.cos(a) + pz * Math.sin(a); const sx = ox + X * o.r, syy = oy + py * o.r; k ? g.lineTo(sx, syy) : g.moveTo(sx, syy); } g.stroke(); } }
+    // ring placement
+    const spot = document.getElementById("ringspot"), rs = !page && spot ? spot.getBoundingClientRect() : null, home = rs && rs.bottom > 40 && rs.top < Hh;
+    const S = home ? Math.min(rs.width * 0.3, rs.height * 0.33, 210) : small ? 110 : Math.min(W * 0.12, 180), cx = home ? rs.left + rs.width / 2 : W * (small ? 0.75 : 0.87), cy = home ? rs.top + rs.height * 0.52 : Hh * 0.62;
+    const fade = home ? 1 : 0.22; g.globalAlpha = fade;
+    if (now - lastSwitch > 1700) { active = (active + 1) % N; lastSwitch = now; }
+    const yaw = still ? 0.5 : t * 0.12, tilt = 0.55, ct = Math.cos(tilt), st = Math.sin(tilt), cyw = Math.cos(yaw), syw = Math.sin(yaw), cam = 4.2;
+    const P = (x, y, z) => { const X = x * cyw - z * syw, Z0 = x * syw + z * cyw, Y = y * ct - Z0 * st, Z = y * st + Z0 * ct, f = cam / (cam + Z); return [cx + X * f * S, cy - Y * f * S, Z]; };
+    const L = [0.3, 0.85, -0.45], polys = [];
+    const tor = (i, j) => { const u = (i / U) * Math.PI * 2, v = (j / V) * Math.PI * 2; return [(Rr + rr * Math.cos(v)) * Math.cos(u), rr * Math.sin(v) + 0.35, (Rr + rr * Math.cos(v)) * Math.sin(u)]; };
+    for (let i = 0; i < U; i++) { const seg = Math.floor(i / SUB), gap = i % SUB === SUB - 1;
+      for (let j = 0; j < V; j++) { const a = tor(i, j), b = tor(i + 1, j), c = tor(i + 1, j + 1), d = tor(i, j + 1);
+        const u = ((i + 0.5) / U) * Math.PI * 2, v = ((j + 0.5) / V) * Math.PI * 2, n = [Math.cos(v) * Math.cos(u), Math.sin(v), Math.cos(v) * Math.sin(u)];
+        const nX = n[0] * cyw - n[2] * syw, nZ0 = n[0] * syw + n[2] * cyw, nY = n[1] * ct - nZ0 * st, nZ = n[1] * st + nZ0 * ct; if (nZ > 0.35) continue;
+        const pts = [a, b, c, d].map((p) => P(...p)), z = pts.reduce((s, p) => s + p[2], 0) / 4, lit = Math.max(0, n[0] * L[0] + n[1] * L[1] + n[2] * L[2]);
+        polys.push({ pts, z, lit, on: seg === active, gap }); } }
+    // base disc (annulus) and pillars
+    const base = [];
+    for (let i = 0; i < U; i++) { const u0 = (i / U) * Math.PI * 2, u1 = ((i + 1) / U) * Math.PI * 2;
+      for (const [r0, r1] of [[0.62, 0.9], [0.9, 1.22]]) { const pts = [[r0, u0], [r1, u0], [r1, u1], [r0, u1]].map(([r, u]) => P(r * Math.cos(u), -0.55, r * Math.sin(u))); base.push({ pts, z: pts.reduce((s, p) => s + p[2], 0) / 4 + 5, lit: 0.35, base: true }); }
+      const pts = [[1.22, u0, -0.55], [1.22, u1, -0.55], [1.22, u1, -0.68], [1.22, u0, -0.68]].map(([r, u, y]) => P(r * Math.cos(u), y, r * Math.sin(u))); base.push({ pts, z: pts.reduce((s, p) => s + p[2], 0) / 4 + 5, lit: 0.15, base: true }); }
+    const poly = (p) => { g.beginPath(); p.pts.forEach(([x, y], k) => (k ? g.lineTo(x, y) : g.moveTo(x, y))); g.closePath();
+      if (p.base) { g.fillStyle = `rgb(${24 + p.lit * 30},${27 + p.lit * 30},${31 + p.lit * 30})`; g.fill(); g.strokeStyle = "rgba(242,243,244,.06)"; g.stroke(); return; }
+      const k = 0.25 + p.lit * 0.75; g.fillStyle = p.on ? `rgb(${Math.round(40 + 50 * k)},${Math.round(70 + 100 * k)},${Math.round(52 + 70 * k)})` : `rgb(${Math.round((p.gap ? 18 : 30) + 55 * k)},${Math.round((p.gap ? 20 : 33) + 57 * k)},${Math.round((p.gap ? 24 : 38) + 60 * k)})`;
+      g.fill(); g.strokeStyle = p.on ? "rgba(119,187,144,.9)" : "rgba(242,243,244,.09)"; g.lineWidth = 0.8; g.stroke(); };
+    base.sort((a, b) => b.z - a.z).forEach(poly);
+    g.strokeStyle = "rgba(154,160,166,.35)"; g.lineWidth = 1.2;
+    for (let k = 0; k < 8; k++) { const u = (k / 8) * Math.PI * 2 + 0.2, a = P(Math.cos(u) * 1.0, -0.55, Math.sin(u) * 1.0), b = P(Math.cos(u) * 1.0, 0.05, Math.sin(u) * 1.0); g.beginPath(); g.moveTo(a[0], a[1]); g.lineTo(b[0], b[1]); g.stroke(); }
+    // signal pillar under the active segment
+    const ua = ((active + 0.5) / N) * Math.PI * 2, pa = P(Math.cos(ua), -0.55, Math.sin(ua)), pb = P(Math.cos(ua), 0.05, Math.sin(ua));
+    g.strokeStyle = "rgba(119,187,144,.95)"; g.lineWidth = 2.2; g.beginPath(); g.moveTo(pa[0], pa[1]); g.lineTo(pb[0], pb[1]); g.stroke();
+    g.fillStyle = "#77bb90"; g.beginPath(); g.arc(pa[0], pa[1], 3.2, 0, 7); g.fill();
+    polys.sort((a, b) => b.z - a.z).forEach(poly);
+    // callout to the active tool
+    if (home && !small) { const top = P(Math.cos(ua) * Rr, 0.35 + rr, Math.sin(ua) * Rr), lx = cx + S * 1.45 * (top[0] > cx ? 1 : -1), ly = cy - S * 1.05;
+      g.strokeStyle = "rgba(119,187,144,.75)"; g.lineWidth = 1; g.beginPath(); g.moveTo(top[0], top[1]); g.lineTo(lx, ly + 22); g.stroke();
+      const label = `Nº ${String(active + 1).padStart(2, "0")} · ${B[active][1].toUpperCase()}`, sub = (B[active][4] || "").split(/[.:]/)[0].slice(0, 46);
+      g.font = '700 13px "JetBrains Mono", monospace'; const wv = Math.max(g.measureText(label).width, (g.font = '500 10.5px "JetBrains Mono", monospace', g.measureText(sub).width)) + 22, bx = Math.max(10, Math.min(W - wv - 10, top[0] > cx ? lx : lx - wv));
+      g.fillStyle = "rgba(18,20,22,.92)"; g.fillRect(bx, ly - 6, wv, 46); g.strokeStyle = "rgba(119,187,144,.6)"; g.strokeRect(bx + 0.5, ly - 5.5, wv - 1, 45);
+      g.fillStyle = "#77bb90"; g.font = '700 13px "JetBrains Mono", monospace'; g.fillText(label, bx + 11, ly + 13); g.fillStyle = "#9aa0a6"; g.font = '500 10.5px "JetBrains Mono", monospace'; g.fillText(sub, bx + 11, ly + 30); }
+    g.globalAlpha = 1;
+  }
+  let raf = 0, last = 0; const loop = (now) => { raf = requestAnimationFrame(loop); if (document.hidden || now - last < 33) return; last = now; draw(now); };
+  if (still) { draw(performance.now()); addEventListener("resize", () => draw(performance.now())); } else raf = requestAnimationFrame(loop);
+})();
+
 if (!reduce) drafting(); else { dsvg.innerHTML = I[B[0][0]].replace(/^<svg[^>]*>/, "").replace(/<\/svg>$/, ""); $("dname").textContent = B[0][1]; $("dwhat").textContent = B[0][4]; }
 
 // ---- life ----
