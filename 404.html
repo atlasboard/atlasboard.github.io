@@ -267,7 +267,7 @@ body.on-page #page{display:block}body.on-page .wrap{display:none}
   
   <header class="hero2"><div class="h2l"><span class="stamp">tools you can check · Robinhood Chain</span>
 <h1><b id="cnt">15</b> tools to build with.<span class="l2">All of them work.</span></h1>
-<p class="h2p">ATLAS is a set of tools for AI agents, payments and privacy on Robinhood Chain mainnet. Every tool has its own page and runs right there, in your browser: no server, no account, and nothing is signed except in your own wallet.</p>
+<p class="h2p">ATLAS is a set of tools for trading, liquidity, AI agents and payments on Robinhood Chain mainnet. Every tool has its own page and runs right there, in your browser: no server, no account, and nothing is signed except in your own wallet.</p>
 <div class="h2b"><a class="btn-a" href="/memory">Open Memory →</a><a class="btn-b" href="/trust">How we keep it safe</a></div>
 <div class="h2s"><span><b id="hlive">15</b> live tools</span><span><b>0</b> servers</span><span><b>0</b> keys held</span><span><b>MIT</b> open source</span></div></div>
 <div class="h2r" id="ringspot" aria-hidden="true"></div></header>
@@ -1046,7 +1046,7 @@ const INFO = {
   developers: () => `<div class="info"><div class="pg-k">DEVELOPERS</div><h2>One file.<br>Nothing to install.</h2><p class="lead">ATLAS is a single static page, MIT licensed. Fork it, run it, or take one tool out of it.</p>
     <div class="sec"><b class="h">RUN IT YOURSELF</b><div class="codeb">git clone https://github.com/atlasboard/atlasboard.github.io
 cd atlasboard.github.io
-python3 -m http.server 8000</div><p>Then open http://localhost:8000.</p></div>
+npx -y serve -s . -l 8000</div><p>Then open http://localhost:8000. The <code>-s</code> flag sends every path to the page, so links like /swap work after a refresh, as they do on GitHub Pages through 404.html.</p></div>
     <div class="sec"><b class="h">EMBED A CHECKOUT BUTTON</b><p>Make a button on the <a href="/checkout-button">Checkout Button</a> page and paste the code into any site. It asks the buyer's wallet to send USDG to your address on Robinhood Chain (chain 4663). No backend needed; check payments with a <a href="/smart-invoice">Smart Invoice</a> link.</p></div>
     <div class="sec"><b class="h">VERIFY A SEAL WITHOUT ATLAS</b><p>A stamp is a 0-ETH transaction from a wallet to itself whose data is the file's SHA-256. To verify: hash the file, fetch the transaction from any Robinhood Chain RPC, and compare its <code>input</code> with the hash.</p><div class="codeb">sha256sum myfile.pdf
 curl -s https://rpc.mainnet.chain.robinhood.com -H 'content-type: application/json' \\
@@ -1055,6 +1055,7 @@ curl -s https://rpc.mainnet.chain.robinhood.com -H 'content-type: application/js
     <div class="sec"><b class="h">ALL TOOLS</b><div class="rm">${B.map((b, i) => `<a href="/${SL[i]}">${b[1]}<em class="${LIVE.has(b[0]) ? "l" : ""}">${LIVE.has(b[0]) ? "LIVE" : "NEXT"}</em></a>`).join("")}</div></div>
     <div class="sec"><b class="h">COMING NEXT</b><ul><li>Memory folders readable by the MCP connector, with the same per-folder permission and read log.</li><li>A public, hourly proof that every live tool still works.</li><li>New tools are added here only once they work on mainnet.</li></ul></div></div>`,
   changelog: () => `<div class="info"><div class="pg-k">CHANGELOG</div><h2>What has shipped.</h2><div class="sec cl">
+    <div><b>27 Nov 2026 · Dark theme, the ring, Model, clean links</b><p>A new dark look with one green accent. A ring of 16 segments, one per tool, turns behind the first screen and lights each tool in turn. AI Model is now Model, with a moving wall of every model that can call ATLAS tools and its live OpenRouter price. Links are clean: atlasboard.dev/swap instead of #/swap, and old links still work.</p></div>
     <div><b>27 Nov 2026 · Protocol: Create Pool and Positions</b><p>Protocol is one tool with four tabs: Swap, Pools, Create Pool and Positions. Create a Uniswap v4 pool or add liquidity at full range through the PositionManager and Permit2, with exact amounts and every step simulated first. Positions shows what each position holds and the fees waiting, and collects or removes them from your wallet.</p></div>
     <div><b>27 Nov 2026 · Swap and Pools</b><p>Swap any token at the best route across Robinhood Chain DEXs, with an exact approval and a simulation before you sign. Pool lists every Uniswap V4 pool for a token with price, liquidity, 24h swaps and volume, read from the PoolManager.</p></div>
     <div><b>27 Nov 2026 · All 15 tools live</b><p>Console, Privacy, Notary, Token Gate, Night Shift, AI Model, x402 and MCP join the others. x402 payments are signed as EIP-3009 authorizations in your own wallet; MCP runs on your computer with <code>npx -y github:atlasboard/atlas-mcp</code>.</p></div>
