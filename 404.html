@@ -247,6 +247,12 @@ body.on-page #page{display:block}body.on-page .wrap{display:none}
 .nv-x{margin-left:auto;display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border:1.5px solid var(--bd);border-radius:50%;color:var(--ink);margin-right:-10px;transition:.15s}.nv-gh{margin-left:-2px}.nv-x:hover{border-color:var(--hi);color:var(--hi)}
 .ca{display:inline-flex;align-items:center;gap:10px;flex-wrap:wrap;margin-top:18px;padding:8px 10px 8px 14px;border:1.5px dashed var(--bd);border-radius:12px;font:600 12.5px "JetBrains Mono";color:var(--mute);max-width:100%}.ca b{color:var(--hi);letter-spacing:.14em}.ca code{color:var(--ink);font:600 12.5px "JetBrains Mono";word-break:break-all}.ca a,.ca button{font:700 11.5px "JetBrains Mono";color:var(--ink);background:var(--card2);border:1px solid var(--bd);border-radius:30px;padding:5px 10px;text-decoration:none;cursor:pointer}.ca a:hover,.ca button:hover{border-color:var(--hi)}.small a{color:var(--hi)}
 body:not(.on-page){background:linear-gradient(180deg,rgba(7,9,11,.55) 0%,rgba(7,9,11,0) 30%,rgba(7,9,11,0) 70%,rgba(7,9,11,.6) 100%) fixed,url(/desk-bg.jpg) center/cover fixed,#07090b}@media (max-width:760px){body:not(.on-page){background:linear-gradient(180deg,rgba(7,9,11,.6),rgba(7,9,11,.2)) fixed,url(/desk-bg-m.jpg) center/cover fixed,#07090b}}
+#wires .pulse{fill:none;stroke:#e6fff0;stroke-width:3;stroke-linecap:round;filter:drop-shadow(0 0 4px #77bb90) drop-shadow(0 0 10px rgba(119,187,144,.8))}
+.gridwrap.boot .tile:not(.on){opacity:.22;filter:saturate(0) brightness(.7);border-color:#1c2024}.gridwrap.boot .tile:not(.on) .livebadge,.gridwrap.boot .tile:not(.on) .mini{opacity:0}.gridwrap.boot #wires .w,.gridwrap.boot #wires .sig{opacity:0}.gridwrap.boot.wired #wires .w{opacity:1;transition:opacity .6s}.gridwrap.boot.wired #wires .sig{opacity:1;transition:opacity .6s .4s}
+.gridwrap .tile.on{transition:opacity .35s,filter .35s,border-color .35s}.tile .livebadge,.tile .mini{transition:opacity .4s}
+.gridwrap::before{content:"";position:absolute;inset:0;pointer-events:none;z-index:0;opacity:0;transition:opacity .4s;background:radial-gradient(420px circle at var(--mx,50%) var(--my,50%),rgba(119,187,144,.13),transparent 65%)}.gridwrap.lit::before{opacity:1}
+.tile{background:radial-gradient(240px circle at var(--x,-300px) var(--y,-300px),rgba(119,187,144,.11),transparent 62%),var(--card)}
+.beat{position:absolute;z-index:3;transform:translate(-50%,-130%);font:700 10px "JetBrains Mono";color:#07090b;background:var(--hi);padding:3px 7px;border-radius:20px;pointer-events:none;white-space:nowrap;animation:beatup 1.6s ease-out forwards;box-shadow:0 0 14px rgba(119,187,144,.6)}@keyframes beatup{0%{opacity:0;transform:translate(-50%,-90%)}15%{opacity:1}100%{opacity:0;transform:translate(-50%,-220%)}}
 #bgring{position:fixed;inset:0;z-index:-1;pointer-events:none}.stage{display:none;position:relative;height:calc(100vh - 61px);min-height:560px;overflow:hidden;background:#07090b}.has3d .stage{display:block}body.on-page .stage{display:none}
 .stage canvas{position:absolute;inset:0;width:100%;height:100%;display:block;cursor:grab;transition:opacity .7s}.stage.loading canvas,.loading3d .stage canvas{opacity:0}.loading3d .st-load{opacity:1}.loading3d .st-ctl{opacity:.35;pointer-events:none}.st-load{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;font:600 13px "JetBrains Mono";color:var(--mute);letter-spacing:.08em;opacity:0;pointer-events:none;transition:opacity .4s}.stage.loading .st-load{opacity:1}.st-load i{width:46px;height:46px;border-radius:50%;border:3px solid var(--line);border-top-color:var(--hi);animation:stspin .9s linear infinite}@keyframes stspin{to{transform:rotate(360deg)}}.stage.loading .st-ctl{opacity:.35;pointer-events:none}
 .st-shade{position:absolute;inset:0;pointer-events:none;background:linear-gradient(90deg,rgba(7,9,11,.96) 0%,rgba(7,9,11,.86) 36%,rgba(7,9,11,0) 60%),linear-gradient(0deg,rgba(7,9,11,.85) 0%,rgba(7,9,11,0) 22%);transition:opacity .5s}
@@ -1156,13 +1162,41 @@ if ($("cacp")) $("cacp").onclick = () => { navigator.clipboard && navigator.clip
   const q = async (ti, to, amt) => { const j = await (await fetch(`${KYBER}/routes?tokenIn=${ti}&tokenOut=${to}&amountIn=${amt}`, { headers: { "x-client-id": "atlas" } })).json(); if (j.code !== 0 || !j.data) throw 0; return BigInt(j.data.routeSummary.amountOut); };
   const NAT = "0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee", NV = "0xd0601ce157db5bdc3162bbac2a2c8af5320d9eec";
   const tick = async () => { if (document.hidden || document.body.classList.contains("on-page")) return;
-    try { const bn = await cblock(); set("console", "block " + bn.toLocaleString("en-US"));  } catch {}
+    try { if (!document.querySelector('.tile .mini[data-k="console"]').textContent) { const bn = await cblock(); set("console", "block " + bn.toLocaleString("en-US")); } } catch {}
     try { const out = await q(NAT, USDG_ADDR, 10n ** 18n); set("protocol", "ETH $" + fmt2(Number(out) / 1e6, 0) + " · best route"); } catch {} };
   const once = async () => {
     try { const j = await (await fetch("https://openrouter.ai/api/v1/models")).json(), ms = (j.data || []).filter((m) => (m.supported_parameters || []).includes("tools")), fr = ms.filter((m) => /:free$/.test(m.id) || (m.pricing && +m.pricing.prompt === 0 && +m.pricing.completion === 0)); if (ms.length) set("aimodel", `${ms.length} models · ${fr.length} free`); } catch {}
     try { const r = await crpc("eth_call", [{ to: ORACLE_ADDR, data: "0xb3596f07" + pad32(NV) }, "latest"]), orc = Number(BigInt(r)) / 1e8, dex = Number(await q(NV, USDG_ADDR, 10n ** 18n)) / 1e6; if (orc > 0) { const g = (dex / orc - 1) * 100; set("stocks", `NVDA ${g >= 0 ? "+" : ""}${g.toFixed(2)}% vs oracle`); } } catch {}
     try { const a = Number(await q(USDG_ADDR, NAT, 100n * 10n ** 6n)) * 100, b = Number(await q(USDG_ADDR, NAT, 10000n * 10n ** 6n)), imp = Math.max(0, (1 - b / a) * 100); set("pool", `10k USDG · ${imp.toFixed(2)}% impact`); } catch {} };
   setTimeout(() => { tick(); once(); }, 600); setInterval(tick, 30000); })();
+// ---------- the board comes alive: power-on wave, the chain's heartbeat, a light that follows the cursor ----------
+(() => { const gw = $("gw"), still = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const wave = (src, speed, visit) => { if (!edges.length) return 0; const dist = new Map([[src, 0]]), q = [src];
+    while (q.length) { const t = q.shift(); edges.forEach((e) => { const o = e.a === t ? e.b : e.b === t ? e.a : null; if (!o) return; const d = dist.get(t) + e.len; if (!dist.has(o) || d < dist.get(o)) { if (!dist.has(o)) q.push(o); dist.set(o, d); } }); }
+    let maxT = 0; edges.forEach((e) => { const da = dist.get(e.a), db = dist.get(e.b); if (da == null || db == null) return; const fwd = da <= db, t0 = Math.min(da, db) / speed, dur = Math.max(160, e.len / speed);
+      const p = document.createElementNS(WS, "path"); p.setAttribute("d", "M" + (fwd ? e.pts : [...e.pts].reverse()).map((x) => x.join(" ")).join(" L")); p.setAttribute("class", "pulse"); const L = e.len, seg = Math.min(46, L);
+      p.style.strokeDasharray = `${seg} ${L + seg}`; p.style.strokeDashoffset = seg; p.style.opacity = 0; wires.appendChild(p);
+      p.animate([{ strokeDashoffset: seg, opacity: 1 }, { strokeDashoffset: -L, opacity: 1 }], { duration: dur, delay: t0, easing: "linear", fill: "forwards" }).onfinish = () => p.remove(); maxT = Math.max(maxT, t0 + dur); });
+    dist.forEach((d, t) => setTimeout(() => visit && visit(t), d / speed)); return maxT; };
+  const flash = (t) => { if (!t.classList.contains("ping")) { t.classList.add("ping"); setTimeout(() => t.classList.remove("ping"), 800); } };
+  let booted = false; const boot = () => { if (booted || !window.wiresReady || !edges.length) return; booted = true;
+    if (still) return; gw.classList.add("boot"); const far = Math.max(...edges.map((e) => e.len)) * 6, speed = Math.max(0.6, far / 1700);
+    const total = wave(tiles[0], speed, (t) => { t.classList.add("on"); flash(t); }); setTimeout(() => gw.classList.add("wired"), total * 0.7); setTimeout(() => { gw.classList.remove("boot", "wired"); tiles.forEach((t) => t.classList.remove("on")); }, total + 900); };
+  if (!still) gw.classList.add("boot");
+  const ready = () => !document.documentElement.classList.contains("intro-on");
+  new IntersectionObserver((en) => { if (en[0].isIntersecting && ready()) setTimeout(boot, 250); }, { threshold: 0.3 }).observe(gw);
+  const retry = setInterval(() => { if (booted) return clearInterval(retry); const r = gw.getBoundingClientRect(); if (r.top < innerHeight * 0.75 && r.bottom > 0 && ready()) boot(); }, 400);
+  let lastB = 0; const beat = async () => { if (document.hidden || document.body.classList.contains("on-page") || !booted || gw.classList.contains("boot")) return;
+    let bn; try { bn = await cblock(); } catch { return; } if (!bn || bn === lastB) return; const first = !lastB; lastB = bn;
+    const ci = B.findIndex((b) => b[0] === "console"), ct = tiles[ci]; if (!ct) return;
+    document.querySelectorAll('.tile .mini[data-k="console"]').forEach((m) => { m.textContent = "block " + bn.toLocaleString("en-US"); m.classList.add("live"); m.classList.remove("tick"); void m.offsetWidth; m.classList.add("tick"); });
+    if (first || still || ct.classList.contains("dim")) return; const g = gw.getBoundingClientRect(), r = ct.getBoundingClientRect(), tag = document.createElement("div"); tag.className = "beat"; tag.textContent = "new block " + bn.toLocaleString("en-US"); tag.style.left = r.left - g.left + r.width / 2 + "px"; tag.style.top = r.top - g.top + "px"; gw.appendChild(tag); setTimeout(() => tag.remove(), 1700);
+    flash(ct); wave(ct, 1.3, (t) => t !== ct && flash(t)); };
+  setInterval(beat, 6000); setTimeout(beat, 3000);
+  let raf = 0, mx = 0, my = 0; gw.addEventListener("pointermove", (e) => { mx = e.clientX; my = e.clientY; if (raf) return; raf = requestAnimationFrame(() => { raf = 0; const g = gw.getBoundingClientRect(); gw.style.setProperty("--mx", mx - g.left + "px"); gw.style.setProperty("--my", my - g.top + "px"); gw.classList.add("lit");
+    tiles.forEach((t) => { const r = t.getBoundingClientRect(); t.style.setProperty("--x", mx - r.left + "px"); t.style.setProperty("--y", my - r.top + "px"); }); }); });
+  gw.addEventListener("pointerleave", () => { gw.classList.remove("lit"); tiles.forEach((t) => { t.style.setProperty("--x", "-300px"); t.style.setProperty("--y", "-300px"); }); });
+})();
 $("hlive").textContent = B.filter((b) => LIVE.has(b[0])).length; $("cnt").textContent = B.length;
 const td = $("tdrop"); ["dragenter", "dragover"].forEach((ev) => td.addEventListener(ev, () => td.classList.add("over"))); ["dragleave", "drop"].forEach((ev) => td.addEventListener(ev, () => td.classList.remove("over")));
 $("tfile").onchange = async () => { const f = $("tfile").files[0]; if (!f) return; $("thash").textContent = "hashing on your device…"; const d = await crypto.subtle.digest("SHA-256", await f.arrayBuffer()), h = "0x" + [...new Uint8Array(d)].map((b) => b.toString(16).padStart(2, "0")).join("");
