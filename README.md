@@ -94,7 +94,7 @@ Six read-only tools for Claude, Cursor and any MCP client. See [atlas-mcp](https
 
 - X: [@atlasboard_](https://x.com/atlasboard_)
 - Email: hello@atlasboard.dev
-- Token: CA coming soon, launching on [Pons](https://ponsfamily.com/launchpad/). Only trust the address shown on atlasboard.dev and @atlasboard_.
+- Token: **ATLAS** · CA `0x95dd0f4943ab2c9304004f87efcfab325c360da3` · [Pons](https://ponsfamily.com/launchpad/0x95dd0f4943ab2c9304004f87efcfab325c360da3). Only trust the address shown on atlasboard.dev and @atlasboard_.
 
 ## License
 

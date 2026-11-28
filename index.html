@@ -1151,7 +1151,7 @@ $("nvb").onclick = () => $("nv").classList.toggle("open");
 addEventListener("keydown", (e) => { if (e.key === "Escape") mega(null); });
 // hero: a real fingerprint, right on the first screen
 // ---------- token CA: fill ATLAS_CA when the token is live on Pons ----------
-const ATLAS_CA = "", PONS = "https://ponsfamily.com/launchpad/";
+const ATLAS_CA = "0x95dd0f4943ab2c9304004f87efcfab325c360da3", PONS = "https://ponsfamily.com/launchpad/";
 $("ca").innerHTML = ATLAS_CA ? `<b>CA</b><code>${ATLAS_CA}</code><button type="button" id="cacp">Copy</button><a href="${PONS + ATLAS_CA}" target="_blank" rel="noopener">Pons ↗</a><a href="${CHAIN.explorer}/token/${ATLAS_CA}" target="_blank" rel="noopener">Explorer ↗</a>`
   : `<b>CA</b><code>coming soon</code><a href="${PONS}" target="_blank" rel="noopener">on Pons ↗</a><a href="https://x.com/atlasboard_" target="_blank" rel="noopener">follow @atlasboard_</a>`;
 if ($("cacp")) $("cacp").onclick = () => { navigator.clipboard && navigator.clipboard.writeText(ATLAS_CA); $("cacp").textContent = "Copied ✓"; };
