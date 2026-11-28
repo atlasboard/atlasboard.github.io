@@ -252,9 +252,10 @@ body.on-page #page{display:block}body.on-page .wrap{display:none}
 .st-ctl .stv{width:auto;border-radius:30px;padding:0 16px;font-size:12.5px;white-space:nowrap}
 .st-ctl a{display:flex;flex-direction:column;min-width:300px;max-width:min(520px,52vw);padding:9px 18px;border:1.5px solid var(--hi);border-radius:14px;background:rgba(10,12,14,.92);text-decoration:none;color:var(--ink);box-shadow:0 10px 40px rgba(0,0,0,.5)}
 .st-ctl a small{font:700 11px "JetBrains Mono";letter-spacing:.16em;color:var(--hi)}.st-ctl a b{font:500 13px Inter,sans-serif;color:var(--mute);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;margin-top:3px}.st-ctl a i{font:700 11.5px "JetBrains Mono";font-style:normal;color:var(--ink);margin-top:3px}
+@media (max-width:700px){.st-title{font-size:12px;top:12px}}.st-title{position:absolute;left:50%;top:22px;transform:translateX(-50%);font:700 15px "JetBrains Mono";color:var(--mute);display:flex;align-items:center;gap:10px;white-space:nowrap;padding:8px 16px;border:1px solid var(--line);border-radius:30px;background:rgba(10,12,14,.75)}.st-title b{color:var(--ink)}.st-title .dot{width:10px;height:10px;border-radius:50%;background:var(--hi)}.stage.over .st-shade{opacity:1!important;transform:none!important;background:linear-gradient(0deg,rgba(7,9,11,.8) 0%,rgba(7,9,11,0) 20%)}.has3d .hero2{padding-top:46px}
 .st-hint{position:absolute;right:28px;top:22px;font:600 11.5px "JetBrains Mono";color:var(--dim);letter-spacing:.08em}
 .has3d #desk,.has3d #cats,.has3d #gw{display:none}
-@media (max-width:900px){.stage{height:calc(100svh - 57px)}.st-shade{background:linear-gradient(0deg,rgba(7,9,11,.96) 0%,rgba(7,9,11,.8) 42%,rgba(7,9,11,0) 62%)}.st-hero{top:auto;bottom:122px;align-items:flex-end}.st-hero .h2p,.st-hero .h2s,.st-hero .stamp,.st-hero .h2b .btn-b{display:none}.st-hero h1{font-size:30px!important;margin-top:0}.st-hero .ca{margin-top:10px;padding:6px 8px 6px 10px;font-size:11px}.st-hero .h2b{margin-top:12px}.st-ctl a small{font-size:10px}.st-ctl{bottom:18px;width:calc(100% - 24px);justify-content:center}.st-ctl a{min-width:0;flex:1}.st-hint{display:none}.st-ctl .stv{display:none}}
+@media (max-width:900px){.stage{height:calc(100svh - 57px)}.st-shade{background:linear-gradient(0deg,rgba(7,9,11,.96) 0%,rgba(7,9,11,.8) 42%,rgba(7,9,11,0) 62%)}.st-hero{top:auto;bottom:122px;align-items:flex-end}.st-hero .h2p,.st-hero .h2s,.st-hero .stamp,.st-hero .h2b .btn-b{display:none}.st-hero h1{font-size:30px!important;margin-top:0}.st-hero .ca{margin-top:10px;padding:6px 8px 6px 10px;font-size:11px}.st-hero .h2b{margin-top:12px}.st-ctl a small{font-size:10px}.st-ctl a i{display:none}.st-ctl a{padding:7px 12px}.st-ctl button{width:38px;height:38px}.st-ctl{bottom:18px;width:calc(100% - 24px);justify-content:center}.st-ctl a{min-width:0;flex:1}.st-hint{display:none}.st-ctl .stv{display:none}}
 .board3d{position:relative;margin:8px -10px 26px;-webkit-mask-image:radial-gradient(120% 100% at 50% 45%,#000 62%,transparent 100%);mask-image:radial-gradient(120% 100% at 50% 45%,#000 62%,transparent 100%)}.board3d canvas{display:block;width:100%}.flat-hidden{position:absolute!important;width:1px!important;height:1px!important;overflow:hidden!important;clip:rect(0 0 0 0)!important}#ringspot{min-height:470px}.tryband{margin:0 0 30px}.tryband .try{display:grid;grid-template-columns:1fr 1fr;gap:0 18px;align-items:start}.tryband .try-k,.tryband .try-go{grid-column:1/-1}.tryband .try-o{margin-top:0}@media (max-width:900px){#ringspot{min-height:300px}.tryband .try{grid-template-columns:1fr}.tryband .try-o{margin-top:12px}}
 .ai-m.wait{color:var(--dim);font:500 12.5px "JetBrains Mono"}.ai-dots:after{content:"";animation:aidots 1.2s steps(4) infinite}@keyframes aidots{0%{content:""}25%{content:"."}50%{content:".."}75%{content:"..."}}
 .rk-stage{border:1px solid var(--line);border-radius:12px;overflow:hidden;margin:12px 0;background:#0a0c0e}.rk-stage canvas{display:block;width:100%;height:auto}
@@ -282,7 +283,7 @@ body.on-page #page{display:block}body.on-page .wrap{display:none}
 <a class="nv-x" href="https://x.com/atlasboard_" target="_blank" rel="noopener" aria-label="ATLAS on X" title="@atlasboard_ on X"><svg viewBox="0 0 24 24" width="15" height="15" aria-hidden="true"><path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a><a class="nv-x nv-gh" href="https://github.com/atlasboard" target="_blank" rel="noopener" aria-label="ATLAS on GitHub" title="github.com/atlasboard"><svg viewBox="0 0 24 24" width="17" height="17" aria-hidden="true"><path fill="currentColor" d="M12 .5C5.65.5.5 5.65.5 12a11.5 11.5 0 0 0 7.86 10.92c.58.1.79-.25.79-.56v-2c-3.2.7-3.87-1.37-3.87-1.37-.53-1.33-1.28-1.69-1.28-1.69-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.78 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.42-2.7 5.4-5.26 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/></svg></a><a class="nv-cta" href="/seal">Try a live tool →</a><button class="nv-burger" id="nvb" type="button" aria-label="menu">☰</button></div>
 <div class="mega" id="mega"></div></nav>
 <section class="stage" id="stage" aria-label="The ATLAS desk: click a tool to open it"><canvas id="stagecv"></canvas><div class="st-shade"></div><div class="st-hero" id="sthero"></div>
-  <div class="st-ctl"><button type="button" id="stp" aria-label="previous tool">◀</button><a id="sto" href="/swap"><small id="stn">Nº 01</small><b id="std"></b><i>open →</i></a><button type="button" id="stx" aria-label="next tool">▶</button><button type="button" id="stv" class="stv">See the whole desk</button></div><div class="st-hint">click any object on the desk to open it</div></section>
+  <div class="st-ctl"><button type="button" id="stp" aria-label="previous tool">◀</button><a id="sto" href="/swap"><small id="stn">17 TOOLS · ROBINHOOD CHAIN</small><b id="std">Click any object on the desk to open it.</b><i>or start with Protocol →</i></a><button type="button" id="stx" aria-label="next tool">▶</button><button type="button" id="stv" class="stv">See the whole desk</button></div><div class="st-title"><span class="dot"></span><b>Don't trust us.</b> Try it yourself.</div></section>
 <div class="wrap">
   
   <header class="hero2"><div class="h2l"><span class="stamp">tools you can check · Robinhood Chain</span>
@@ -1100,7 +1101,7 @@ tiles.forEach((t) => (t.onclick = () => (go("/" + SL[+t.dataset.i])))); $("px").
 // the highlight hops from blueprint to blueprint, like a finger on the map
 let hot = -1; const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
 function point(t) { const g = $("gw").getBoundingClientRect(), r = t.getBoundingClientRect(); $("ptr").style.left = (r.left - g.left + r.width * 0.62) + "px"; $("ptr").style.top = (r.top - g.top + r.height * 0.55) + "px"; }
-function hop() { const live = tiles.filter((t) => !t.classList.contains("dim")); if (!live.length) return; tiles.forEach((t) => t.classList.remove("hot")); let n; do { n = Math.floor(Math.random() * live.length); } while (live.length > 1 && live[n] === tiles[hot]); live[n].classList.add("hot"); hot = tiles.indexOf(live[n]); point(live[n]); if (window.wiresReady) lightWires(); }
+function hop() { if (document.body.classList.contains("has3d")) return; const live = tiles.filter((t) => !t.classList.contains("dim")); if (!live.length) return; tiles.forEach((t) => t.classList.remove("hot")); let n; do { n = Math.floor(Math.random() * live.length); } while (live.length > 1 && live[n] === tiles[hot]); live[n].classList.add("hot"); hot = tiles.indexOf(live[n]); point(live[n]); if (window.wiresReady) lightWires(); }
 if (!reduce) { hop(); setInterval(hop, 900); }
 
 
@@ -1247,7 +1248,7 @@ function wire() {
   sigs.forEach((sg) => sg.el.remove()); sigs = []; for (let k = 0; k < Math.min(10, edges.length); k++) { const c = document.createElementNS(WS, "circle"); c.setAttribute("r", 3.6); c.setAttribute("class", "sig"); wires.appendChild(c); sigs.push({ el: c, e: edges[Math.floor(Math.random() * edges.length)], t: Math.random(), dir: Math.random() < 0.5 ? 1 : -1, sp: 0.006 + Math.random() * 0.008 }); }
   window.wiresReady = true; lightWires(); }
 function lightWires() { const h = tiles[hot]; edges.forEach((e) => { const on = h && (e.a === h || e.b === h); e.el.classList.toggle("hot", !!on); (e.ports || []).forEach((p) => p.classList.toggle("hot", !!on)); }); }
-function signals() { for (const sg of sigs) { if (!sg.e || !sg.e.el.isConnected) continue; sg.t += sg.sp * sg.dir; if (sg.t > 1 || sg.t < 0) { const at = sg.dir > 0 ? sg.e.b : sg.e.a, next = edges.filter((x) => x !== sg.e && (x.a === at || x.b === at)); sg.e = next.length ? next[Math.floor(Math.random() * next.length)] : edges[Math.floor(Math.random() * edges.length)]; sg.dir = sg.e.a === at ? 1 : -1; sg.t = sg.dir > 0 ? 0 : 1; }
+function signals() { if (document.body.classList.contains("has3d")) { setTimeout(() => requestAnimationFrame(signals), 1000); return; } for (const sg of sigs) { if (!sg.e || !sg.e.el.isConnected) continue; sg.t += sg.sp * sg.dir; if (sg.t > 1 || sg.t < 0) { const at = sg.dir > 0 ? sg.e.b : sg.e.a, next = edges.filter((x) => x !== sg.e && (x.a === at || x.b === at)); sg.e = next.length ? next[Math.floor(Math.random() * next.length)] : edges[Math.floor(Math.random() * edges.length)]; sg.dir = sg.e.a === at ? 1 : -1; sg.t = sg.dir > 0 ? 0 : 1; }
     const p = sg.e.el.getPointAtLength(sg.e.len * Math.max(0, Math.min(1, sg.t))); sg.el.setAttribute("cx", p.x); sg.el.setAttribute("cy", p.y); }
   requestAnimationFrame(signals); }
 setTimeout(() => { wire(); signals(); }, 1600); addEventListener("resize", () => wire());
@@ -1313,7 +1314,7 @@ function portalBG() {
     if (!small && !page) { const lg = g.createLinearGradient(0, 0, W * 0.6, 0); lg.addColorStop(0, "rgba(10,12,14,.82)"); lg.addColorStop(0.75, "rgba(10,12,14,.35)"); lg.addColorStop(1, "rgba(10,12,14,0)"); g.fillStyle = lg; g.fillRect(0, 0, W * 0.6, Hh); }
     if (small) { g.fillStyle = "rgba(10,12,14,.45)"; g.fillRect(0, 0, W, Hh); }
   }
-  let last = 0; const loop = (now) => { requestAnimationFrame(loop); if (document.hidden || now - last < 33) return; last = now; draw(now); };
+  let last = 0; const loop = (now) => { requestAnimationFrame(loop); if (document.hidden || now - last < 33) return; if (document.body.classList.contains("has3d") && !document.body.classList.contains("on-page")) { if (cv.style.display !== "none") cv.style.display = "none"; return; } if (cv.style.display) cv.style.display = ""; last = now; draw(now); };
   if (still) { draw(performance.now()); addEventListener("resize", () => draw(performance.now())); } else requestAnimationFrame(loop);
 }
 // ATLAS desk: a dark blueprint table with one 3D object per tool, joined by a glowing dashed path.
@@ -1322,14 +1323,14 @@ function atlasDesk(canvas, TOOLS, opts = {}) {
   const T = THREE, still = matchMedia("(prefers-reduced-motion: reduce)").matches;
   const C = { bg: 0x07090b, table: 0x0f1418, grid: 0x77bb90, green: 0x77bb90, cream: 0xe9e4d8, dark: 0x24282d, slate: 0x4a5057, amber: 0xe3c565, coral: 0xef7b6e, steel: 0x8a9096 };
   const renderer = new T.WebGLRenderer({ canvas, antialias: true, alpha: false });
-  const lowEnd = (canvas.clientWidth || innerWidth) < 760; renderer.setPixelRatio(Math.min(lowEnd ? 1.25 : 1.5, devicePixelRatio || 1)); renderer.shadowMap.enabled = !lowEnd; renderer.shadowMap.type = T.PCFSoftShadowMap;
+  const lowEnd = (canvas.clientWidth || innerWidth) < 760; renderer.setPixelRatio(Math.min(lowEnd ? 1 : 1.25, devicePixelRatio || 1)); renderer.shadowMap.enabled = !lowEnd; renderer.shadowMap.autoUpdate = false; renderer.shadowMap.needsUpdate = true; renderer.shadowMap.type = T.PCFShadowMap;
   renderer.outputEncoding = T.sRGBEncoding;
   const scene = new T.Scene(); scene.background = new T.Color(C.bg); scene.fog = new T.Fog(C.bg, 9, 26);
   const cam = new T.PerspectiveCamera(42, 1, 0.1, 80);
   // light
   scene.add(new T.HemisphereLight(0xdfeee6, 0x0a0c0e, 0.42));
   const key = new T.DirectionalLight(0xfff1dc, 1.25); key.position.set(-6, 12, 6); key.castShadow = true;
-  key.shadow.mapSize.set(2048, 2048); Object.assign(key.shadow.camera, { left: -22, right: 22, top: 22, bottom: -22, near: 1, far: 40 }); key.shadow.bias = -0.0008; scene.add(key);
+  key.shadow.mapSize.set(1024, 1024); Object.assign(key.shadow.camera, { left: -22, right: 22, top: 22, bottom: -22, near: 1, far: 40 }); key.shadow.bias = -0.0008; scene.add(key);
   const rim = new T.PointLight(0x77bb90, 0.6, 30); rim.position.set(8, 6, -8); scene.add(rim);
   // table with a blueprint grid drawn on a canvas texture
   const tc = document.createElement("canvas"); tc.width = tc.height = 2048; const tg = tc.getContext("2d");
@@ -1387,15 +1388,15 @@ function atlasDesk(canvas, TOOLS, opts = {}) {
   const curve = new T.CatmullRomCurve3(pts, false, "catmullrom", 0.2), L = curve.getLength(), dashN = Math.floor(L / 0.42);
   const dash = new T.InstancedMesh(box(0.22, 0.02, 0.07), new T.MeshStandardMaterial({ color: 0xffffff, emissive: C.green, emissiveIntensity: 0.9, roughness: 0.5 }), dashN); scene.add(dash);
   const dm = new T.Object3D(), dashColor = new T.Color();
-  const setDashes = (t) => { for (let i = 0; i < dashN; i++) { const u = i / dashN, p = curve.getPointAt(u), tg = curve.getTangentAt(u); dm.position.copy(p); dm.rotation.set(0, Math.atan2(-tg.z, tg.x), 0); dm.updateMatrix(); dash.setMatrixAt(i, dm.matrix);
-      const wave = 0.5 + 0.5 * Math.sin(u * 60 - t * 4); dash.setColorAt(i, dashColor.setRGB(0.35 + 0.6 * wave, 0.6 + 0.4 * wave, 0.45 + 0.5 * wave)); } dash.instanceMatrix.needsUpdate = true; if (dash.instanceColor) dash.instanceColor.needsUpdate = true; };
+  for (let i = 0; i < dashN; i++) { const u = i / dashN, p = curve.getPointAt(u), tg = curve.getTangentAt(u); dm.position.copy(p); dm.rotation.set(0, Math.atan2(-tg.z, tg.x), 0); dm.updateMatrix(); dash.setMatrixAt(i, dm.matrix); } dash.instanceMatrix.needsUpdate = true;
+  let dashT = -1; const setDashes = (t) => { const q = Math.floor(t * 8); if (q === dashT) return; dashT = q; for (let i = 0; i < dashN; i++) { const wave = 0.5 + 0.5 * Math.sin((i / dashN) * 60 - q / 2); dash.setColorAt(i, dashColor.setRGB(0.35 + 0.6 * wave, 0.6 + 0.4 * wave, 0.45 + 0.5 * wave)); } if (dash.instanceColor) dash.instanceColor.needsUpdate = true; };
   // camera tour
   let idx = 0, since = 0; const DWELL = opts.dwell || 3.2, camPos = new T.Vector3(), camLook = new T.Vector3(), tmp = new T.Vector3();
   const shot = (i, out) => { const p = items[i].g.position; const sh = opts.shift ? opts.shift() : 0, z = typeof opts.zoom === "function" ? opts.zoom() : opts.zoom || 1; const up = opts.up ? opts.up() : 0; out.pos.set(p.x + 1.5 * z - sh, 0.7 + 3.3 * z, p.z + 0.9 + 3.4 * z + up); out.look.set(p.x - 0.1 - sh, 0.5, p.z + 0.9 + up); return out; };
   const s0 = shot(0, { pos: new T.Vector3(), look: new T.Vector3() }); camPos.copy(s0.pos).add(new T.Vector3(3, 4, 4)); camLook.copy(s0.look);
   const want = { pos: new T.Vector3(), look: new T.Vector3() };
   let overview = false, hoverI = -1; const ovPos = new T.Vector3(), ovLook = new T.Vector3();
-  const fitOverview = () => { const EL = 58 * Math.PI / 180, halfW = ((COLS - 1) * SP) / 2 + 2, zN = ((ROWS - 1) * SP) / 2 + 3.2, zF = -((ROWS - 1) * SP) / 2 - 1.3, cz = (zN + zF) / 2, vf = (cam.fov * Math.PI) / 360, hf = Math.atan(Math.tan(vf) * cam.aspect), halfD = ((zN - zF) / 2) * Math.sin(EL) + 0.9, dd = Math.max(halfW / Math.tan(hf), halfD / Math.tan(vf)) * 1.03; ovLook.set(0, 0.4, cz); ovPos.set(0, 0.4 + dd * Math.sin(EL), cz + dd * Math.cos(EL)); };
+  const fitOverview = () => { const EL = 58 * Math.PI / 180, halfW = ((COLS - 1) * SP) / 2 + 2, zN = ((ROWS - 1) * SP) / 2 + 3.2, zF = -((ROWS - 1) * SP) / 2 - 1.3, cz = (zN + zF) / 2, vf = (cam.fov * Math.PI) / 360, hf = Math.atan(Math.tan(vf) * cam.aspect), halfD = ((zN - zF) / 2) * Math.sin(EL) + 0.9, dd = Math.max(halfW / Math.tan(hf), halfD / Math.tan(vf)) * (opts.ovPad ? opts.ovPad() : 1.03); ovLook.set(0, 0.4, cz + (opts.ovShift ? opts.ovShift() : 0)); ovPos.set(0, 0.4 + dd * Math.sin(EL), cz + dd * Math.cos(EL)); };
   if (opts.interactive) { const ray = new T.Raycaster(), ndc = new T.Vector2(), groups = items.map((it) => it.g);
     const pickAt = (e) => { const r = canvas.getBoundingClientRect(); ndc.set(((e.clientX - r.left) / r.width) * 2 - 1, -((e.clientY - r.top) / r.height) * 2 + 1); ray.setFromCamera(ndc, cam); const h = ray.intersectObjects(groups, true)[0]; return h && h.object.userData.item != null ? h.object.userData.item : -1; };
     canvas.addEventListener("pointermove", (e) => { hoverI = pickAt(e); canvas.style.cursor = hoverI >= 0 ? "pointer" : "grab"; });
@@ -1408,10 +1409,12 @@ function atlasDesk(canvas, TOOLS, opts = {}) {
     if (opts.paused && opts.paused()) return; since += dt; if (!overview && since > DWELL && !still) { since = 0; idx = (idx + 1) % items.length; if (opts.onFocus) opts.onFocus(idx); }
     if (overview) { fitOverview(); want.pos.copy(ovPos); want.look.copy(ovLook); } else shot(idx, want); const k = 1 - Math.pow(0.0025, dt); camPos.lerp(want.pos, k * 0.9); camLook.lerp(want.look, k);
     tmp.copy(camPos); tmp.x += Math.sin(t * 0.5) * 0.18; tmp.y += Math.sin(t * 0.7) * 0.08; cam.position.copy(tmp); cam.lookAt(camLook);
-    items.forEach((it, i) => { const on = i === hoverI, focus = !overview && i === idx; it.lift = (it.lift || 0) + (((on ? 0.45 : 0) + (focus ? 0.12 : 0)) - (it.lift || 0)) * Math.min(1, dt * 8); it.obj.rotation.y = on ? it.obj.rotation.y + dt * 1.5 : Math.sin(t * 0.6 + i) * 0.25 + (focus ? Math.sin(t * 0.8) * 0.45 : 0); it.obj.position.y = it.base + it.lift + (focus || on ? Math.sin(t * 2) * 0.04 : 0); });
+    items.forEach((it, i) => { const on = i === hoverI, focus = !overview && i === idx; it.lift = (it.lift || 0) + (((on ? 0.45 : 0) + (focus ? 0.12 : 0)) - (it.lift || 0)) * Math.min(1, dt * 8); it.obj.rotation.y = on ? it.obj.rotation.y + dt * 1.5 : overview ? it.obj.rotation.y * (1 - Math.min(1, dt * 3)) : Math.sin(t * 0.6 + i) * 0.25 + (focus ? Math.sin(t * 0.8) * 0.45 : 0); it.obj.position.y = it.base + it.lift + (focus || on ? Math.sin(t * 2) * 0.04 : 0); });
     rim.position.set(items[idx].g.position.x + 3, 5, items[idx].g.position.z - 3);
+    let moving = false; items.forEach((it) => { const y = it.obj.position.y, r = it.obj.rotation.y; if (Math.abs(y - (it.py || 0)) > 0.002 || Math.abs(r - (it.pr || 0)) > 0.01) { moving = true; it.py = y; it.pr = r; } }); if (moving) renderer.shadowMap.needsUpdate = true;
     setDashes(t); renderer.render(scene, cam); };
-  const frame = (now) => { if (!running) return; requestAnimationFrame(frame); if (document.hidden) { last = now; return; } const dt = Math.min(0.05, (now - last) / 1000); last = now; step(dt); };
+  let onScreen = true; if ("IntersectionObserver" in window) new IntersectionObserver((en) => { onScreen = en[0].isIntersecting; }).observe(canvas);
+  const frame = (now) => { if (!running) return; requestAnimationFrame(frame); if (document.hidden || !onScreen) { last = now; return; } if (now - last < 32) return; const dt = Math.min(0.05, (now - last) / 1000); last = now; step(dt); };
   if (opts.board) { running = false; return board(); }
   if (opts.onFocus) opts.onFocus(0);
   if (running) requestAnimationFrame(frame);
@@ -1450,13 +1453,14 @@ portalBG();
   const load = (src) => new Promise((ok, no) => { const sc = document.createElement("script"); sc.src = src; sc.onload = ok; sc.onerror = no; document.head.appendChild(sc); });
   const fonts = ['800 104px "JetBrains Mono"', '500 46px "JetBrains Mono"', '600 42px "JetBrains Mono"', 'bold 34px "JetBrains Mono"'].map((f) => document.fonts.load(f).catch(() => {}));
   load("/three.min.js").catch(() => load("https://cdn.jsdelivr.net/npm/three@0.128.0/build/three.min.js")).then(() => Promise.all(fonts)).then(() => {
-    document.body.classList.add("has3d"); $("sthero").appendChild(document.querySelector(".hero2"));
+    document.body.classList.add("has3d");
     const tools = B.map((b, i) => [DESK_KEY[b[0]] || b[0], b[1].replace("Liquidity Depth", "Liq. Depth").replace("Checkout Button", "Checkout").replace("Smart Invoice", "Invoice"), DESK_LINE[b[0]] || "", SL[i], b[2]]);
-    const wide = () => innerWidth >= 900; let over = false;
-    const show = (i) => { $("stn").textContent = `Nº ${String(i + 1).padStart(2, "0")} / ${B.length} · ${B[i][1].toUpperCase()}`; $("std").textContent = B[i][4]; $("sto").href = "/" + SL[i]; };
-    const d = (window.__desk = atlasDesk(cv, tools, { cols: 5, interactive: true, dwell: 4.2, zoom: () => (wide() ? 2.05 : 2.6), shift: () => (wide() && !over ? 3.1 : 0), up: () => (wide() ? 0 : 3.4), paused: () => document.body.classList.contains("on-page"), onFocus: show, onPick: (i) => go("/" + SL[i]) }));
-    $("stp").onclick = () => d.prev(); $("stx").onclick = () => d.next();
-    $("stv").onclick = () => { over = !over; d.overview(over); stage.classList.toggle("over", over); $("stv").textContent = over ? "Tour" : "See the whole desk"; };
+    const wide = () => innerWidth >= 900; let over = true;
+    const show = (i) => { if (over) return; $("stn").textContent = `Nº ${String(i + 1).padStart(2, "0")} / ${B.length} · ${B[i][1].toUpperCase()}`; $("std").textContent = B[i][4]; $("sto").href = "/" + SL[i]; };
+    const d = (window.__desk = atlasDesk(cv, tools, { cols: innerWidth < 700 ? 3 : 5, ovPad: () => (innerWidth < 700 ? 1.2 : 1.03), ovShift: () => (innerWidth < 700 ? 1.5 : 0), interactive: true, dwell: 4.2, zoom: () => (wide() ? 2.05 : 2.6), shift: () => 0, up: () => (wide() ? 0 : 1.2), paused: () => document.body.classList.contains("on-page"), onFocus: show, onPick: (i) => go("/" + SL[i]) }));
+    const setMode = (o) => { over = o; d.overview(o); stage.classList.toggle("over", o); $("stv").textContent = o ? "▶ Start the tour" : "See the whole desk"; };
+    setMode(true); $("stp").onclick = () => { if (over) setMode(false); d.prev(); }; $("stx").onclick = () => { if (over) setMode(false); d.next(); };
+    $("stv").onclick = () => setMode(!over);
     addEventListener("keydown", (e) => { if (document.body.classList.contains("on-page") || /INPUT|TEXTAREA|SELECT/.test(document.activeElement.tagName)) return; if (e.key === "ArrowRight") d.next(); if (e.key === "ArrowLeft") d.prev(); });
   }).catch((e) => console.error("desk", e)); })();
 
