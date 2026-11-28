@@ -1,15 +1,16 @@
 # ATLAS
 
-**16 tools for trading, liquidity, AI agents and payments on Robinhood Chain. All of them work.**
+**17 tools for trading, liquidity, AI agents and payments on Robinhood Chain. All of them work.**
 
 [atlasboard.dev](https://atlasboard.dev) is a map of tools for Robinhood Chain mainnet, grouped as Protocol, Agent, Payment, Data and Tools. Protocol holds Swap, Pools, Create Pool and Positions in one place. Every tool has its own page, and the site has Trust, Status, Developers, Roadmap and Changelog pages with what it is in plain words, an example, who it is for, how it works and how to build a first version. Every tool works right on its page, on mainnet.
 
-## All 16 tools are live
+## All 17 tools are live
 
 | Tool | What it does |
 | --- | --- |
 | [Protocol](https://atlasboard.dev/swap) | Four tabs: **Swap** any token at the best route; **Pools**, every Uniswap v4 pool for a token; **Create Pool**, start a pool or add full-range liquidity via the PositionManager and Permit2; **Positions**, what your liquidity holds, fees to collect, collect or remove. Exact amounts, simulated first, signed in your own wallet. |
 | [MCP](https://atlasboard.dev/mcp) | Six read-only chain tools for Claude, Cursor and any MCP client: `npx -y github:atlasboard/atlas-mcp` |
+| [Remotion Kit](https://atlasboard.dev/remotion-kit) | Turn live chain data (a price, a block, a stock drift, a transaction) into a video card: preview it in the browser, record a WebM, or download a Remotion project and render an MP4. Not affiliated with Remotion. |
 | [Model](https://atlasboard.dev/model) | A live wall of 400+ models with their OpenRouter prices. Pick any of 400+ models; it answers from live chain data using ATLAS tools. Your own OpenRouter key, kept in the tab. |
 | [Console](https://atlasboard.dev/console) | A command line for the chain: block, gas, balance, token, price, tx, verify, hash. |
 | [Memory](https://atlasboard.dev/memory) | An encrypted memory vault on your device: folders, ChatGPT/Claude import, an approval inbox, per-folder sharing, read log. |

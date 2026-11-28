@@ -241,8 +241,9 @@ body.on-page #page{display:block}body.on-page .wrap{display:none}
 .sw-info{margin:12px 0}.sw-l{display:flex;justify-content:space-between;font:500 13px "JetBrains Mono";padding:6px 0;border-bottom:1px dashed var(--line)}.sw-l span{color:var(--mute)}.sw-go{width:100%;padding:15px!important;font-size:15px!important}
 .nv-x{margin-left:auto;display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border:1.5px solid var(--bd);border-radius:50%;color:var(--ink);margin-right:-10px;transition:.15s}.nv-gh{margin-left:-2px}.nv-x:hover{border-color:var(--hi);color:var(--hi)}
 .ca{display:inline-flex;align-items:center;gap:10px;flex-wrap:wrap;margin-top:18px;padding:8px 10px 8px 14px;border:1.5px dashed var(--bd);border-radius:12px;font:600 12.5px "JetBrains Mono";color:var(--mute);max-width:100%}.ca b{color:var(--hi);letter-spacing:.14em}.ca code{color:var(--ink);font:600 12.5px "JetBrains Mono";word-break:break-all}.ca a,.ca button{font:700 11.5px "JetBrains Mono";color:var(--ink);background:var(--card2);border:1px solid var(--bd);border-radius:30px;padding:5px 10px;text-decoration:none;cursor:pointer}.ca a:hover,.ca button:hover{border-color:var(--hi)}.small a{color:var(--hi)}
-#bgring{position:fixed;inset:0;z-index:-1;pointer-events:none}#ringspot{min-height:470px}.tryband{margin:0 0 30px}.tryband .try{display:grid;grid-template-columns:1fr 1fr;gap:0 18px;align-items:start}.tryband .try-k,.tryband .try-go{grid-column:1/-1}.tryband .try-o{margin-top:0}@media (max-width:900px){#ringspot{min-height:300px}.tryband .try{grid-template-columns:1fr}.tryband .try-o{margin-top:12px}}
+#bgring{position:fixed;inset:0;z-index:-1;pointer-events:none}#bgdesk{position:fixed;inset:0;width:100vw;height:100vh;z-index:-2;pointer-events:none;transition:opacity .5s}#bgshade{position:fixed;inset:0;z-index:-1;pointer-events:none;background:linear-gradient(90deg,rgba(10,12,14,.9) 0%,rgba(10,12,14,.62) 42%,rgba(10,12,14,0) 68%)}body.on-page #bgshade{background:rgba(10,12,14,.5)}@media (max-width:900px){#bgshade{background:rgba(10,12,14,.74)}}#ringspot{min-height:470px}.tryband{margin:0 0 30px}.tryband .try{display:grid;grid-template-columns:1fr 1fr;gap:0 18px;align-items:start}.tryband .try-k,.tryband .try-go{grid-column:1/-1}.tryband .try-o{margin-top:0}@media (max-width:900px){#ringspot{min-height:300px}.tryband .try{grid-template-columns:1fr}.tryband .try-o{margin-top:12px}}
 .ai-m.wait{color:var(--dim);font:500 12.5px "JetBrains Mono"}.ai-dots:after{content:"";animation:aidots 1.2s steps(4) infinite}@keyframes aidots{0%{content:""}25%{content:"."}50%{content:".."}75%{content:"..."}}
+.rk-stage{border:1px solid var(--line);border-radius:12px;overflow:hidden;margin:12px 0;background:#0a0c0e}.rk-stage canvas{display:block;width:100%;height:auto}
 .mw{border:1px solid var(--line);border-radius:12px;background:var(--card);padding:14px 0 10px;margin-bottom:16px;overflow:hidden}.mw-h{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;padding:0 16px 10px}.mw-h b{font:700 12px "JetBrains Mono";letter-spacing:.16em;color:var(--ink)}.mw-h span{font:500 11.5px "JetBrains Mono";color:var(--dim)}.mw-h span em{font-style:normal;color:var(--hi)}
 .mw-f{display:flex;gap:6px;flex-wrap:wrap;padding:0 16px 10px}.mw-f button,.mw-p{font:600 11.5px "JetBrains Mono";color:var(--mute);background:transparent;border:1px solid var(--bd);border-radius:30px;padding:5px 11px;cursor:pointer}.mw-f button.on{color:var(--on);background:var(--hi);border-color:var(--hi)}.mw-p:hover,.mw-f button:hover{color:var(--ink)}
 .mw-row{overflow:hidden;padding:5px 0;-webkit-mask-image:linear-gradient(90deg,transparent,#000 5%,#000 95%,transparent);mask-image:linear-gradient(90deg,transparent,#000 5%,#000 95%,transparent)}.mw-track{display:flex;gap:10px;width:max-content;animation:mwL var(--dur,80s) linear infinite}.mw-row.rev .mw-track{animation-direction:reverse}.mw.paused .mw-track,.mw-row:hover .mw-track{animation-play-state:paused}@keyframes mwL{to{transform:translateX(-50%)}}
@@ -311,6 +312,7 @@ const I = {
   positions: S(box(12, 12, 40, 46, 5) + l("M20 24h24M20 32h16") + box(20, 40, 24, 10, 2, acc) + l("M62 50l10-12 10 6 10-16 10 8") + l("M62 56h46")),
   pool4: S(l("M14 46c10-8 20 8 30 0s20 8 30 0 20 8 32 0") + l("M14 56c10-8 20 8 30 0s20 8 30 0 20 8 32 0") + box(30, 10, 26, 24, 5) + box(64, 10, 26, 24, 5, acc) + l("M56 22h8")),
 
+  remotion: S(box(10, 14, 70, 44, 6) + l("M10 24h70M22 14l-6 10M38 14l-6 10M54 14l-6 10M70 14l-6 10") + l("M38 34l16 9-16 9z") + c(98, 30, 9) + c(98, 50, 9, acc) + l("M80 30h9M80 50h9")),
   mcp: S(box(10, 18, 34, 34, 6) + l("M18 18v-6M36 18v-6M18 52v6M36 52v6") + c(27, 35, 6, acc) + l("M44 35h18") + box(62, 24, 22, 22, 5) + l("M84 30h12M84 40h12") + c(104, 30, 3) + c(104, 40, 3)),
   aimodel: S(box(38, 12, 44, 44, 8) + box(48, 22, 24, 24, 4, acc) + l("M30 22h8M30 34h8M30 46h8M82 22h8M82 34h8M82 46h8M48 6v6M60 6v6M72 6v6M48 56v6M60 56v6M72 56v6") + `<text x="60" y="38" font-size="9" font-family="JetBrains Mono" font-weight="700" fill="#77bb90" stroke="none" text-anchor="middle">AI</text>`),
   console: S(box(10, 10, 100, 50, 6) + l("M10 20h100") + c(18, 15, 1.5, "currentColor") + c(24, 15, 1.5, "currentColor") + c(30, 15, 1.5, "currentColor") + l("M20 32l8 6-8 6") + l("M34 46h22") + box(60, 42, 7, 8, 1, acc)),
@@ -358,6 +360,7 @@ const I = {
 const B = [
   ["protocol", "Protocol", "protocol", 3, "Swap any token, find every pool, create a pool, add liquidity and manage your positions on Robinhood Chain, in one place.", ["KyberSwap router", "Uniswap v4 PositionManager", "Permit2, exact amounts"], ["Swap any token at the best route", "Find a pool, or create one and add liquidity", "Track your positions, collect fees or remove them"]],
   ["mcp", "MCP", "agent", 2, "One URL that gives any AI app read-only tools for the chain: Claude, Cursor, ChatGPT and more.", ["MCP server", "Streamable HTTP", "Chain RPC"], ["Write a few read-only tools", "Serve them over Streamable HTTP", "Add the URL to an AI app and ask"]],
+  ["remotion", "Remotion Kit", "agent", 2, "Turn live chain data into a video card: preview it here, then render an MP4 with Remotion.", ["Remotion (React video)", "Chain RPC", "KyberSwap and the oracle"], ["Pick a price, a block, a stock drift or a transaction", "Watch the card play here with the live numbers", "Download the Remotion project and run npm run render"]],
   ["aimodel", "Model", "agent", 2, "Hundreds of AI models with live prices. Pick one and it answers from live chain data, with its sources.", ["Any AI model", "Tool calling", "Chain RPC"], ["Choose a model", "Give it the chain tools", "Show the answer with the blocks it read"]],
   ["console", "Console", "agent", 1, "One prompt for everything: type a command, get the answer from the chain.", ["Browser", "Chain RPC", "Commands"], ["Open the console", "Type a command like block, token or wallet", "Read the answer, with links"]],
   ["memory", "Memory", "agent", 2, "An encrypted memory vault on your own device: what your AI should know about you, in folders, given only where you allow it.", ["AES-256-GCM", "PBKDF2", "Your browser"], ["Create a vault with a password: it is encrypted on this device", "Save memories into folders, or import your ChatGPT and Claude history into the inbox", "Give an AI only the folders you choose, and see every read in the log"]],
@@ -990,6 +993,76 @@ DEMO.positions = (el) => {
     catch (e) { o.innerHTML = `<p class="dm-e">${esc2(e.message)}</p>`; } }
 };
 LIVE.add("create"); LIVE.add("positions");
+// ---------- Remotion Kit: live chain data as a video card, previewed here, rendered with Remotion ----------
+const RK_FILES = {"package.json": "{\n  \"name\": \"atlas-remotion-kit\",\n  \"version\": \"1.0.0\",\n  \"private\": true,\n  \"description\": \"ATLAS Remotion Kit: a chain data card as a video. Not affiliated with Remotion.\",\n  \"scripts\": { \"studio\": \"remotion studio\", \"render\": \"remotion render AtlasCard out/atlas-card.mp4\" },\n  \"dependencies\": { \"@remotion/cli\": \"4.0.547\", \"react\": \"18.3.1\", \"react-dom\": \"18.3.1\", \"remotion\": \"4.0.547\" }\n}\n", "src/index.ts": "import { registerRoot } from \"remotion\";\nimport { RemotionRoot } from \"./Root\";\nregisterRoot(RemotionRoot);\n", "src/Root.tsx": "import React from \"react\";\nimport { Composition } from \"remotion\";\nimport { AtlasCard } from \"./AtlasCard\";\nimport data from \"./data.json\";\n\nexport const RemotionRoot: React.FC = () => (\n  <Composition id=\"AtlasCard\" component={AtlasCard} durationInFrames={180} fps={30} width={1280} height={720} defaultProps={data} />\n);\n", "src/AtlasCard.tsx": "import React from \"react\";\nimport { AbsoluteFill, interpolate, spring, useCurrentFrame, useVideoConfig } from \"remotion\";\n\ntype Props = { kind: string; title: string; value: string; sub: string; rows: [string, string][]; url: string };\nconst G = \"#77bb90\", BG = \"#0a0c0e\", INK = \"#f2f3f4\", MUTE = \"#9aa0a6\", LINE = \"#24272b\";\nconst mono = \"JetBrains Mono, ui-monospace, Menlo, monospace\";\n\nexport const AtlasCard: React.FC<Props> = ({ kind, title, value, sub, rows, url }) => {\n  const f = useCurrentFrame(), { fps, durationInFrames } = useVideoConfig();\n  const pop = (d: number) => spring({ frame: f - d, fps, config: { damping: 200 } });\n  const fadeOut = interpolate(f, [durationInFrames - 15, durationInFrames], [1, 0], { extrapolateLeft: \"clamp\" });\n  const ring = Array.from({ length: 16 }, (_, i) => i);\n  const lit = Math.floor(f / 8) % 16;\n  return (\n    <AbsoluteFill style={{ background: BG, color: INK, fontFamily: mono, opacity: fadeOut }}>\n      <AbsoluteFill style={{ backgroundImage: `linear-gradient(${LINE} 1px, transparent 1px), linear-gradient(90deg, ${LINE} 1px, transparent 1px)`, backgroundSize: \"40px 40px\", opacity: 0.5 }} />\n      <svg width={420} height={420} viewBox=\"-210 -210 420 420\" style={{ position: \"absolute\", right: 70, top: 150, transform: `rotate(${f * 0.4}deg)` }}>\n        {ring.map((i) => { const a0 = ((i * 22.5 + 1.6 - 90) * Math.PI) / 180, a1 = (((i + 1) * 22.5 - 1.6 - 90) * Math.PI) / 180, R = 190, r = 130;\n          const d = `M${R * Math.cos(a0)} ${R * Math.sin(a0)} A${R} ${R} 0 0 1 ${R * Math.cos(a1)} ${R * Math.sin(a1)} L${r * Math.cos(a1)} ${r * Math.sin(a1)} A${r} ${r} 0 0 0 ${r * Math.cos(a0)} ${r * Math.sin(a0)}Z`;\n          return <path key={i} d={d} fill={i === lit ? G : \"#22262a\"} stroke={i === lit ? \"#a8e0bc\" : \"#363b41\"} strokeWidth={1.5} />; })}\n        <circle r={42} fill={G} />\n      <\/svg>\n      <div style={{ position: \"absolute\", left: 80, top: 56, display: \"flex\", alignItems: \"center\", gap: 14, fontSize: 26, fontWeight: 800, letterSpacing: \"0.3em\", opacity: pop(0) }}>\n        <div style={{ width: 22, height: 22, borderRadius: 11, background: G }} />ATLAS\n      <\/div>\n      <div style={{ position: \"absolute\", left: 80, top: 150, width: 700 }}>\n        <div style={{ color: G, fontSize: 20, fontWeight: 700, letterSpacing: \"0.22em\", textTransform: \"uppercase\", opacity: pop(6) }}>{kind}<\/div>\n        <div style={{ fontSize: 40, fontWeight: 700, marginTop: 14, opacity: pop(12), transform: `translateY(${(1 - pop(12)) * 20}px)` }}>{title}<\/div>\n        <div style={{ fontSize: 120, fontWeight: 800, color: G, marginTop: 6, opacity: pop(20), transform: `scale(${0.9 + 0.1 * pop(20)})`, transformOrigin: \"left\" }}>{value}<\/div>\n        <div style={{ fontSize: 22, color: MUTE, marginTop: 4, opacity: pop(28) }}>{sub}<\/div>\n        <div style={{ marginTop: 28, borderTop: `1px solid ${LINE}` }}>\n          {rows.map(([k, v], i) => (\n            <div key={k} style={{ display: \"flex\", justifyContent: \"space-between\", padding: \"12px 0\", borderBottom: `1px dashed ${LINE}`, fontSize: 21, opacity: pop(36 + i * 6) }}>\n              <span style={{ color: MUTE }}>{k}<\/span><span>{v}<\/span>\n            <\/div>\n          ))}\n        <\/div>\n      <\/div>\n      <div style={{ position: \"absolute\", left: 80, bottom: 34, fontSize: 22, fontWeight: 600, opacity: pop(60) }}>{url}<\/div>\n    <\/AbsoluteFill>\n  );\n};\n", "remotion.config.ts": "import { Config } from \"@remotion/cli/config\";\nConfig.setVideoImageFormat(\"jpeg\");\n", "tsconfig.json": "{ \"compilerOptions\": { \"target\": \"ES2018\", \"module\": \"commonjs\", \"jsx\": \"react-jsx\", \"strict\": true, \"esModuleInterop\": true, \"resolveJsonModule\": true, \"skipLibCheck\": true } }\n", "README.md": "# ATLAS Remotion Kit\n\nA chain data card as a video, made with Remotion. The data in `src/data.json` was read live from Robinhood Chain on atlasboard.dev.\n\nNot affiliated with Remotion. Remotion has its own license: free for individuals and small teams, companies may need a license (remotion.dev/license).\n\n## Render\n\n```\nnpm install\nnpm run render\n```\n\nThe video is written to `out/atlas-card.mp4`. To edit live, run `npm run studio`.\n"};
+const crcT = (() => { const t = new Uint32Array(256); for (let n = 0; n < 256; n++) { let c = n; for (let k = 0; k < 8; k++) c = c & 1 ? 0xedb88320 ^ (c >>> 1) : c >>> 1; t[n] = c >>> 0; } return t; })();
+const crc32 = (b) => { let c = 0xffffffff; for (let i = 0; i < b.length; i++) c = crcT[(c ^ b[i]) & 255] ^ (c >>> 8); return (c ^ 0xffffffff) >>> 0; };
+function zipStore(files) { const enc = new TextEncoder(), parts = [], cen = []; let off = 0;
+  const u16 = (v) => [v & 255, (v >> 8) & 255], u32 = (v) => [v & 255, (v >> 8) & 255, (v >> 16) & 255, (v >>> 24) & 255];
+  for (const [name, text] of Object.entries(files)) { const nb = enc.encode(name), db = enc.encode(text), c = crc32(db);
+    const head = [0x50, 0x4b, 3, 4, ...u16(20), ...u16(0), ...u16(0), ...u16(0), ...u16(0x21), ...u32(c), ...u32(db.length), ...u32(db.length), ...u16(nb.length), ...u16(0)];
+    parts.push(new Uint8Array(head), nb, db);
+    cen.push(new Uint8Array([0x50, 0x4b, 1, 2, ...u16(20), ...u16(20), ...u16(0), ...u16(0), ...u16(0), ...u16(0x21), ...u32(c), ...u32(db.length), ...u32(db.length), ...u16(nb.length), ...u16(0), ...u16(0), ...u16(0), ...u16(0), ...u32(0), ...u32(off)]), nb);
+    off += head.length + nb.length + db.length; }
+  const cs = cen.reduce((s, x) => s + x.length, 0), n = Object.keys(files).length;
+  return new Blob([...parts, ...cen, new Uint8Array([0x50, 0x4b, 5, 6, 0, 0, 0, 0, ...u16(n), ...u16(n), ...u32(cs), ...u32(off), 0, 0])], { type: "application/zip" }); }
+const saveBlob = (blob, name) => { const a = document.createElement("a"); a.href = URL.createObjectURL(blob); a.download = name; document.body.appendChild(a); a.click(); setTimeout(() => { URL.revokeObjectURL(a.href); a.remove(); }, 2000); };
+
+DEMO.remotion = (el) => {
+  el.innerHTML = `<div class="dm-row"><select id="rkk"><option value="price">Token price</option><option value="block">Latest block</option><option value="drift">Stock drift</option><option value="tx">A transaction</option></select>
+      <select id="rkt">${PRESET.filter(([s]) => s !== "USDG").map(([s, a]) => `<option value="${a}">${s}</option>`).join("")}</select><input id="rkx" placeholder="transaction 0x… (64 hex)" spellcheck="false" style="display:none"><button id="rkb" class="dm-b">Read the chain ▸</button></div>
+    <div class="rk-stage"><canvas id="rkc" width="1280" height="720"></canvas></div>
+    <div class="dm-row"><button id="rkr" class="dm-b ghost" disabled>Record WebM here (6 s)</button><button id="rkz" class="dm-b" disabled>Download the Remotion project ▸</button><span class="dm-n" id="rkm"></span></div>
+    <div class="dm-card"><b>RENDER AN MP4 WITH REMOTION</b><p>Unzip the project, then run <code>npm install</code> and <code>npm run render</code>. Your video is written to <code>out/atlas-card.mp4</code>, with the data read above. ATLAS is not affiliated with Remotion. Remotion has its own license: free for individuals and small teams, companies may need one.</p></div>`;
+  const cv = $("rkc"), g = cv.getContext("2d"); let data = null, t0 = performance.now(), raf = 0;
+  const show = () => { const k = $("rkk").value; $("rkt").style.display = k === "price" || k === "drift" ? "" : "none"; $("rkx").style.display = k === "tx" ? "" : "none";
+    if (k === "drift") { const v = $("rkt").value; $("rkt").innerHTML = STOCKS.map(([s, a]) => `<option value="${a}">${s}</option>`).join(""); if ([...$("rkt").options].some((o) => o.value === v)) $("rkt").value = v; }
+    if (k === "price") { const v = $("rkt").value; $("rkt").innerHTML = PRESET.filter(([s]) => s !== "USDG").map(([s, a]) => `<option value="${a}">${s}</option>`).join(""); if ([...$("rkt").options].some((o) => o.value === v)) $("rkt").value = v; } };
+  $("rkk").onchange = show;
+  const kyberUsd = async (tok, dec) => { for (let k = 0; k < 3; k++) { try { return await kyberUsd1(tok, dec); } catch (e) { if (k === 2) throw e; await new Promise((r) => setTimeout(r, 1200 * (k + 1))); } } };
+  const kyberUsd1 = async (tok, dec) => { const j = await (await fetch(`${KYBER}/routes?tokenIn=${tok}&tokenOut=${USDG_ADDR}&amountIn=${10n ** BigInt(dec)}`, { headers: { "x-client-id": "atlas" } })).json(); if (j.code !== 0 || !j.data) throw new Error("No route right now."); return Number(j.data.routeSummary.amountOut) / 1e6; };
+  async function read() { const k = $("rkk").value, m = $("rkm"); m.textContent = "reading Robinhood Chain…"; $("rkr").disabled = $("rkz").disabled = true;
+    try { const bn = await cblock(), when = utcT(await tsOf(bn)), blk = bn.toLocaleString("en-US");
+      if (k === "price") { const a = $("rkt").value, sym = $("rkt").selectedOptions[0].textContent, dec = a === NATIVE ? 18 : (await tokenMeta(a)).decimals, usd = await kyberUsd(a, dec);
+        data = { kind: "Token price", title: `${sym} on Robinhood Chain`, value: "$" + fmt2(usd, usd < 1 ? 6 : 2), sub: `1 ${sym} via the best route, quoted live`, rows: [["block", blk], ["source", "KyberSwap route to USDG"], ["time", when]], url: "atlasboard.dev" }; }
+      else if (k === "block") { const gp = BigInt(await crpc("eth_gasPrice", [])), b = await crpc("eth_getBlockByNumber", ["0x" + bn.toString(16), false]);
+        data = { kind: "Latest block", title: "Robinhood Chain mainnet", value: blk, sub: "chain 4663, read live", rows: [["transactions", String(b.transactions.length)], ["gas price", fmt2(Number(gp) / 1e9, 4) + " gwei"], ["time", when]], url: "atlasboard.dev" }; }
+      else if (k === "drift") { const a = $("rkt").value, sym = $("rkt").selectedOptions[0].textContent, r = await crpc("eth_call", [{ to: ORACLE_ADDR, data: "0xb3596f07" + pad32(a) }, "latest"]), oracle = r && r !== "0x" ? Number(BigInt(r)) / 1e8 : 0;
+        if (!oracle) throw new Error(`${sym} has no on-chain oracle price. Try NVDA, SPY, QQQ or GLD.`); const dex = await kyberUsd(a, 18), gap = (dex / oracle - 1) * 100;
+        data = { kind: "Stock drift", title: `${sym}: chain vs oracle`, value: (gap >= 0 ? "+" : "") + gap.toFixed(2) + "%", sub: `on chain $${fmt2(dex, 2)} · oracle $${fmt2(oracle, 2)}`, rows: [["block", blk], ["oracle", shortA(ORACLE_ADDR)], ["time", when]], url: "atlasboard.dev/stock-drift" }; }
+      else { const h = $("rkx").value.trim(); if (!/^0x[0-9a-fA-F]{64}$/.test(h)) throw new Error("Paste a transaction hash 0x… (64 hex)."); const tx = await crpc("eth_getTransactionByHash", [h]); if (!tx || !tx.blockNumber) throw new Error("That transaction is not on Robinhood Chain mainnet (yet).");
+        const rc = await crpc("eth_getTransactionReceipt", [h]), tb = parseInt(tx.blockNumber, 16), self = tx.to && tx.from.toLowerCase() === tx.to.toLowerCase() && BigInt(tx.value) === 0n && tx.input.length === 66;
+        data = { kind: self ? "Seal stamp" : "Transaction", title: shortA(h), value: rc.status === "0x1" ? "CONFIRMED" : "REVERTED", sub: self ? "a SHA-256 fingerprint, stamped on chain" : `${fmt2(Number(BigInt(tx.value)) / 1e18, 6)} ETH · ${(rc.logs || []).length} events`, rows: [["block", tb.toLocaleString("en-US")], ["from", shortA(tx.from)], ["time", utcT(await tsOf(tb))]], url: "atlasboard.dev" }; }
+      t0 = performance.now(); m.innerHTML = `read at block ${blk} · ${esc2(when)}`; $("rkr").disabled = $("rkz").disabled = false; if (!raf) loop(); }
+    catch (e) { m.innerHTML = `<span class="dm-e">${esc2(e.message || e)}</span>`; } }
+  $("rkb").onclick = read;
+  // the same card as the Remotion composition, drawn on a canvas so you can see it here
+  const ease = (x) => 1 - Math.pow(1 - Math.min(1, Math.max(0, x)), 3);
+  function drawCard(f) { const G = "#77bb90", MONO = '"JetBrains Mono", monospace', pop = (d) => ease((f - d) / 18), out = f > 165 ? Math.max(0, (180 - f) / 15) : 1;
+    g.globalAlpha = 1; g.fillStyle = "#0a0c0e"; g.fillRect(0, 0, 1280, 720); g.globalAlpha = out;
+    g.strokeStyle = "rgba(36,39,43,.5)"; g.lineWidth = 1; for (let x = 0; x <= 1280; x += 40) { g.beginPath(); g.moveTo(x, 0); g.lineTo(x, 720); g.stroke(); } for (let y = 0; y <= 720; y += 40) { g.beginPath(); g.moveTo(0, y); g.lineTo(1280, y); g.stroke(); }
+    const lit = Math.floor(f / 8) % 16, rot = (f * 0.4 * Math.PI) / 180; g.save(); g.translate(1000, 360); g.rotate(rot);
+    for (let i = 0; i < 16; i++) { const a0 = ((i * 22.5 + 1.6 - 90) * Math.PI) / 180, a1 = (((i + 1) * 22.5 - 1.6 - 90) * Math.PI) / 180; g.beginPath(); g.arc(0, 0, 190, a0, a1); g.arc(0, 0, 130, a1, a0, true); g.closePath(); g.fillStyle = i === lit ? G : "#22262a"; g.fill(); g.strokeStyle = i === lit ? "#a8e0bc" : "#363b41"; g.lineWidth = 1.5; g.stroke(); }
+    g.beginPath(); g.arc(0, 0, 42, 0, 7); g.fillStyle = G; g.fill(); g.restore();
+    const txt = (s, x, y, font, color, a) => { g.globalAlpha = out * a; g.font = font; g.fillStyle = color; g.fillText(s, x, y); };
+    g.globalAlpha = out * pop(0); g.beginPath(); g.arc(91, 73, 11, 0, 7); g.fillStyle = G; g.fill(); txt("A T L A S", 116, 82, `800 26px ${MONO}`, "#f2f3f4", pop(0));
+    if (!data) { txt("Pick something and read the chain.", 80, 380, `600 30px ${MONO}`, "#9aa0a6", 1); return; }
+    txt(data.kind.toUpperCase().split("").join(" "), 80, 170, `700 20px ${MONO}`, G, pop(6)); txt(data.title, 80, 230 + (1 - pop(12)) * 20, `700 40px ${MONO}`, "#f2f3f4", pop(12));
+    let vs = 120; g.font = `800 ${vs}px ${MONO}`; while (g.measureText(data.value).width > 690 && vs > 40) { vs -= 4; g.font = `800 ${vs}px ${MONO}`; } txt(data.value, 80, 375, `800 ${vs}px ${MONO}`, G, pop(20));
+    txt(data.sub, 80, 432, `500 22px ${MONO}`, "#9aa0a6", pop(28));
+    data.rows.forEach(([k, v], i) => { const y = 495 + i * 52, a = pop(36 + i * 6); g.globalAlpha = out * a; g.strokeStyle = "#24272b"; g.setLineDash([4, 4]); g.beginPath(); g.moveTo(80, y + 18); g.lineTo(780, y + 18); g.stroke(); g.setLineDash([]); txt(k, 80, y, `500 21px ${MONO}`, "#9aa0a6", a); g.font = `500 21px ${MONO}`; txt(v, 780 - g.measureText(v).width, y, `500 21px ${MONO}`, "#f2f3f4", a); });
+    txt(data.url, 80, 680, `600 22px ${MONO}`, "#f2f3f4", pop(60)); g.globalAlpha = 1; }
+  function loop() { raf = requestAnimationFrame(loop); if (!document.body.contains(cv)) { cancelAnimationFrame(raf); raf = 0; return; } drawCard(Math.floor(((performance.now() - t0) / 1000) * 30) % 180); }
+  loop();
+  $("rkr").onclick = () => { if (!cv.captureStream || !window.MediaRecorder) { $("rkm").innerHTML = `<span class="dm-e">This browser cannot record a canvas. Use the Remotion project instead.</span>`; return; }
+    const type = ["video/webm;codecs=vp9", "video/webm"].find((x) => MediaRecorder.isTypeSupported(x)), rec = new MediaRecorder(cv.captureStream(30), type ? { mimeType: type, videoBitsPerSecond: 6e6 } : undefined), chunks = [];
+    rec.ondataavailable = (e) => e.data.size && chunks.push(e.data); rec.onstop = () => { saveBlob(new Blob(chunks, { type: "video/webm" }), "atlas-card.webm"); $("rkm").textContent = "saved atlas-card.webm"; $("rkr").disabled = false; };
+    t0 = performance.now(); rec.start(); $("rkr").disabled = true; $("rkm").textContent = "recording 6 seconds…"; setTimeout(() => rec.stop(), 6000); };
+  $("rkz").onclick = () => { if (!data) return; saveBlob(zipStore({ ...RK_FILES, "src/data.json": JSON.stringify(data, null, 2) + "\n" }), "atlas-remotion-kit.zip"); $("rkm").textContent = "saved atlas-remotion-kit.zip · unzip, npm install, npm run render"; };
+  show();
+};
+LIVE.add("remotion");
+
 const PTABS = [["swap", "swap", "Swap"], ["pools", "pool4", "Pools"], ["create-pool", "create", "Create Pool"], ["positions", "positions", "Positions"]];
 DEMO.protocol = (el, tab) => { tab = PTABS.some((t) => t[0] === tab) ? tab : "swap";
   el.innerHTML = `<div class="pt-tabs">${PTABS.map(([h, , n]) => `<button type="button" data-t="${h}">${n}</button>`).join("")}</div><div id="ptb"></div>`;
@@ -1021,7 +1094,7 @@ if (!reduce) { hop(); setInterval(hop, 900); }
 // ---- navigation menus, hero try-it, and the trust / status / developers / roadmap / changelog pages ----
 const MENU = {
   protocol: ["PROTOCOL", "Trade and provide liquidity on Robinhood Chain. Simulated first, signed in your own wallet.", () => [["/swap", "Swap", "Any token, best route, exact approvals", 1], ["/pools", "Pools", "Every v4 pool for a token, live", 1], ["/create-pool", "Create Pool", "New pool or add liquidity, full range", 1], ["/positions", "Positions", "Your liquidity, fees, collect and remove", 1]]],
-  tools: ["TOOLS", "16 tools for liquidity, agents, payments and data. Each has its own page.", () => B.map((b, i) => [`/${SL[i]}`, b[1], ((t) => (t.length > 64 ? t.slice(0, 64).replace(/\s+\S*$/, "") + "…" : t))(b[4].split(":")[0]), LIVE.has(b[0])])],
+  tools: ["TOOLS", "17 tools for liquidity, agents, payments and data. Each has its own page.", () => B.map((b, i) => [`/${SL[i]}`, b[1], ((t) => (t.length > 64 ? t.slice(0, 64).replace(/\s+\S*$/, "") + "…" : t))(b[4].split(":")[0]), LIVE.has(b[0])])],
   trust: ["TRUST", "What ATLAS can see, what it cannot, and how you can check.", () => [["/trust", "How it works", "From a click to a signed transaction, in plain words"], ["/trust", "What ATLAS can't see", "Your files, memories, keys and passwords"], ["/trust", "Wallet safety", "Simulated first, signed only in your wallet"], ["/trust", "Threat model", "What we protect against, and what we do not"], ["/status", "Status", "Live health of everything ATLAS reads"]]],
   dev: ["DEVELOPERS", "Open source, one static page, nothing to install.", () => [["https://x.com/atlasboard_", "ATLAS on X", "@atlasboard_ · news and updates"], ["/developers", "Run it yourself", "Clone, serve, done"], ["/developers", "Embed a Checkout Button", "Paste one button into any site"], ["/developers", "Verify a Seal", "Check a stamp without ATLAS"], ["/mcp", "MCP connector", "npx -y github:atlasboard/atlas-mcp"], ["https://github.com/atlasboard/atlasboard.github.io", "Source code", "github.com/atlasboard, MIT"]]],
   vision: ["VISION", "Where ATLAS goes next, and what it has shipped.", () => [["/roadmap", "Roadmap", "What is live and what comes next"], ["/changelog", "Changelog", "Everything shipped, by date"]]],
@@ -1067,6 +1140,7 @@ curl -s https://rpc.mainnet.chain.robinhood.com -H 'content-type: application/js
     <div class="sec"><b class="h">ALL TOOLS</b><div class="rm">${B.map((b, i) => `<a href="/${SL[i]}">${b[1]}<em class="${LIVE.has(b[0]) ? "l" : ""}">${LIVE.has(b[0]) ? "LIVE" : "NEXT"}</em></a>`).join("")}</div></div>
     <div class="sec"><b class="h">COMING NEXT</b><ul><li>Memory folders readable by the MCP connector, with the same per-folder permission and read log.</li><li>A public, hourly proof that every live tool still works.</li><li>New tools are added here only once they work on mainnet.</li></ul></div></div>`,
   changelog: () => `<div class="info"><div class="pg-k">CHANGELOG</div><h2>What has shipped.</h2><div class="sec cl">
+    <div><b>28 Nov 2026 · Remotion Kit and the 3D desk</b><p>Remotion Kit turns live chain data into a video card: a token price, the latest block, a stock drift or a transaction. Preview it in the browser, record a WebM, or download a ready Remotion project with the same numbers and render an MP4. The first screen is now a 3D desk with one object per tool. ATLAS is not affiliated with Remotion.</p></div>
     <div><b>27 Nov 2026 · Dark theme, the ring, Model, clean links</b><p>A new dark look with one green accent. A ring of 16 segments, one per tool, turns behind the first screen and lights each tool in turn. AI Model is now Model, with a moving wall of every model that can call ATLAS tools and its live OpenRouter price. Links are clean: atlasboard.dev/swap instead of #/swap, and old links still work.</p></div>
     <div><b>27 Nov 2026 · Protocol: Create Pool and Positions</b><p>Protocol is one tool with four tabs: Swap, Pools, Create Pool and Positions. Create a Uniswap v4 pool or add liquidity at full range through the PositionManager and Permit2, with exact amounts and every step simulated first. Positions shows what each position holds and the fees waiting, and collects or removes them from your wallet.</p></div>
     <div><b>27 Nov 2026 · Swap and Pools</b><p>Swap any token at the best route across Robinhood Chain DEXs, with an exact approval and a simulation before you sign. Pool lists every Uniswap V4 pool for a token with price, liquidity, 24h swaps and volume, read from the PoolManager.</p></div>
@@ -1084,6 +1158,7 @@ async function statusLoop() { if (!H().startsWith("/status")) return; const chec
 const D = {
   swap: { plain: "Trade one token for another without leaving ATLAS. The router searches every pool on Robinhood Chain for the best price, and you see what you get before you sign.", example: "Swap 0.01 ETH for USDG: see the rate, the minimum you will receive at 0.5% slippage and the price impact, then sign once in your wallet.", who: "Anyone trading ETH, USDG or stock tokens on Robinhood Chain.", flow: ["Your tokens", "Best route", "Your wallet signs"] },
   protocol: { plain: "Everything to trade and provide liquidity, in four tabs. Swap finds the best price across every pool. Pools shows every Uniswap v4 pool for a token. Create Pool starts a pool or adds to one. Positions shows what your liquidity holds and the fees it earned.", example: "Swap 0.01 ETH for USDG, find the busiest USDG / NVDA pool, add liquidity to it, then collect its fees from Positions.", who: "Traders, liquidity providers and projects launching a pair on Robinhood Chain.", flow: ["Swap", "Pools", "Create Pool", "Positions"] },
+  remotion: { plain: "A video card made from what the chain says right now: a token price, the latest block, a stock token next to its oracle, or a transaction. It plays here, you can record it as a WebM, or download a ready Remotion project with the same numbers and render an MP4 on your computer.", example: "Pick NVDA, read the chain, and get a 6 second card with its live price, the block and the time in UTC. Run npm run render and post the MP4.", who: "Projects and creators who post on-chain numbers and want them as clean video.", flow: ["Chain data", "Card preview", "Remotion MP4"] },
   create: { plain: "A pool needs someone to put both tokens in before anyone can trade. Here you create a new pool, or add to an existing one, and earn a share of the fee on every trade that goes through your liquidity.", example: "Create an ETH / USDG pool at 0.30%: set the starting price, deposit 0.01 ETH and the matching USDG, sign, and receive a position NFT.", who: "Projects launching a pair, and holders who want to earn trading fees.", flow: ["Two tokens", "PositionManager", "Your position NFT"] },
   positions: { plain: "Each deposit in a pool is a position NFT in your wallet. This page finds them, shows what each one holds right now and how much fee is waiting, and lets you collect it or take your liquidity out.", example: "Paste a wallet: see #4377790 · ETH / USDG · full range · in range, what it holds and its fees, then collect them in one signature.", who: "Anyone who provides liquidity on Robinhood Chain.", flow: ["Position NFTs", "Pool state", "Collect or remove"] },
   pool4: { plain: "A pool is where two tokens sit together so people can trade between them. This tool finds every Uniswap V4 pool for a token and reads how each one is doing, straight from the contract.", example: "Pick NVDA and see its pools, the price in each, how much liquidity is active and how many swaps happened today.", who: "Traders choosing where to trade, and projects watching their own pools.", flow: ["Token", "PoolManager events", "Each pool's state"] },
@@ -1177,74 +1252,161 @@ async function drafting() {
     $("stampd").classList.add("on"); await new Promise((r) => setTimeout(r, 1400)); di++; }
 }
 route();
-// ---------- background object: a segmented ring, one segment per tool, over wireframe orbs ----------
-(() => {
+// ---------- fallback background: particle portal ----------
+function portalBG() {
   const cv = document.createElement("canvas"); cv.id = "bgring"; cv.setAttribute("aria-hidden", "true"); document.body.prepend(cv);
   const g = cv.getContext("2d"), still = matchMedia("(prefers-reduced-motion: reduce)").matches;
   let W = 0, Hh = 0, dpr = 1, small = false;
   const size = () => { dpr = Math.min(1.5, devicePixelRatio || 1); W = innerWidth; Hh = innerHeight; small = W < 760; cv.width = W * dpr; cv.height = Hh * dpr; cv.style.width = W + "px"; cv.style.height = Hh + "px"; g.setTransform(dpr, 0, 0, dpr, 0, 0); };
   size(); addEventListener("resize", size);
-  const N = B.length, SUB = small ? 3 : 4, U = N * SUB, V = small ? 9 : 13, Rr = 1, rr = 0.3;
-  // orbs: each a set of random great circles
-  const rnd = (a, b) => a + Math.random() * (b - a);
-  const orbs = Array.from({ length: small ? 4 : 8 }, () => ({ x: rnd(0, 1), y: rnd(0, 1), r: rnd(40, 120), vx: rnd(-6, 6), vy: rnd(-4, 4), sp: rnd(0.05, 0.18), ph: rnd(0, 6),
-    cs: Array.from({ length: 9 }, () => { const a = rnd(0, Math.PI), b = rnd(0, Math.PI); return [Math.cos(a) * Math.sin(b), Math.sin(a) * Math.sin(b), Math.cos(b)]; }) }));
-  let active = 0, lastSwitch = 0, t0 = performance.now();
+  const N = small ? 4200 : 12000, R = 3.2, H = 0.36, CZ = 1.25;
+  const P = Array.from({ length: N }, (_, i) => { const r = 0.25 + Math.sqrt(Math.random()) * (R - 0.25); return { r, a: Math.random() * 6.283, s: (Math.random() < 0.5 ? 1 : -1) * 0 + 1, up: i % 2 === 0, w: 0.22 / Math.sqrt(r), green: Math.random() < 0.12, b: 0.25 + Math.random() * 0.75 }; });
+  const threads = Array.from({ length: small ? 28 : 56 }, (_, i) => ({ p: (i / (small ? 28 : 56)) * 6.283, tw: 1.6 + Math.random() * 0.8 }));
+  let t0 = performance.now();
   function draw(now) {
-    const t = (now - t0) / 1000; g.clearRect(0, 0, W, Hh);
-    const page = document.body.classList.contains("on-page"), sy = scrollY;
-    // orbs
-    g.lineWidth = 1;
-    for (const o of orbs) { const ox = ((o.x * W + o.vx * t) % (W + 260) + W + 260) % (W + 260) - 130, oy = ((o.y * Hh + o.vy * t) % (Hh + 260) + Hh + 260) % (Hh + 260) - 130, a = t * o.sp + o.ph;
-      g.strokeStyle = "rgba(242,243,244,.07)";
-      for (const [nx, ny, nz] of o.cs) { // circle perpendicular to n, rotated about y by a
-        const ux = [ny, -nx, 0], ul = Math.hypot(...ux) || 1; const u = ux.map((v) => v / ul), w = [ny * u[2] - nz * u[1], nz * u[0] - nx * u[2], nx * u[1] - ny * u[0]];
-        g.beginPath(); for (let k = 0; k <= 40; k++) { const th = (k / 40) * Math.PI * 2, px = u[0] * Math.cos(th) + w[0] * Math.sin(th), py = u[1] * Math.cos(th) + w[1] * Math.sin(th), pz = u[2] * Math.cos(th) + w[2] * Math.sin(th);
-          const X = px * Math.cos(a) + pz * Math.sin(a); const sx = ox + X * o.r, syy = oy + py * o.r; k ? g.lineTo(sx, syy) : g.moveTo(sx, syy); } g.stroke(); } }
-    // ring placement
-    const spot = document.getElementById("ringspot"), rs = !page && spot ? spot.getBoundingClientRect() : null, home = rs && rs.bottom > 40 && rs.top < Hh;
-    const S = home ? Math.min(rs.width * 0.3, rs.height * 0.33, 210) : small ? 110 : Math.min(W * 0.12, 180), cx = home ? rs.left + rs.width / 2 : W * (small ? 0.75 : 0.87), cy = home ? rs.top + rs.height * 0.52 : Hh * 0.62;
-    const fade = home ? 1 : 0.22; g.globalAlpha = fade;
-    if (now - lastSwitch > 1700) { active = (active + 1) % N; lastSwitch = now; }
-    const yaw = still ? 0.5 : t * 0.12, tilt = 0.55, ct = Math.cos(tilt), st = Math.sin(tilt), cyw = Math.cos(yaw), syw = Math.sin(yaw), cam = 4.2;
-    const P = (x, y, z) => { const X = x * cyw - z * syw, Z0 = x * syw + z * cyw, Y = y * ct - Z0 * st, Z = y * st + Z0 * ct, f = cam / (cam + Z); return [cx + X * f * S, cy - Y * f * S, Z]; };
-    const L = [0.3, 0.85, -0.45], polys = [];
-    const tor = (i, j) => { const u = (i / U) * Math.PI * 2, v = (j / V) * Math.PI * 2; return [(Rr + rr * Math.cos(v)) * Math.cos(u), rr * Math.sin(v) + 0.35, (Rr + rr * Math.cos(v)) * Math.sin(u)]; };
-    for (let i = 0; i < U; i++) { const seg = Math.floor(i / SUB), gap = i % SUB === SUB - 1;
-      for (let j = 0; j < V; j++) { const a = tor(i, j), b = tor(i + 1, j), c = tor(i + 1, j + 1), d = tor(i, j + 1);
-        const u = ((i + 0.5) / U) * Math.PI * 2, v = ((j + 0.5) / V) * Math.PI * 2, n = [Math.cos(v) * Math.cos(u), Math.sin(v), Math.cos(v) * Math.sin(u)];
-        const nX = n[0] * cyw - n[2] * syw, nZ0 = n[0] * syw + n[2] * cyw, nY = n[1] * ct - nZ0 * st, nZ = n[1] * st + nZ0 * ct; if (nZ > 0.35) continue;
-        const pts = [a, b, c, d].map((p) => P(...p)), z = pts.reduce((s, p) => s + p[2], 0) / 4, lit = Math.max(0, n[0] * L[0] + n[1] * L[1] + n[2] * L[2]);
-        polys.push({ pts, z, lit, on: seg === active, gap }); } }
-    // base disc (annulus) and pillars
-    const base = [];
-    for (let i = 0; i < U; i++) { const u0 = (i / U) * Math.PI * 2, u1 = ((i + 1) / U) * Math.PI * 2;
-      for (const [r0, r1] of [[0.62, 0.9], [0.9, 1.22]]) { const pts = [[r0, u0], [r1, u0], [r1, u1], [r0, u1]].map(([r, u]) => P(r * Math.cos(u), -0.55, r * Math.sin(u))); base.push({ pts, z: pts.reduce((s, p) => s + p[2], 0) / 4 + 5, lit: 0.35, base: true }); }
-      const pts = [[1.22, u0, -0.55], [1.22, u1, -0.55], [1.22, u1, -0.68], [1.22, u0, -0.68]].map(([r, u, y]) => P(r * Math.cos(u), y, r * Math.sin(u))); base.push({ pts, z: pts.reduce((s, p) => s + p[2], 0) / 4 + 5, lit: 0.15, base: true }); }
-    const poly = (p) => { g.beginPath(); p.pts.forEach(([x, y], k) => (k ? g.lineTo(x, y) : g.moveTo(x, y))); g.closePath();
-      if (p.base) { g.fillStyle = `rgb(${24 + p.lit * 30},${27 + p.lit * 30},${31 + p.lit * 30})`; g.fill(); g.strokeStyle = "rgba(242,243,244,.06)"; g.stroke(); return; }
-      const k = 0.25 + p.lit * 0.75; g.fillStyle = p.on ? `rgb(${Math.round(40 + 50 * k)},${Math.round(70 + 100 * k)},${Math.round(52 + 70 * k)})` : `rgb(${Math.round((p.gap ? 18 : 30) + 55 * k)},${Math.round((p.gap ? 20 : 33) + 57 * k)},${Math.round((p.gap ? 24 : 38) + 60 * k)})`;
-      g.fill(); g.strokeStyle = p.on ? "rgba(119,187,144,.9)" : "rgba(242,243,244,.09)"; g.lineWidth = 0.8; g.stroke(); };
-    base.sort((a, b) => b.z - a.z).forEach(poly);
-    g.strokeStyle = "rgba(154,160,166,.35)"; g.lineWidth = 1.2;
-    for (let k = 0; k < 8; k++) { const u = (k / 8) * Math.PI * 2 + 0.2, a = P(Math.cos(u) * 1.0, -0.55, Math.sin(u) * 1.0), b = P(Math.cos(u) * 1.0, 0.05, Math.sin(u) * 1.0); g.beginPath(); g.moveTo(a[0], a[1]); g.lineTo(b[0], b[1]); g.stroke(); }
-    // signal pillar under the active segment
-    const ua = ((active + 0.5) / N) * Math.PI * 2, pa = P(Math.cos(ua), -0.55, Math.sin(ua)), pb = P(Math.cos(ua), 0.05, Math.sin(ua));
-    g.strokeStyle = "rgba(119,187,144,.95)"; g.lineWidth = 2.2; g.beginPath(); g.moveTo(pa[0], pa[1]); g.lineTo(pb[0], pb[1]); g.stroke();
-    g.fillStyle = "#77bb90"; g.beginPath(); g.arc(pa[0], pa[1], 3.2, 0, 7); g.fill();
-    polys.sort((a, b) => b.z - a.z).forEach(poly);
-    // callout to the active tool
-    if (home && !small) { const top = P(Math.cos(ua) * Rr, 0.35 + rr, Math.sin(ua) * Rr), lx = cx + S * 1.45 * (top[0] > cx ? 1 : -1), ly = cy - S * 1.05;
-      g.strokeStyle = "rgba(119,187,144,.75)"; g.lineWidth = 1; g.beginPath(); g.moveTo(top[0], top[1]); g.lineTo(lx, ly + 22); g.stroke();
-      const label = `Nº ${String(active + 1).padStart(2, "0")} · ${B[active][1].toUpperCase()}`, sub = (B[active][4] || "").split(/[.:]/)[0].slice(0, 46);
-      g.font = '700 13px "JetBrains Mono", monospace'; const wv = Math.max(g.measureText(label).width, (g.font = '500 10.5px "JetBrains Mono", monospace', g.measureText(sub).width)) + 22, bx = Math.max(10, Math.min(W - wv - 10, top[0] > cx ? lx : lx - wv));
-      g.fillStyle = "rgba(18,20,22,.92)"; g.fillRect(bx, ly - 6, wv, 46); g.strokeStyle = "rgba(119,187,144,.6)"; g.strokeRect(bx + 0.5, ly - 5.5, wv - 1, 45);
-      g.fillStyle = "#77bb90"; g.font = '700 13px "JetBrains Mono", monospace'; g.fillText(label, bx + 11, ly + 13); g.fillStyle = "#9aa0a6"; g.font = '500 10.5px "JetBrains Mono", monospace'; g.fillText(sub, bx + 11, ly + 30); }
-    g.globalAlpha = 1;
+    const t = still ? 0 : (now - t0) / 1000; g.clearRect(0, 0, W, Hh);
+    const page = document.body.classList.contains("on-page");
+    const cx = small ? W * 0.5 : W * (page ? 0.72 : 0.66), cy = Hh * (small ? 0.42 : 0.5), f = Math.min(W, Hh * 1.7) * 0.62;
+    const proj = (x, y, z) => { const d = z + CZ; if (d < 0.08) return null; return [cx + (f * x) / d, cy - (f * y) / d, d]; };
+    const base = page ? 0.38 : 1;
+    // discs: streaks along the orbit, batched by brightness
+    const buckets = [[], [], [], []], greens = [];
+    for (const q of P) {
+      const a = q.a + t * q.w, y = q.up ? H : -H, a2 = a - 0.03 - q.w * 0.1;
+      const p1 = proj(q.r * Math.cos(a), y, q.r * Math.sin(a)), p2 = proj(q.r * Math.cos(a2), y, q.r * Math.sin(a2)); if (!p1 || !p2) continue;
+      if (p1[0] < -40 || p1[0] > W + 40 || p1[1] < -40 || p1[1] > Hh + 40) continue;
+      const far = Math.min(1, p1[2] / 3.2), k = q.b * (0.35 + 0.65 * far);
+      (q.green ? greens : buckets[Math.min(3, Math.floor(k * 4))]).push(p1[0], p1[1], p2[0], p2[1]);
+    }
+    const line = (arr, style, lw) => { if (!arr.length) return; g.strokeStyle = style; g.lineWidth = lw; g.beginPath(); for (let i = 0; i < arr.length; i += 4) { g.moveTo(arr[i], arr[i + 1]); g.lineTo(arr[i + 2], arr[i + 3]); } g.stroke(); };
+    buckets.forEach((arr, i) => line(arr, `rgba(242,243,244,${(0.08 + i * 0.14) * base})`, 0.8));
+    line(greens, `rgba(119,187,144,${0.55 * base})`, 1.2);
+    // hourglass threads between the discs, turning slowly
+    g.lineWidth = 1; g.strokeStyle = `rgba(242,243,244,${0.07 * base})`;
+    for (const th of threads) { g.beginPath(); let first = true;
+      for (let k = 0; k <= 24; k++) { const y = -H + (2 * H * k) / 24, u = y / H, rho = 0.18 + 0.62 * u * u, a = th.p + t * 0.15 + u * th.tw, p = proj(rho * Math.cos(a), y, rho * Math.sin(a)); if (!p) { first = true; continue; } first ? g.moveTo(p[0], p[1]) : g.lineTo(p[0], p[1]); first = false; }
+      g.stroke(); }
+    // beam of light on the axis
+    const top = proj(0, H + 0.12, 0), bot = proj(0, -H - 0.12, 0), mid = proj(0, 0, 0);
+    if (top && bot) { const gr = g.createLinearGradient(0, top[1], 0, bot[1]); gr.addColorStop(0, "rgba(119,187,144,0)"); gr.addColorStop(0.2, `rgba(220,245,228,${0.9 * base})`); gr.addColorStop(0.5, `rgba(119,187,144,${0.8 * base})`); gr.addColorStop(0.8, `rgba(220,245,228,${0.9 * base})`); gr.addColorStop(1, "rgba(119,187,144,0)");
+      g.strokeStyle = gr; g.lineWidth = 2.2; g.beginPath(); g.moveTo(top[0], top[1]); g.lineTo(bot[0], bot[1]); g.stroke();
+      const glow = (x, y, r, a) => { const rg = g.createRadialGradient(x, y, 0, x, y, r); rg.addColorStop(0, `rgba(255,255,255,${a * base})`); rg.addColorStop(0.35, `rgba(150,215,175,${a * 0.5 * base})`); rg.addColorStop(1, "rgba(119,187,144,0)"); g.fillStyle = rg; g.beginPath(); g.arc(x, y, r, 0, 7); g.fill(); };
+      const pu = proj(0, H * 0.82, 0), pd = proj(0, -H * 0.82, 0), pulse = 0.75 + 0.25 * Math.sin(t * 2.2);
+      if (pu) glow(pu[0], pu[1], 26, pulse); if (pd) glow(pd[0], pd[1], 26, pulse); if (mid) glow(mid[0], mid[1], 12, 0.8); }
+    // keep text readable: darken behind the left column on the first screen
+    if (!small && !page) { const lg = g.createLinearGradient(0, 0, W * 0.6, 0); lg.addColorStop(0, "rgba(10,12,14,.82)"); lg.addColorStop(0.75, "rgba(10,12,14,.35)"); lg.addColorStop(1, "rgba(10,12,14,0)"); g.fillStyle = lg; g.fillRect(0, 0, W * 0.6, Hh); }
+    if (small) { g.fillStyle = "rgba(10,12,14,.45)"; g.fillRect(0, 0, W, Hh); }
   }
-  let raf = 0, last = 0; const loop = (now) => { raf = requestAnimationFrame(loop); if (document.hidden || now - last < 33) return; last = now; draw(now); };
-  if (still) { draw(performance.now()); addEventListener("resize", () => draw(performance.now())); } else raf = requestAnimationFrame(loop);
-})();
+  let last = 0; const loop = (now) => { requestAnimationFrame(loop); if (document.hidden || now - last < 33) return; last = now; draw(now); };
+  if (still) { draw(performance.now()); addEventListener("resize", () => draw(performance.now())); } else requestAnimationFrame(loop);
+}
+// ATLAS desk: a dark blueprint table with one 3D object per tool, joined by a glowing dashed path.
+// The camera glides from tool to tool. Needs THREE (r128). Call atlasDesk(canvas, tools, opts).
+function atlasDesk(canvas, TOOLS, opts = {}) {
+  const T = THREE, still = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const C = { bg: 0x07090b, table: 0x0f1418, grid: 0x77bb90, green: 0x77bb90, cream: 0xe9e4d8, dark: 0x24282d, slate: 0x4a5057, amber: 0xe3c565, coral: 0xef7b6e, steel: 0x8a9096 };
+  const renderer = new T.WebGLRenderer({ canvas, antialias: true, alpha: false });
+  const lowEnd = (canvas.clientWidth || innerWidth) < 760; renderer.setPixelRatio(Math.min(lowEnd ? 1.25 : 1.5, devicePixelRatio || 1)); renderer.shadowMap.enabled = !lowEnd; renderer.shadowMap.type = T.PCFSoftShadowMap;
+  renderer.outputEncoding = T.sRGBEncoding;
+  const scene = new T.Scene(); scene.background = new T.Color(C.bg); scene.fog = new T.Fog(C.bg, 9, 26);
+  const cam = new T.PerspectiveCamera(42, 1, 0.1, 80);
+  // light
+  scene.add(new T.HemisphereLight(0xdfeee6, 0x0a0c0e, 0.42));
+  const key = new T.DirectionalLight(0xfff1dc, 1.25); key.position.set(-6, 12, 6); key.castShadow = true;
+  key.shadow.mapSize.set(2048, 2048); Object.assign(key.shadow.camera, { left: -22, right: 22, top: 22, bottom: -22, near: 1, far: 40 }); key.shadow.bias = -0.0008; scene.add(key);
+  const rim = new T.PointLight(0x77bb90, 0.6, 30); rim.position.set(8, 6, -8); scene.add(rim);
+  // table with a blueprint grid drawn on a canvas texture
+  const tc = document.createElement("canvas"); tc.width = tc.height = 2048; const tg = tc.getContext("2d");
+  tg.fillStyle = "#0f1418"; tg.fillRect(0, 0, 2048, 2048);
+  for (let i = 0; i <= 2048; i += 32) { tg.strokeStyle = i % 256 === 0 ? "rgba(119,187,144,.22)" : "rgba(119,187,144,.07)"; tg.lineWidth = i % 256 === 0 ? 2 : 1; tg.beginPath(); tg.moveTo(i, 0); tg.lineTo(i, 2048); tg.moveTo(0, i); tg.lineTo(2048, i); tg.stroke(); }
+  const ttex = new T.CanvasTexture(tc); ttex.anisotropy = 8; ttex.encoding = T.sRGBEncoding;
+  const table = new T.Mesh(new T.PlaneGeometry(48, 48), new T.MeshStandardMaterial({ map: ttex, roughness: 0.92, metalness: 0 }));
+  table.rotation.x = -Math.PI / 2; table.receiveShadow = true; scene.add(table);
+  // helpers
+  const M = (c, o = {}) => new T.MeshStandardMaterial(Object.assign({ color: c, roughness: 0.55, metalness: 0.05 }, o));
+  const glow = (c) => new T.MeshStandardMaterial({ color: c, emissive: c, emissiveIntensity: 0.9, roughness: 0.4 });
+  const add = (g, geo, mat, x = 0, y = 0, z = 0, rx = 0, ry = 0, rz = 0) => { const m = new T.Mesh(geo, mat); m.position.set(x, y, z); m.rotation.set(rx, ry, rz); m.castShadow = m.receiveShadow = true; g.add(m); return m; };
+  const box = (w, h, d) => new T.BoxGeometry(w, h, d), cyl = (rt, rb, h, s = 32) => new T.CylinderGeometry(rt, rb, h, s), sph = (r) => new T.SphereGeometry(r, 32, 20), tor = (r, t, arc = Math.PI * 2) => new T.TorusGeometry(r, t, 16, 48, arc);
+  const screenTex = (lines, color = "#77bb90", bg = "#0b1410") => { const c = document.createElement("canvas"); c.width = 512; c.height = 320; const g = c.getContext("2d"); g.fillStyle = bg; g.fillRect(0, 0, 512, 320); g.fillStyle = color; g.font = "bold 34px JetBrains Mono, monospace"; lines.forEach((l, i) => g.fillText(l, 28, 62 + i * 52)); const t = new T.CanvasTexture(c); t.encoding = T.sRGBEncoding; return new T.MeshStandardMaterial({ map: t, emissive: 0xffffff, emissiveMap: t, emissiveIntensity: 0.55, roughness: 0.3 }); };
+  const pedestal = (g) => { add(g, cyl(0.95, 1.02, 0.14, 48), M(0x181c20, { roughness: 0.35, metalness: 0.4 }), 0, 0.07); add(g, tor(0.98, 0.025), glow(C.green), 0, 0.145, 0, Math.PI / 2); };
+  // one builder per tool, all original shapes
+  const B = {
+    protocol(g) { for (let i = 0; i < 4; i++) add(g, cyl(0.3, 0.3, 0.09), M(C.amber, { metalness: 0.6, roughness: 0.3 }), -0.5, 0.2 + i * 0.1, 0); for (let i = 0; i < 3; i++) add(g, cyl(0.3, 0.3, 0.09), M(C.green, { metalness: 0.3, roughness: 0.35 }), 0.5, 0.2 + i * 0.1, 0);
+      const arrow = (y, dir, mat) => { add(g, box(0.5, 0.06, 0.06), mat, 0, y, 0); add(g, new T.ConeGeometry(0.09, 0.18, 16), mat, dir * 0.32, y, 0, 0, 0, -dir * Math.PI / 2); }; arrow(0.75, 1, glow(C.green)); arrow(0.55, -1, M(C.cream)); },
+    mcp(g) { add(g, box(0.7, 0.5, 0.5), M(C.cream), 0, 0.45, 0); add(g, box(0.1, 0.28, 0.1), M(C.steel, { metalness: 0.8 }), -0.15, 0.85, 0); add(g, box(0.1, 0.28, 0.1), M(C.steel, { metalness: 0.8 }), 0.15, 0.85, 0); const cv = new T.CatmullRomCurve3([new T.Vector3(0.35, 0.4, 0), new T.Vector3(0.75, 0.3, 0.2), new T.Vector3(0.7, 0.18, 0.6), new T.Vector3(0.2, 0.18, 0.75)]); add(g, new T.TubeGeometry(cv, 40, 0.05, 10), glow(C.green)); },
+    remotion(g) { add(g, box(1.0, 0.62, 0.06), M(C.dark), 0, 0.62); add(g, box(0.9, 0.52, 0.01), screenTex(["  \u25B6 6s card", "  $148.86", "  block 124,6.."], "#77bb90"), 0, 0.62, 0.035); add(g, box(1.04, 0.14, 0.07), M(C.cream), 0, 1.02, 0, 0, 0, -0.18); for (let i = 0; i < 5; i++) add(g, box(0.08, 0.15, 0.075), M(C.dark), -0.4 + i * 0.2, 1.06 - i * 0.035, 0.002, 0, 0, -0.18 + 0.6); add(g, box(0.3, 0.04, 0.3), M(C.slate), 0, 0.3); add(g, cyl(0.04, 0.04, 0.3), M(C.slate), 0, 0.42); },
+    model(g) { add(g, box(0.95, 0.2, 0.95), M(C.dark, { metalness: 0.4 }), 0, 0.35); add(g, box(0.55, 0.06, 0.55), glow(C.green), 0, 0.48); for (let i = -3; i <= 3; i++) for (const s of [-1, 1]) { add(g, box(0.06, 0.05, 0.18), M(C.steel, { metalness: 0.9 }), i * 0.12, 0.3, s * 0.55); add(g, box(0.18, 0.05, 0.06), M(C.steel, { metalness: 0.9 }), s * 0.55, 0.3, i * 0.12); } },
+    console(g) { add(g, box(1.15, 0.75, 0.08), M(C.dark), 0, 0.85); add(g, box(1.02, 0.63, 0.01), screenTex(["$ block", "124,433,980", "$ price NVDA", "$165.51"]), 0, 0.85, 0.046); add(g, cyl(0.05, 0.05, 0.35), M(C.slate), 0, 0.35); add(g, box(0.5, 0.04, 0.3), M(C.slate), 0, 0.17); },
+    memory(g) { const s = [[0, 0.55, 0, 0.32], [0.28, 0.62, 0.1, 0.24], [-0.28, 0.62, -0.05, 0.26], [0.1, 0.82, -0.12, 0.22], [-0.12, 0.8, 0.15, 0.2]]; s.forEach(([x, y, z, r], i) => add(g, sph(r), i === 0 ? glow(C.green) : M(C.green, { roughness: 0.35 }), x, y, z)); add(g, box(0.34, 0.26, 0.12), M(C.amber, { metalness: 0.5 }), 0.55, 0.3, 0.45); add(g, tor(0.1, 0.03, Math.PI), M(C.steel, { metalness: 0.8 }), 0.55, 0.43, 0.45); },
+    x402(g) { for (let i = 0; i < 5; i++) add(g, cyl(0.34, 0.34, 0.08), M(i % 2 ? C.amber : C.cream, { metalness: 0.5, roughness: 0.3 }), 0.1 * Math.sin(i), 0.22 + i * 0.09, 0.05 * Math.cos(i)); add(g, cyl(0.34, 0.34, 0.08), glow(C.green), 0, 0.72, 0); },
+    scheduled(g) { add(g, sph(0.32), M(C.cream, { roughness: 0.8 }), -0.35, 0.95, 0); add(g, sph(0.3), M(0x0a0c0e), -0.22, 1.02, 0.12); add(g, cyl(0.38, 0.38, 0.1), M(C.dark), 0.3, 0.55, 0, Math.PI / 2); add(g, cyl(0.32, 0.32, 0.02), M(C.cream), 0.3, 0.55, 0.06, Math.PI / 2); add(g, box(0.03, 0.22, 0.02), glow(C.green), 0.3, 0.62, 0.08); add(g, box(0.16, 0.03, 0.02), glow(C.green), 0.36, 0.55, 0.08); },
+    seal(g) { add(g, cyl(0.42, 0.45, 0.18), M(C.green), 0, 0.25); add(g, cyl(0.1, 0.14, 0.45), M(C.cream), 0, 0.55); add(g, sph(0.2), M(C.dark), 0, 0.86); add(g, box(0.8, 0.02, 0.6), M(C.cream, { roughness: 0.9 }), 0.35, 0.16, 0.45, 0, 0.3); add(g, cyl(0.16, 0.16, 0.022), glow(C.green), 0.35, 0.17, 0.45); },
+    privacy(g) { add(g, box(0.7, 0.55, 0.3), M(C.amber, { metalness: 0.5, roughness: 0.35 }), 0, 0.45); add(g, tor(0.24, 0.07, Math.PI), M(C.steel, { metalness: 0.8 }), 0, 0.72); add(g, cyl(0.06, 0.06, 0.32), M(C.dark), 0, 0.42, 0.16, Math.PI / 2); },
+    paybtn(g) { add(g, cyl(0.6, 0.65, 0.22), M(C.dark), 0, 0.25); add(g, cyl(0.45, 0.45, 0.18), glow(C.green), 0, 0.42); add(g, box(0.06, 0.25, 0.06), M(C.cream), 0, 0.62); },
+    invoice(g) { add(g, box(0.75, 0.02, 1), M(C.cream, { roughness: 0.9 }), 0, 0.3, 0, -0.5); for (let i = 0; i < 4; i++) add(g, box(0.5, 0.012, 0.04), M(C.slate), -0.05, 0.31 + i * 0.1, -0.25 + i * 0.16, -0.5); add(g, tor(0.13, 0.035), glow(C.green), 0.22, 0.62, 0.32, -0.5); },
+    pool(g) { [0.3, 0.5, 0.8, 1.15].forEach((h, i) => add(g, box(0.2, h, 0.2), i === 3 ? glow(C.green) : M(C.cream), -0.36 + i * 0.24, 0.15 + h / 2, 0)); },
+    stocks(g) { add(g, box(1.1, 0.75, 0.05), M(C.dark), 0, 0.75, -0.1); const pts = [[-0.45, 0.5], [-0.25, 0.62], [-0.05, 0.56], [0.15, 0.8], [0.4, 0.95]].map(([x, y]) => new T.Vector3(x, y, -0.05)); add(g, new T.TubeGeometry(new T.CatmullRomCurve3(pts), 40, 0.025, 8), glow(C.green)); add(g, box(0.04, 0.4, 0.04), M(C.slate), -0.3, 0.2, -0.1); add(g, box(0.04, 0.4, 0.04), M(C.slate), 0.3, 0.2, -0.1); },
+    proof(g) { add(g, cyl(0.12, 0.12, 0.9), M(C.cream, { roughness: 0.85 }), 0, 0.32, -0.25, 0, 0, Math.PI / 2); add(g, box(0.9, 0.02, 0.55), M(C.cream, { roughness: 0.9 }), 0, 0.22, 0.05); add(g, cyl(0.16, 0.16, 0.05), glow(C.green), 0.25, 0.25, 0.18); add(g, box(0.06, 0.02, 0.25), M(C.coral), 0.2, 0.22, 0.38, 0, 0.3); add(g, box(0.06, 0.02, 0.25), M(C.coral), 0.3, 0.22, 0.38, 0, -0.3); },
+    verify(g) { add(g, box(0.8, 0.02, 1), M(C.cream, { roughness: 0.9 }), 0, 0.18); add(g, tor(0.28, 0.05), M(C.steel, { metalness: 0.85, roughness: 0.25 }), 0.1, 0.6, 0.1, -0.9); add(g, cyl(0.27, 0.27, 0.01), new T.MeshStandardMaterial({ color: C.green, transparent: true, opacity: 0.35, emissive: C.green, emissiveIntensity: 0.4 }), 0.1, 0.6, 0.1, -0.9 + Math.PI / 2); add(g, cyl(0.05, 0.05, 0.5), M(C.dark), 0.35, 0.38, 0.4, -0.9, 0, -0.5); },
+    gate(g) { add(g, box(0.16, 1, 0.16), M(C.cream), -0.45, 0.65); add(g, box(0.16, 1, 0.16), M(C.cream), 0.45, 0.65); add(g, box(1.1, 0.14, 0.12), glow(C.green), 0, 1.1); add(g, cyl(0.22, 0.22, 0.06), M(C.amber, { metalness: 0.5 }), 0, 0.5, 0, Math.PI / 2); },
+  };
+  // label lying flat in front of each object: name, short line, url
+  const label = (name, line, url) => { const c = document.createElement("canvas"); c.width = 1024; c.height = 400; const g = c.getContext("2d");
+    g.strokeStyle = "rgba(233,228,216,.75)"; g.lineWidth = 4; g.strokeRect(18, 18, 988, 364); g.beginPath(); g.moveTo(18, 290); g.lineTo(1006, 290); g.stroke();
+    g.fillStyle = "#77bb90"; g.fillRect(18, 18, 14, 364);
+    g.fillStyle = "#f2f3f4"; g.font = "800 104px JetBrains Mono, monospace"; g.fillText(name.toUpperCase(), 60, 130);
+    g.fillStyle = "#c9ced3"; g.font = "500 46px JetBrains Mono, monospace"; g.fillText(line, 60, 220);
+    g.fillStyle = "#77bb90"; g.font = "600 42px JetBrains Mono, monospace"; g.fillText(url, 60, 352);
+    const t = new T.CanvasTexture(c); t.anisotropy = 8; t.encoding = T.sRGBEncoding;
+    const m = new T.Mesh(new T.PlaneGeometry(2.6, 1.016), new T.MeshBasicMaterial({ map: t, transparent: true })); m.rotation.x = -Math.PI / 2; return m; };
+  // layout: a winding path, 4 per row
+  const SP = 4.2, items = [];
+  TOOLS.forEach(([ic, name, line, slug], i) => { const row = Math.floor(i / 4), col = row % 2 ? 3 - (i % 4) : i % 4;
+    const g = new T.Group(); g.position.set((col - 1.5) * SP, 0, (row - 1.5) * SP); pedestal(g); const obj = new T.Group(); (B[ic] || B.protocol)(obj); obj.position.y = 0.14; obj.scale.setScalar(1.45); g.add(obj);
+    const l = label(name, line, "atlasboard.dev/" + slug); l.position.set(0, 0.012, 1.75); g.add(l); scene.add(g); items.push({ g, obj, base: obj.position.y }); });
+  // glowing dashed path through every tool
+  const pts = items.map((it) => new T.Vector3(it.g.position.x, 0.02, it.g.position.z + 2.75));
+  const curve = new T.CatmullRomCurve3(pts, false, "catmullrom", 0.2), L = curve.getLength(), dashN = Math.floor(L / 0.42);
+  const dash = new T.InstancedMesh(box(0.22, 0.02, 0.07), new T.MeshStandardMaterial({ color: 0xffffff, emissive: C.green, emissiveIntensity: 0.9, roughness: 0.5 }), dashN); scene.add(dash);
+  const dm = new T.Object3D(), dashColor = new T.Color();
+  const setDashes = (t) => { for (let i = 0; i < dashN; i++) { const u = i / dashN, p = curve.getPointAt(u), tg = curve.getTangentAt(u); dm.position.copy(p); dm.rotation.set(0, Math.atan2(-tg.z, tg.x), 0); dm.updateMatrix(); dash.setMatrixAt(i, dm.matrix);
+      const wave = 0.5 + 0.5 * Math.sin(u * 60 - t * 4); dash.setColorAt(i, dashColor.setRGB(0.35 + 0.6 * wave, 0.6 + 0.4 * wave, 0.45 + 0.5 * wave)); } dash.instanceMatrix.needsUpdate = true; if (dash.instanceColor) dash.instanceColor.needsUpdate = true; };
+  // camera tour
+  let idx = 0, since = 0; const DWELL = opts.dwell || 3.2, camPos = new T.Vector3(), camLook = new T.Vector3(), tmp = new T.Vector3();
+  const shot = (i, out) => { const p = items[i].g.position; const sh = opts.shift ? opts.shift() : 0, z = typeof opts.zoom === "function" ? opts.zoom() : opts.zoom || 1; out.pos.set(p.x + 1.5 * z - sh, 0.7 + 3.3 * z, p.z + 0.9 + 3.4 * z); out.look.set(p.x - 0.1 - sh, 0.5, p.z + 0.9); return out; };
+  const s0 = shot(0, { pos: new T.Vector3(), look: new T.Vector3() }); camPos.copy(s0.pos).add(new T.Vector3(3, 4, 4)); camLook.copy(s0.look);
+  const want = { pos: new T.Vector3(), look: new T.Vector3() };
+  const resize = () => { const w = canvas.clientWidth || innerWidth, h = canvas.clientHeight || innerHeight; renderer.setSize(w, h, false); cam.aspect = w / h; cam.updateProjectionMatrix(); };
+  resize(); addEventListener("resize", resize);
+  let last = performance.now(), t = 0, running = !opts.manual;
+  const step = (dt) => { if (!still) t += dt;
+    since += dt; if (since > DWELL && !still) { since = 0; idx = (idx + 1) % items.length; if (opts.onFocus) opts.onFocus(idx); }
+    shot(idx, want); const k = 1 - Math.pow(0.0025, dt); camPos.lerp(want.pos, k * 0.9); camLook.lerp(want.look, k);
+    tmp.copy(camPos); tmp.x += Math.sin(t * 0.5) * 0.18; tmp.y += Math.sin(t * 0.7) * 0.08; cam.position.copy(tmp); cam.lookAt(camLook);
+    items.forEach((it, i) => { it.obj.rotation.y = Math.sin(t * 0.6 + i) * 0.25 + (i === idx ? Math.sin(t * 0.8) * 0.45 : 0); it.obj.position.y = it.base + (i === idx ? 0.12 + Math.sin(t * 2) * 0.04 : 0); });
+    rim.position.set(items[idx].g.position.x + 3, 5, items[idx].g.position.z - 3);
+    setDashes(t); renderer.render(scene, cam); };
+  const frame = (now) => { if (!running) return; requestAnimationFrame(frame); if (document.hidden) { last = now; return; } const dt = Math.min(0.05, (now - last) / 1000); last = now; step(dt); };
+  if (opts.onFocus) opts.onFocus(0);
+  if (running) requestAnimationFrame(frame);
+  return { stop() { running = false; }, focus(i) { idx = i % items.length; since = 0; }, step, cam, items: () => items.map((x) => x.g.position.toArray()), renderer };
+}
+
+// ---------- background: the ATLAS desk in 3D, one object per tool (falls back to the portal) ----------
+const DESK_KEY = { aimodel: "model" }, DESK_LINE = { protocol: "swap, pools, liquidity", mcp: "chain tools for any AI app", remotion: "chain data to video", aimodel: "400+ AI models, live prices", console: "ask the chain in one line", memory: "encrypted memory vault", x402: "pay an API per call", scheduled: "a daily chain report", seal: "prove a file existed", privacy: "what strangers can see", paybtn: "a USDG pay button", invoice: "marks itself paid", pool: "price impact by size", stocks: "on chain vs oracle", proof: "a certificate anyone checks", verify: "verified code, write functions", gate: "holders only, free signature" };
+(() => { const gl = (() => { try { const c = document.createElement("canvas"); return !!(c.getContext("webgl") || c.getContext("experimental-webgl")); } catch { return false; } })();
+  if (!gl || matchMedia("(prefers-reduced-motion: reduce)").matches) return portalBG();
+  const cv = document.createElement("canvas"), sh = document.createElement("div"); cv.id = "bgdesk"; sh.id = "bgshade"; cv.setAttribute("aria-hidden", "true"); document.body.prepend(sh); document.body.prepend(cv);
+  const load = (src) => new Promise((ok, no) => { const sc = document.createElement("script"); sc.src = src; sc.onload = ok; sc.onerror = no; document.head.appendChild(sc); });
+  const fonts = ['800 104px "JetBrains Mono"', '500 46px "JetBrains Mono"', '600 42px "JetBrains Mono"', 'bold 34px "JetBrains Mono"'].map((f) => document.fonts.load(f).catch(() => {}));
+  load("/three.min.js").catch(() => load("https://cdn.jsdelivr.net/npm/three@0.128.0/build/three.min.js")).then(() => Promise.all(fonts)).then(() => {
+    const tools = B.map((b, i) => [DESK_KEY[b[0]] || b[0], b[1].replace("Liquidity Depth", "Liq. Depth").replace("Checkout Button", "Checkout").replace("Smart Invoice", "Invoice"), DESK_LINE[b[0]] || "", SL[i]]);
+    const wide = () => innerWidth >= 900 && !document.body.classList.contains("on-page");
+    window.__desk = atlasDesk(cv, tools, { dwell: 3.4, zoom: () => (innerWidth < 900 ? 2.7 : 2.25), shift: () => (wide() ? 3.2 : 0) });
+    const fade = () => { const page = document.body.classList.contains("on-page"); cv.style.opacity = page ? ".3" : String(Math.max(0.3, 1 - scrollY / 1100)); };
+    addEventListener("scroll", fade, { passive: true }); addEventListener("popstate", () => setTimeout(fade, 50)); document.addEventListener("click", () => setTimeout(fade, 80)); fade();
+  }).catch(() => { cv.remove(); sh.remove(); portalBG(); }); })();
+
 
 if (!reduce) drafting(); else { dsvg.innerHTML = I[B[0][0]].replace(/^<svg[^>]*>/, "").replace(/<\/svg>$/, ""); $("dname").textContent = B[0][1]; $("dwhat").textContent = B[0][4]; }
 
