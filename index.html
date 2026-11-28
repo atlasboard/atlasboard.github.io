@@ -1337,8 +1337,8 @@ function atlasDesk(canvas, TOOLS, opts = {}) {
   const LM = (o) => { const p = Object.assign({}, o); delete p.roughness; delete p.metalness; return new THREE.MeshLambertMaterial(p); };
   const T = THREE, still = matchMedia("(prefers-reduced-motion: reduce)").matches;
   const C = { bg: 0x07090b, table: 0x0f1418, grid: 0x77bb90, green: 0x77bb90, cream: 0xe9e4d8, dark: 0x24282d, slate: 0x4a5057, amber: 0xe3c565, coral: 0xef7b6e, steel: 0x8a9096 };
-  const renderer = new T.WebGLRenderer({ canvas, antialias: (devicePixelRatio || 1) < 1.5, alpha: false, powerPreference: "high-performance" });
-  const lowEnd = (canvas.clientWidth || innerWidth) < 760; renderer.setPixelRatio(Math.min(lowEnd ? 1 : 1.25, devicePixelRatio || 1)); renderer.shadowMap.enabled = false; renderer.shadowMap.autoUpdate = false; renderer.shadowMap.needsUpdate = true; renderer.shadowMap.type = T.PCFShadowMap;
+  const renderer = new T.WebGLRenderer({ canvas, antialias: true, alpha: false, powerPreference: "high-performance" });
+  const lowEnd = (canvas.clientWidth || innerWidth) < 760; renderer.setPixelRatio(Math.min(2, Math.max(1.5, devicePixelRatio || 1))); renderer.shadowMap.enabled = false; renderer.shadowMap.autoUpdate = false; renderer.shadowMap.needsUpdate = true; renderer.shadowMap.type = T.PCFShadowMap;
   renderer.outputEncoding = T.sRGBEncoding;
   const scene = new T.Scene(); scene.background = new T.Color(C.bg); scene.fog = new T.Fog(C.bg, 9, 26);
   const cam = new T.PerspectiveCamera(42, 1, 0.1, 80);
@@ -1351,7 +1351,7 @@ function atlasDesk(canvas, TOOLS, opts = {}) {
   const tc = document.createElement("canvas"); tc.width = tc.height = 1024; const tg = tc.getContext("2d");
   tg.fillStyle = "#0f1418"; tg.fillRect(0, 0, 1024, 1024);
   for (let i = 0; i <= 1024; i += 16) { tg.strokeStyle = i % 128 === 0 ? "rgba(119,187,144,.15)" : "rgba(119,187,144,.05)"; tg.lineWidth = i % 128 === 0 ? 2 : 1; tg.beginPath(); tg.moveTo(i, 0); tg.lineTo(i, 1024); tg.moveTo(0, i); tg.lineTo(1024, i); tg.stroke(); }
-  const ttex = new T.CanvasTexture(tc); ttex.anisotropy = 4; ttex.encoding = T.sRGBEncoding;
+  const ttex = new T.CanvasTexture(tc); ttex.anisotropy = renderer.capabilities.getMaxAnisotropy(); ttex.encoding = T.sRGBEncoding;
   const table = new T.Mesh(new T.PlaneGeometry(48, 48), LM({ map: ttex, roughness: 0.92, metalness: 0 }));
   table.rotation.x = -Math.PI / 2; table.receiveShadow = true; scene.add(table);
   // helpers
@@ -1385,13 +1385,13 @@ function atlasDesk(canvas, TOOLS, opts = {}) {
     gate(g) { add(g, box(0.16, 1, 0.16), M(C.cream), -0.45, 0.65); add(g, box(0.16, 1, 0.16), M(C.cream), 0.45, 0.65); add(g, box(1.1, 0.14, 0.12), glow(C.green), 0, 1.1); add(g, cyl(0.22, 0.22, 0.06), M(C.amber, { metalness: 0.5 }), 0, 0.5, 0, Math.PI / 2); },
   };
   // label lying flat in front of each object: name, short line, url
-  const label = (name, line, url) => { const c = document.createElement("canvas"); c.width = 1024; c.height = 400; const g = c.getContext("2d");
+  const label = (name, line, url) => { const c = document.createElement("canvas"); c.width = 2048; c.height = 800; const g = c.getContext("2d"); g.scale(2, 2);
     g.strokeStyle = "rgba(233,228,216,.75)"; g.lineWidth = 4; g.strokeRect(18, 18, 988, 364); g.beginPath(); g.moveTo(18, 290); g.lineTo(1006, 290); g.stroke();
     g.fillStyle = "#77bb90"; g.fillRect(18, 18, 14, 364);
     g.fillStyle = "#f2f3f4"; g.font = "800 104px JetBrains Mono, monospace"; g.fillText(name.toUpperCase(), 60, 130);
     g.fillStyle = "#c9ced3"; g.font = "500 46px JetBrains Mono, monospace"; g.fillText(line, 60, 220);
     g.fillStyle = "#77bb90"; g.font = "600 42px JetBrains Mono, monospace"; g.fillText(url, 60, 352);
-    const t = new T.CanvasTexture(c); t.anisotropy = 8; t.encoding = T.sRGBEncoding;
+    const t = new T.CanvasTexture(c); t.anisotropy = renderer.capabilities.getMaxAnisotropy(); t.encoding = T.sRGBEncoding;
     const m = new T.Mesh(new T.PlaneGeometry(2.6, 1.016), new T.MeshBasicMaterial({ map: t, transparent: true })); m.rotation.x = -Math.PI / 2; return m; };
   // layout: a winding path, 4 per row
   const COLS = opts.cols || 4, ROWS = Math.ceil(TOOLS.length / COLS), SP = opts.spacing || 4.2, items = [];
@@ -1443,7 +1443,7 @@ function atlasDesk(canvas, TOOLS, opts = {}) {
   let slow = 0, prRaw = renderer.getPixelRatio();
   const frame = (now) => { if (!running) return; requestAnimationFrame(frame); if (document.hidden || !onScreen) { last = now; return; } if (now - last < 32) return; const gap = now - last, dt = Math.min(0.05, gap / 1000); last = now;
     const t1 = performance.now(); step(dt); const cost = performance.now() - t1; slow = cost > 22 || gap > 70 ? slow + 1 : Math.max(0, slow - 1);
-    if (slow > 20 && prRaw > 0.6) { prRaw = Math.max(0.6, prRaw - 0.15); renderer.setPixelRatio(prRaw); resize(); slow = 0; } };
+     };
   if (opts.board) { running = false; return board(); }
   if (opts.onFocus) opts.onFocus(0);
   if (running) requestAnimationFrame(frame);
