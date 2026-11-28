@@ -1,8 +1,33 @@
-# ATLAS
+<p align="center"><img src="assets/banner.jpg" alt="ATLAS: Don't trust us. Try it yourself." width="100%"></p>
 
-**17 tools for trading, liquidity, AI agents and payments on Robinhood Chain. All of them work.**
+<h1 align="center">ATLAS</h1>
 
-[atlasboard.dev](https://atlasboard.dev) is a map of tools for Robinhood Chain mainnet, grouped as Protocol, Agent, Payment, Data and Tools. Protocol holds Swap, Pools, Create Pool and Positions in one place. Every tool has its own page, and the site has Trust, Status, Developers, Roadmap and Changelog pages with what it is in plain words, an example, who it is for, how it works and how to build a first version. Every tool works right on its page, on mainnet.
+<p align="center"><b>17 tools for trading, liquidity, AI agents and payments on Robinhood Chain.</b><br>One board. Every tool runs on its own page, on mainnet, in your browser.</p>
+
+<p align="center">
+<a href="https://atlasboard.dev">atlasboard.dev</a> ·
+<a href="https://x.com/atlasboard_">X @atlasboard_</a> ·
+<a href="https://github.com/atlasboard/atlas-mcp">ATLAS MCP</a> ·
+<a href="docs/ARCHITECTURE.md">How it works</a> ·
+<a href="SECURITY.md">Security</a>
+</p>
+
+<p align="center">
+<img alt="chain" src="https://img.shields.io/badge/Robinhood%20Chain-4663-77bb90?style=flat-square&labelColor=0a0c0e">
+<img alt="tools" src="https://img.shields.io/badge/tools-17%20live-77bb90?style=flat-square&labelColor=0a0c0e">
+<img alt="server" src="https://img.shields.io/badge/server-none-77bb90?style=flat-square&labelColor=0a0c0e">
+<img alt="license" src="https://img.shields.io/badge/license-MIT-77bb90?style=flat-square&labelColor=0a0c0e">
+</p>
+
+---
+
+## The board
+
+<p align="center"><img src="assets/board.jpg" alt="The ATLAS board: 17 tools joined by living wires" width="100%"></p>
+
+The home page is a board of 17 squares joined by wires. It powers on as you arrive, and it has a heartbeat: every few seconds ATLAS asks Robinhood Chain for the latest block, and when a new one lands a pulse runs from Console through every tool. Some squares show live numbers (ETH price, the latest block, NVDA against its oracle, price impact on 10k USDG), refreshed from the chain every 30 seconds.
+
+<p align="center"><img src="assets/heartbeat.jpg" alt="A new block sends a pulse across the board" width="80%"></p>
 
 ## All 17 tools are live
 
@@ -26,18 +51,26 @@
 | [Source Check](https://atlasboard.dev/source-check) | Sourcify verification and every function that can change state. |
 | [Token Gate](https://atlasboard.dev/token-gate) | Holders prove they hold a token with a free wallet signature; anyone can check the proof. |
 
-## Trust
+<table><tr>
+<td width="33%"><img src="assets/protocol.jpg" alt="Protocol"><br><b>Protocol</b>: swap, pools, create a pool, positions</td>
+<td width="33%"><img src="assets/remotion-kit.jpg" alt="Remotion Kit"><br><b>Remotion Kit</b>: chain data to a video card</td>
+<td width="33%"><img src="assets/model.jpg" alt="Model"><br><b>Model</b>: 400+ AI models with live prices</td>
+</tr></table>
 
-What ATLAS can and cannot see, the threat model and live health: [atlasboard.dev/trust](https://atlasboard.dev/trust) and [/status](https://atlasboard.dev/status).
+## Tested with a real wallet
+
+Before launch, every tool that writes to the chain was used once from a real wallet on mainnet: a swap both ways, liquidity added and removed, Seal, Notary, Smart Invoice, Checkout Button and Token Gate. Every approval was for the exact amount, and the allowance went back to zero after each. x402 is ready but waits for a live x402 endpoint on Robinhood Chain to test against.
 
 ## How it works
 
-- One static page, no server, no database, no tracking.
-- Memory is encrypted on your device; the password and the plaintext never leave the page.
-- Reads Robinhood Chain mainnet (chain 4663) from the public RPC, contracts on Sourcify, route quotes from KyberSwap and pools from the Uniswap v4 PoolManager, straight from your browser.
-- Liquidity goes through the Uniswap v4 PositionManager with Permit2, for the exact amounts only.
+- One static page. No server, no database, no account, no tracking.
+- Reads Robinhood Chain mainnet (chain 4663) from the public RPC, contracts from Sourcify, route quotes from KyberSwap and pools from the Uniswap v4 PoolManager, straight from your browser.
 - Anything that sends money or writes to the chain is simulated first (`eth_call` and `eth_estimateGas`) and then signed in **your own wallet**. ATLAS never holds funds, keys or seed phrases.
+- Liquidity goes through the Uniswap v4 PositionManager with Permit2, for the exact amounts only.
+- Memory is encrypted on your device (AES-256-GCM, PBKDF2); the password and the plaintext never leave the page.
 - No predictions, no scores, not financial advice.
+
+More detail in [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md), and the threat model in [SECURITY.md](SECURITY.md).
 
 ## Run it yourself
 
@@ -49,12 +82,20 @@ npx -y serve -s . -l 8000
 
 Then open http://localhost:8000. The `-s` flag sends every path to the page, so links like `/swap` work after a refresh, as they do on GitHub Pages through `404.html`.
 
+## Use ATLAS from your AI
+
+```bash
+claude mcp add atlas -- npx -y github:atlasboard/atlas-mcp
+```
+
+Six read-only tools for Claude, Cursor and any MCP client. See [atlas-mcp](https://github.com/atlasboard/atlas-mcp).
+
 ## Contact
 
 - X: [@atlasboard_](https://x.com/atlasboard_)
 - Email: hello@atlasboard.dev
-- Token: CA coming soon, launching on [Pons](https://ponsfamily.com/launchpad/)
+- Token: CA coming soon, launching on [Pons](https://ponsfamily.com/launchpad/). Only trust the address shown on atlasboard.dev and @atlasboard_.
 
 ## License
 
-MIT
+[MIT](LICENSE). Changes are listed in [CHANGELOG.md](CHANGELOG.md).
